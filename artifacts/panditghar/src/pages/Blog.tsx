@@ -18,7 +18,7 @@ const blogPosts = [
     date: '15 January 2026',
     readTime: '8 min',
     icon: '🏠',
-    image: '/images/blog/griha-pravesh-vidhi.png'
+    image: '/images/blog/griha-pravesh-vidhi.jpg'
   },
   {
     slug: 'satyanarayan-katha-benefits',
@@ -30,7 +30,7 @@ const blogPosts = [
     date: '22 January 2026',
     readTime: '10 min',
     icon: '📖',
-    image: '/images/blog/satyanarayan-katha-benefits.png'
+    image: '/images/blog/satyanarayan-katha-benefits.jpg'
   },
   {
     slug: 'vivah-muhurat-2026',
@@ -42,7 +42,7 @@ const blogPosts = [
     date: '1 February 2026',
     readTime: '6 min',
     icon: '🌺',
-    image: '/images/blog/vivah-muhurat-2026.png'
+    image: '/images/blog/vivah-muhurat-2026.jpg'
   },
   {
     slug: 'satyanarayan-katha-vidhi',
@@ -54,7 +54,7 @@ const blogPosts = [
     date: '10 February 2026',
     readTime: '9 min',
     icon: '🕉️',
-    image: '/images/blog/satyanarayan-katha-vidhi.png'
+    image: '/images/blog/satyanarayan-katha-vidhi.jpg'
   },
   {
     slug: 'mundan-sanskar-mahatva',
@@ -66,7 +66,7 @@ const blogPosts = [
     date: '20 February 2026',
     readTime: '7 min',
     icon: '✂️',
-    image: '/images/blog/mundan-sanskar-mahatva.png'
+    image: '/images/blog/mundan-sanskar-mahatva.jpg'
   },
   {
     slug: 'pooja-samagri-complete-list',
@@ -78,7 +78,7 @@ const blogPosts = [
     date: '5 March 2026',
     readTime: '12 min',
     icon: '🪔',
-    image: '/images/blog/pooja-samagri-complete-list.png'
+    image: '/images/blog/pooja-samagri-complete-list.jpg'
   },
   {
     slug: 'navgrah-puja-significance',
@@ -90,7 +90,7 @@ const blogPosts = [
     date: '15 March 2026',
     readTime: '11 min',
     icon: '⭐',
-    image: '/images/blog/navgrah-puja-significance.png'
+    image: '/images/blog/navgrah-puja-significance.jpg'
   }
 ];
 

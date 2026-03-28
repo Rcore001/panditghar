@@ -202,11 +202,12 @@ export function AnimatedCounter({
           controlsRef.current = animate(0, target, {
             duration,
             onUpdate: (v) => setValue(Math.floor(v)),
+            onComplete: () => setValue(target),
             ease: [0.22, 1, 0.36, 1],
           });
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.1 }
     );
     if (ref.current) observer.observe(ref.current);
     return () => {
