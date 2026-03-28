@@ -16,7 +16,8 @@ const blogPosts = [
     shastreeyRef: 'स्कन्द पुराण, गृह्य सूत्र (Skanda Purana, Grihya Sutras)',
     date: '15 January 2026',
     readTime: '8 min',
-    icon: '🏠'
+    icon: '🏠',
+    image: '/images/blog/griha-pravesh-vidhi.png'
   },
   {
     slug: 'satyanarayan-katha-benefits',
@@ -27,7 +28,8 @@ const blogPosts = [
     shastreeyRef: 'स्कन्द पुराण, रेवा खण्ड (Skanda Purana, Reva Khanda)',
     date: '22 January 2026',
     readTime: '10 min',
-    icon: '📖'
+    icon: '📖',
+    image: '/images/blog/satyanarayan-katha-benefits.png'
   },
   {
     slug: 'vivah-muhurat-2026',
@@ -38,7 +40,8 @@ const blogPosts = [
     shastreeyRef: 'हिंदू पंचांग, पारस्कर गृह्यसूत्र (Hindu Panchang, Paraskara Grihya Sutra)',
     date: '1 February 2026',
     readTime: '6 min',
-    icon: '🌺'
+    icon: '🌺',
+    image: '/images/blog/vivah-muhurat-2026.png'
   },
   {
     slug: 'satyanarayan-katha-vidhi',
@@ -49,7 +52,8 @@ const blogPosts = [
     shastreeyRef: 'स्कन्द पुराण, रेवा खण्ड (Skanda Purana, Reva Khanda)',
     date: '10 February 2026',
     readTime: '9 min',
-    icon: '🕉️'
+    icon: '🕉️',
+    image: '/images/blog/satyanarayan-katha-vidhi.png'
   },
   {
     slug: 'mundan-sanskar-mahatva',
@@ -60,7 +64,8 @@ const blogPosts = [
     shastreeyRef: 'मनुस्मृति, गृह्य सूत्र (Manusmriti, Grihya Sutras)',
     date: '20 February 2026',
     readTime: '7 min',
-    icon: '✂️'
+    icon: '✂️',
+    image: '/images/blog/mundan-sanskar-mahatva.png'
   },
   {
     slug: 'pooja-samagri-complete-list',
@@ -71,7 +76,8 @@ const blogPosts = [
     shastreeyRef: 'वैदिक परंपरा, गृह्य सूत्र (Vedic Tradition, Grihya Sutras)',
     date: '5 March 2026',
     readTime: '12 min',
-    icon: '🪔'
+    icon: '🪔',
+    image: '/images/blog/pooja-samagri-complete-list.png'
   },
   {
     slug: 'navgrah-puja-significance',
@@ -82,7 +88,8 @@ const blogPosts = [
     shastreeyRef: 'मत्स्य पुराण, ज्योतिष शास्त्र (Matsya Purana, Jyotisha Shastra)',
     date: '15 March 2026',
     readTime: '11 min',
-    icon: '⭐'
+    icon: '⭐',
+    image: '/images/blog/navgrah-puja-significance.png'
   }
 ];
 
@@ -833,8 +840,26 @@ export default function Blog({ lang }: { lang: Language }) {
           {blogPosts.map((post) => (
             <StaggerItem key={post.slug}>
               <TiltCard intensity={4} className="bg-card rounded-2xl border border-border shadow-md overflow-hidden flex flex-col md:flex-row">
-                <div className="bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center p-12 text-7xl min-w-[160px]">
-                  {post.icon}
+                <div className="relative min-w-[220px] w-full md:w-[220px] h-[180px] md:h-auto flex-shrink-0 overflow-hidden">
+                  {post.image && (
+                    <img
+                      src={post.image}
+                      alt={isHi ? post.hiTitle : post.enTitle}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        const t = e.currentTarget as HTMLImageElement;
+                        t.style.display = 'none';
+                        const fb = t.nextElementSibling as HTMLElement | null;
+                        if (fb) fb.style.display = 'flex';
+                      }}
+                    />
+                  )}
+                  <div
+                    className="bg-gradient-to-br from-primary/20 to-secondary/20 items-center justify-center w-full h-full text-7xl absolute inset-0"
+                    style={{ display: post.image ? 'none' : 'flex' }}
+                  >
+                    {post.icon}
+                  </div>
                 </div>
                 <div className="p-8 flex-1">
                   <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
