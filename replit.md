@@ -67,9 +67,9 @@ The easiest platform for deploying PanditGhar.in. Zero config needed — the `ve
 1. Push the repo to GitHub.
 2. Go to [vercel.com](https://vercel.com), import the repository.
 3. In Project Settings, set:
-   - **Root Directory**: `artifacts/panditghar` (or leave empty — `vercel.json` sets the build command)
+   - **Root Directory**: `artifacts/panditghar` (Vercel will run from this subdirectory)
    - **Build Command**: `cd ../.. && pnpm --filter @workspace/panditghar run build:vercel`
-   - **Output Directory**: `artifacts/panditghar/dist/public`
+   - **Output Directory**: `dist/public` (relative to Root Directory)
 4. No env vars are required for a static deploy. Add `CUSTOM_DOMAIN=panditghar.in` if using a custom domain.
 5. Click **Deploy**.
 
