@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import {
   Language, muhurats,
   satyanarayan2026, satyanarayan2027,
@@ -95,14 +94,9 @@ export default function ShubhMuhurat({ lang }: { lang: Language }) {
         {/* ── Hero ── */}
         <ScrollReveal direction="up">
           <div className="text-center mb-16">
-            <motion.div
-              initial={{ scale: 0.7, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="inline-flex justify-center items-center w-20 h-20 rounded-full bg-accent/20 mb-6 text-accent"
-            >
+            <div className="inline-flex justify-center items-center w-20 h-20 rounded-full bg-accent/20 mb-6 text-accent">
               <CalendarDays className="w-10 h-10" />
-            </motion.div>
+            </div>
             <h1 className={`text-3xl md:text-5xl font-display font-bold text-secondary mb-4 leading-tight ${isHi ? 'font-hindi' : ''}`}>
               {title}
             </h1>
