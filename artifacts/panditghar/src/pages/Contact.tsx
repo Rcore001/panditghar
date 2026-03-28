@@ -5,6 +5,7 @@ import { SEO } from '@/components/SEO';
 import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ScrollReveal, StaggerContainer, StaggerItem, TiltCard } from '@/components/ui/animated';
+import { Breadcrumb } from '@/components/Breadcrumb';
 
 export default function Contact({ lang }: { lang: Language }) {
   const t = useTranslation(lang);
@@ -80,6 +81,10 @@ export default function Contact({ lang }: { lang: Language }) {
         path={`/${lang}/contact`}
         schema={schema}
       />
+
+      <div className="max-w-5xl mx-auto px-4 pt-4 pb-2">
+        <Breadcrumb items={[{ label: isHi ? 'संपर्क करें' : 'Contact' }]} lang={lang} />
+      </div>
 
       <section className="bg-gradient-maroon text-white py-20 px-4 text-center">
         <ScrollReveal direction="up">

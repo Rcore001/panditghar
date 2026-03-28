@@ -26,6 +26,7 @@ export function Navbar({ lang }: { lang: Language }) {
     { href: `/${lang}/about`, label: t.about },
     { href: `/${lang}/shubh-muhurat-2026`, label: t.shubhMuhurat },
     { href: `/${lang}/blog`, label: t.blog },
+    { href: `/${lang}/contact`, label: t.contact },
   ];
 
   const toggleLang = lang === 'hi' ? 'en' : 'hi';

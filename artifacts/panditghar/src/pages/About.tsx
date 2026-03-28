@@ -6,6 +6,7 @@ import { CheckCircle2, MapPin, Phone } from 'lucide-react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { ScrollReveal, StaggerContainer, StaggerItem, TiltCard } from '@/components/ui/animated';
+import { Breadcrumb } from '@/components/Breadcrumb';
 
 export default function About({ lang }: { lang: Language }) {
   const t = useTranslation(lang);
@@ -70,6 +71,10 @@ export default function About({ lang }: { lang: Language }) {
         path={`/${lang}/about`}
         schema={schema}
       />
+
+      <div className="max-w-4xl mx-auto px-4 pt-4 pb-2">
+        <Breadcrumb items={[{ label: isHi ? 'हमारे बारे में' : 'About' }]} lang={lang} />
+      </div>
 
       {/* Hero */}
       <section className="bg-gradient-maroon text-white py-20 px-4">

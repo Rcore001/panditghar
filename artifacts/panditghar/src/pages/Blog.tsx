@@ -6,6 +6,7 @@ import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { CalendarDays, Clock } from 'lucide-react';
 import { ScrollReveal, StaggerContainer, StaggerItem, TiltCard } from '@/components/ui/animated';
+import { Breadcrumb } from '@/components/Breadcrumb';
 
 const blogPosts = [
   {
@@ -938,6 +939,16 @@ export function BlogPost({ lang, slug }: { lang: Language; slug: string }) {
         path={`/${lang}/blog/${slug}`}
         schema={schema}
       />
+
+      <div className="max-w-3xl mx-auto px-4 pt-4 pb-2">
+        <Breadcrumb
+          items={[
+            { label: isHi ? 'ब्लॉग' : 'Blog', href: `/${lang}/blog` },
+            { label: isHi ? post.hiTitle : post.enTitle },
+          ]}
+          lang={lang}
+        />
+      </div>
 
       <article className="max-w-3xl mx-auto px-4">
         <div className="mb-8">

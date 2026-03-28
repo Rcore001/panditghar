@@ -10,6 +10,7 @@ import { motion } from 'framer-motion';
 import { WHATSAPP_NUMBER } from '@/lib/data';
 import { ScrollReveal, StaggerContainer, StaggerItem } from '@/components/ui/animated';
 import { ServiceCardImage } from '@/components/ServiceCardImage';
+import { SITE_URL } from '@/lib/config';
 
 interface FAQ {
   q_hi: string;
@@ -1154,7 +1155,21 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
     "image": service.image
   };
 
-  const combinedSchema = [schema, faqSchema];
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": isHi ? "होम" : "Home", "item": `${SITE_URL}/${lang}` },
+      { "@type": "ListItem", "position": 2, "name": isHi ? "सेवाएं" : "Services", "item": `${SITE_URL}/${lang}/services` },
+      { "@type": "ListItem", "position": 3, "name": title },
+    ]
+  };
+
+  const relatedServices = services
+    .filter(s => s.category === service.category && s.id !== service.id)
+    .slice(0, 3);
+
+  const combinedSchema = [schema, faqSchema, breadcrumbSchema];
 
   const whatsappMsg = encodeURIComponent(
     isHi
@@ -1365,6 +1380,33 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
                 </StaggerContainer>
               </div>
             </ScrollReveal>
+
+            {relatedServices.length > 0 && (
+              <ScrollReveal direction="up" delay={0.06}>
+                <div>
+                  <h3 className={`text-2xl font-display font-bold text-secondary mb-6 ${isHi ? 'font-hindi' : ''}`}>
+                    {isHi ? 'संबंधित सेवाएं' : 'Related Services'}
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    {relatedServices.map(rel => (
+                      <Link key={rel.id} href={`/${lang}/services/${rel.slug}`}>
+                        <motion.div
+                          whileHover={{ y: -4 }}
+                          transition={{ duration: 0.2 }}
+                          className="bg-card border border-border rounded-2xl p-5 hover:border-primary/40 hover:shadow-md transition-all cursor-pointer"
+                        >
+                          <div className="text-3xl mb-3">{rel.icon}</div>
+                          <h4 className={`font-bold text-secondary text-sm mb-1 ${isHi ? 'font-hindi' : ''}`}>
+                            {isHi ? rel.hiTitle : rel.enTitle}
+                          </h4>
+                          <p className="text-primary font-medium text-sm">₹{rel.price.toLocaleString('en-IN')}</p>
+                        </motion.div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </ScrollReveal>
+            )}
           </div>
 
           <div className="lg:col-span-1">

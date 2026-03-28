@@ -47,6 +47,7 @@ export function Footer({ lang }: { lang: Language }) {
                 <li><Link href={`/${lang}/services`} className="hover:text-accent transition-colors">{nav.services}</Link></li>
                 <li><Link href={`/${lang}/shubh-muhurat-2026`} className="hover:text-accent transition-colors">{nav.shubhMuhurat}</Link></li>
                 <li><Link href={`/${lang}/blog`} className="hover:text-accent transition-colors">{nav.blog}</Link></li>
+                <li><Link href={`/${lang}/contact`} className="hover:text-accent transition-colors">{nav.contact}</Link></li>
                 <li><Link href={`/${lang}/book`} className="hover:text-accent transition-colors text-accent">{nav.bookNow}</Link></li>
               </ul>
             </div>

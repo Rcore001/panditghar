@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
 import { ScrollReveal, StaggerContainer, StaggerItem } from '@/components/ui/animated';
+import { Breadcrumb } from '@/components/Breadcrumb';
 
 function SectionHeader({
   icon: Icon,
@@ -79,6 +80,26 @@ export default function ShubhMuhurat({ lang }: { lang: Language }) {
 
   const vyaparIconMap: Record<string, React.ElementType> = { Car, Home, Store };
 
+  const tocItems = isHi ? [
+    { id: 'muhurat-calendar', label: 'मुहूर्त कैलेंडर' },
+    { id: 'satyanarayan', label: 'सत्यनारायण' },
+    { id: 'vivah', label: 'विवाह' },
+    { id: 'griha-pravesh', label: 'गृह प्रवेश' },
+    { id: 'namkaran', label: 'नामकरण' },
+    { id: 'mundan', label: 'मुंडन' },
+    { id: 'vyapar', label: 'व्यापार' },
+    { id: 'abujh', label: 'अबूझ मुहूर्त' },
+  ] : [
+    { id: 'muhurat-calendar', label: 'Calendar 2026' },
+    { id: 'satyanarayan', label: 'Satyanarayan' },
+    { id: 'vivah', label: 'Vivah' },
+    { id: 'griha-pravesh', label: 'Griha Pravesh' },
+    { id: 'namkaran', label: 'Namkaran' },
+    { id: 'mundan', label: 'Mundan' },
+    { id: 'vyapar', label: 'Business' },
+    { id: 'abujh', label: 'Abujh Muhurat' },
+  ];
+
   return (
     <div className="pt-24 pb-20 bg-background min-h-screen">
       <SEO
@@ -91,9 +112,16 @@ export default function ShubhMuhurat({ lang }: { lang: Language }) {
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
+        {/* ── Breadcrumb ── */}
+        <Breadcrumb
+          items={[{ label: isHi ? 'शुभ मुहूर्त 2026' : 'Shubh Muhurat 2026' }]}
+          lang={lang}
+          className="mb-6 mt-2"
+        />
+
         {/* ── Hero ── */}
         <ScrollReveal direction="up">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <div className="inline-flex justify-center items-center w-20 h-20 rounded-full bg-accent/20 mb-6 text-accent">
               <CalendarDays className="w-10 h-10" />
             </div>
@@ -106,8 +134,25 @@ export default function ShubhMuhurat({ lang }: { lang: Language }) {
           </div>
         </ScrollReveal>
 
+        {/* ── Sticky in-page TOC ── */}
+        <div className="sticky top-20 z-30 bg-background/95 backdrop-blur border-b border-border mb-10 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 py-3">
+          <div className="overflow-x-auto scrollbar-hide">
+            <div className={`flex gap-2 min-w-max ${isHi ? 'font-hindi' : ''}`}>
+              {tocItems.map(item => (
+                <a
+                  key={item.id}
+                  href={`#${item.id}`}
+                  className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-white transition-all whitespace-nowrap"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* ── General Muhurat List ── */}
-        <section className="mb-16">
+        <section id="muhurat-calendar" className="mb-16 scroll-mt-40">
           <SectionHeader
             icon={CalendarDays}
             title={isHi ? 'शुभ मुहूर्त कैलेंडर 2026' : 'Shubh Muhurat Calendar 2026'}
@@ -152,7 +197,7 @@ export default function ShubhMuhurat({ lang }: { lang: Language }) {
         <DecorativeDivider />
 
         {/* ── Section 1 — Satyanarayan Purnima ── */}
-        <section className="mb-16 mt-16">
+        <section id="satyanarayan" className="mb-16 mt-16 scroll-mt-40">
           <SectionHeader
             icon={Moon}
             title={isHi ? '१. श्री सत्यनारायण व्रत — पूर्णिमा तिथियां' : '1. Shri Satyanarayan Vrat — Purnima Dates'}
@@ -202,7 +247,7 @@ export default function ShubhMuhurat({ lang }: { lang: Language }) {
         <DecorativeDivider />
 
         {/* ── Section 2 — Vivah Muhurat ── */}
-        <section className="mb-16 mt-16">
+        <section id="vivah" className="mb-16 mt-16 scroll-mt-40">
           <SectionHeader
             icon={Heart}
             title={isHi ? '२. शुभ विवाह मुहूर्त' : '2. Shubh Vivah Muhurat (Marriage Dates)'}
@@ -270,7 +315,7 @@ export default function ShubhMuhurat({ lang }: { lang: Language }) {
         <DecorativeDivider />
 
         {/* ── Section 3 — Griha Pravesh ── */}
-        <section className="mb-16 mt-16">
+        <section id="griha-pravesh" className="mb-16 mt-16 scroll-mt-40">
           <SectionHeader
             icon={Home}
             title={isHi ? '३. नूतन गृह प्रवेश मुहूर्त 2026' : '3. Nutan Griha Pravesh Muhurat 2026'}
@@ -305,7 +350,7 @@ export default function ShubhMuhurat({ lang }: { lang: Language }) {
         <DecorativeDivider />
 
         {/* ── Section 4 — Namkaran / Annaprashan ── */}
-        <section className="mb-16 mt-16">
+        <section id="namkaran" className="mb-16 mt-16 scroll-mt-40">
           <SectionHeader
             icon={Baby}
             title={isHi ? '४. नामकरण एवं अन्नप्राशन संस्कार' : '4. Namkaran & Annaprashan Sanskar'}
@@ -354,7 +399,7 @@ export default function ShubhMuhurat({ lang }: { lang: Language }) {
         <DecorativeDivider />
 
         {/* ── Section 5 — Mundan Sanskar ── */}
-        <section className="mb-16 mt-16">
+        <section id="mundan" className="mb-16 mt-16 scroll-mt-40">
           <SectionHeader
             icon={Scissors}
             title={isHi ? '५. मुंडन संस्कार (चूड़ाकर्म)' : '5. Mundan Sanskar (Chudakarana)'}
@@ -403,7 +448,7 @@ export default function ShubhMuhurat({ lang }: { lang: Language }) {
         <DecorativeDivider />
 
         {/* ── Section 6 — Vyapar / Vahan / Sampatti ── */}
-        <section className="mb-16 mt-16">
+        <section id="vyapar" className="mb-16 mt-16 scroll-mt-40">
           <SectionHeader
             icon={Landmark}
             title={isHi ? '६. नया व्यापार, वाहन एवं संपत्ति मुहूर्त' : '6. New Business, Vehicle & Property Muhurat'}
@@ -435,7 +480,7 @@ export default function ShubhMuhurat({ lang }: { lang: Language }) {
         <DecorativeDivider />
 
         {/* ── Section 7 — Abujh Muhurat ── */}
-        <section className="mb-8 mt-16">
+        <section id="abujh" className="mb-8 mt-16 scroll-mt-40">
           <SectionHeader
             icon={Star}
             title={isHi ? '७. अबूझ मुहूर्त 2026–2027' : '7. Abujh Muhurat 2026–2027'}
