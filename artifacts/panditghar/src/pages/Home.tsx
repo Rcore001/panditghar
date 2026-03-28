@@ -156,7 +156,7 @@ export default function Home({ lang }: { lang: Language }) {
       <ScrollReveal delay={0.05}>
         <div className="bg-accent text-secondary py-4 shadow-md relative z-20 -mt-8 mx-4 sm:mx-8 rounded-2xl md:mx-auto md:max-w-5xl border border-accent-foreground/10">
           <div className="flex flex-wrap justify-around items-center gap-4 px-6 font-medium text-sm sm:text-base">
-            <div className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5" /> 15+ Years Exp.</div>
+            <div className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5" /> 20+ Years Exp.</div>
             <div className="hidden md:block w-px h-6 bg-secondary/20" />
             <div className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5" /> North Indian Brahmin</div>
             <div className="hidden md:block w-px h-6 bg-secondary/20" />
@@ -174,10 +174,10 @@ export default function Home({ lang }: { lang: Language }) {
         <section className="py-10 px-4">
           <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { num: 5000, suffix: '+', label: isHi ? 'परिवार सेवित' : 'Families Served' },
-              { num: 15, suffix: '+', label: isHi ? 'वर्षों का अनुभव' : 'Years Experience' },
-              { num: 25, suffix: '+', label: isHi ? 'सेवाएं उपलब्ध' : 'Services Available' },
-              { num: 20, suffix: '+', label: isHi ? 'क्षेत्र कवर' : 'Areas Covered' },
+              { num: 1800, suffix: '+', label: isHi ? 'परिवार सेवित' : 'Families Served' },
+              { num: 20, suffix: '+', label: isHi ? 'वर्षों का अनुभव' : 'Years Experience' },
+              { num: 50, suffix: '+', label: isHi ? 'सेवाएं उपलब्ध' : 'Services Available' },
+              { num: 30, suffix: '+', label: isHi ? 'क्षेत्र कवर' : 'Areas Covered' },
             ].map((stat, i) => (
               <motion.div
                 key={i}
