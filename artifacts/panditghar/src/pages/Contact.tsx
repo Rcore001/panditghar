@@ -82,22 +82,16 @@ export default function Contact({ lang }: { lang: Language }) {
       />
 
       <section className="bg-gradient-maroon text-white py-20 px-4 text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className={`text-4xl md:text-5xl font-display font-bold mb-4 text-accent ${isHi ? 'font-hindi' : ''}`}
-        >
-          {isHi ? 'संपर्क करें' : 'Contact Us'}
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.15, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className={`text-xl text-white/80 max-w-2xl mx-auto ${isHi ? 'font-hindi' : ''}`}
-        >
-          {isHi ? 'पूजा बुकिंग के लिए हमसे आज ही संपर्क करें' : 'Contact us today to book your pooja'}
-        </motion.p>
+        <ScrollReveal direction="up">
+          <h1 className={`text-4xl md:text-5xl font-display font-bold mb-4 text-accent ${isHi ? 'font-hindi' : ''}`}>
+            {isHi ? 'संपर्क करें' : 'Contact Us'}
+          </h1>
+        </ScrollReveal>
+        <ScrollReveal direction="up" delay={0.1}>
+          <p className={`text-xl text-white/80 max-w-2xl mx-auto ${isHi ? 'font-hindi' : ''}`}>
+            {isHi ? 'पूजा बुकिंग के लिए हमसे आज ही संपर्क करें' : 'Contact us today to book your pooja'}
+          </p>
+        </ScrollReveal>
       </section>
 
       <section className="py-16 px-4 max-w-5xl mx-auto">

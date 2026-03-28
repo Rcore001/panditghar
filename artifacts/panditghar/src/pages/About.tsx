@@ -74,24 +74,18 @@ export default function About({ lang }: { lang: Language }) {
       {/* Hero */}
       <section className="bg-gradient-maroon text-white py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className={`text-4xl md:text-5xl font-display font-bold mb-6 text-accent ${isHi ? 'font-hindi' : ''}`}
-          >
-            {isHi ? 'हमारे बारे में' : 'About PanditGhar.in'}
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className={`text-xl text-white/90 max-w-2xl mx-auto ${isHi ? 'font-hindi' : ''}`}
-          >
-            {isHi
-              ? 'बेंगलुरु के प्रत्येक कोने में प्रामाणिक वैदिक सेवाएं प्रदान करने के लिए समर्पित'
-              : 'Dedicated to providing authentic Vedic services in every corner of Bangalore'}
-          </motion.p>
+          <ScrollReveal direction="up">
+            <h1 className={`text-4xl md:text-5xl font-display font-bold mb-6 text-accent ${isHi ? 'font-hindi' : ''}`}>
+              {isHi ? 'हमारे बारे में' : 'About PanditGhar.in'}
+            </h1>
+          </ScrollReveal>
+          <ScrollReveal direction="up" delay={0.1}>
+            <p className={`text-xl text-white/90 max-w-2xl mx-auto ${isHi ? 'font-hindi' : ''}`}>
+              {isHi
+                ? 'बेंगलुरु के प्रत्येक कोने में प्रामाणिक वैदिक सेवाएं प्रदान करने के लिए समर्पित'
+                : 'Dedicated to providing authentic Vedic services in every corner of Bangalore'}
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 
