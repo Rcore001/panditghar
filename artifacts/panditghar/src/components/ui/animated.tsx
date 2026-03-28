@@ -132,8 +132,8 @@ export function FloatingOrb({
 }: {
   size?: number;
   color?: string;
-  x?: number;
-  y?: number;
+  x?: number | string;
+  y?: number | string;
   duration?: number;
   delay?: number;
 }) {
@@ -158,8 +158,8 @@ export function FloatingSymbol({
 }: {
   symbol?: string;
   size?: number;
-  x?: number;
-  y?: number;
+  x?: number | string;
+  y?: number | string;
   duration?: number;
   delay?: number;
   opacity?: number;
@@ -192,24 +192,27 @@ export function AnimatedCounter({
   const [value, setValue] = useState(0);
   const [started, setStarted] = useState(false);
   const ref = useRef<HTMLSpanElement>(null);
+  const controlsRef = useRef<ReturnType<typeof animate> | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !started) {
           setStarted(true);
-          const controls = animate(0, target, {
+          controlsRef.current = animate(0, target, {
             duration,
             onUpdate: (v) => setValue(Math.floor(v)),
             ease: [0.22, 1, 0.36, 1],
           });
-          return () => controls.stop();
         }
       },
       { threshold: 0.5 }
     );
     if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      controlsRef.current?.stop();
+    };
   }, [target, duration, started]);
 
   return (
