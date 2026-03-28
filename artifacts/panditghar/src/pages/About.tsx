@@ -93,12 +93,14 @@ export default function About({ lang }: { lang: Language }) {
       <section className="py-16 px-4 max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <ScrollReveal direction="left">
-            <TiltCard className="aspect-square max-w-sm mx-auto rounded-2xl overflow-hidden border-4 border-primary/30 shadow-xl">
-              <img
-                src={`${import.meta.env.BASE_URL}images/pandit-portrait.png`}
-                alt="Pandit Ji"
-                className="w-full h-full object-cover"
-              />
+            <TiltCard className="aspect-square max-w-sm mx-auto rounded-2xl border-4 border-primary/30 shadow-xl overflow-hidden">
+              <div
+                className="w-full h-full flex items-center justify-center relative"
+                style={{ background: 'radial-gradient(circle at 40% 35%, #7a1c1c, #3d0a0a 80%)' }}
+              >
+                <span className="text-[100px] leading-none select-none font-hindi" style={{ color: 'rgba(255,204,0,0.22)' }}>ॐ</span>
+                <span className="absolute bottom-8 text-accent/60 text-sm tracking-widest font-medium">PanditGhar.in</span>
+              </div>
             </TiltCard>
           </ScrollReveal>
 

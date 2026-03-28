@@ -50,21 +50,16 @@ export default function Home({ lang }: { lang: Language }) {
 
       {/* ─── Hero Section ─── */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-        {/* Background image */}
+        {/* Background — CSS radial gradient, no external image needed */}
         <div className="absolute inset-0 z-0">
-          <motion.div
+          <div
             className="w-full h-full"
-            initial={{ scale: 1.06 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 1.2, ease: 'easeOut' }}
-          >
-            <img
-              src={`${import.meta.env.BASE_URL}images/hero-sacred.png`}
-              alt="Sacred Pooja Background"
-              className="w-full h-full object-cover"
-            />
-          </motion.div>
-          <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/80 to-transparent" />
+            style={{
+              background:
+                'radial-gradient(ellipse 80% 90% at 70% 50%, #7a1c1c 0%, #5a1010 40%, #3d0a0a 100%)',
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/75 to-transparent" />
         </div>
 
         {/* Floating decorative symbols */}
@@ -290,15 +285,13 @@ export default function Home({ lang }: { lang: Language }) {
 
           <ScrollReveal className="flex-1 w-full relative" direction="right" delay={0.1}>
             <motion.div
-              className="aspect-square max-w-md mx-auto rounded-full overflow-hidden border-4 border-accent/50 shadow-glow-gold relative"
+              className="aspect-square max-w-md mx-auto rounded-full border-4 border-accent/50 shadow-glow-gold relative flex items-center justify-center overflow-hidden"
+              style={{ background: 'radial-gradient(circle at 40% 35%, #7a1c1c, #3d0a0a 80%)' }}
               whileHover={{ scale: 1.03, boxShadow: '0 0 60px rgba(255,204,0,0.4)' }}
               transition={{ duration: 0.35 }}
             >
-              <img
-                src={`${import.meta.env.BASE_URL}images/pandit-portrait.png`}
-                alt="Pandit Ji"
-                className="w-full h-full object-cover"
-              />
+              <span className="text-[120px] leading-none select-none font-hindi" style={{ color: 'rgba(255,204,0,0.25)' }}>ॐ</span>
+              <span className="absolute bottom-10 text-accent/60 text-sm tracking-widest font-medium">PanditGhar.in</span>
             </motion.div>
           </ScrollReveal>
         </div>
