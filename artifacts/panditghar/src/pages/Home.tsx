@@ -17,6 +17,7 @@ import {
   AnimatedCounter,
   GlowPulse,
 } from '@/components/ui/animated';
+import { ServiceCardImage } from '@/components/ServiceCardImage';
 
 export default function Home({ lang }: { lang: Language }) {
   const t = useTranslation(lang);
@@ -130,13 +131,22 @@ export default function Home({ lang }: { lang: Language }) {
               transition={{ duration: 0.5, delay: 0.55 }}
             >
               <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map(i => (
-                  <div key={i} className="w-8 h-8 rounded-full bg-accent border-2 border-secondary flex items-center justify-center text-xs font-bold text-secondary">
-                    {String.fromCharCode(64 + i)}
+                {['🙏', '⭐', '🕉️', '🪔'].map((emoji, i) => (
+                  <div
+                    key={i}
+                    className="w-9 h-9 rounded-full border-2 border-white/30 flex items-center justify-center text-base shadow-md"
+                    style={{ background: 'linear-gradient(135deg,#c75b1a,#e8a020)' }}
+                  >
+                    {emoji}
                   </div>
                 ))}
               </div>
-              <p className={isHi ? 'font-hindi' : ''}>{t.hero.trusted}</p>
+              <div className="flex flex-col gap-0.5">
+                <div className="flex items-center gap-1">
+                  {[1,2,3,4,5].map(s => <Star key={s} className="w-3 h-3 fill-accent text-accent" />)}
+                </div>
+                <p className={isHi ? 'font-hindi' : ''}>{t.hero.trusted}</p>
+              </div>
             </motion.div>
           </motion.div>
         </div>
@@ -205,14 +215,17 @@ export default function Home({ lang }: { lang: Language }) {
           {services.slice(0, 6).map((service) => (
             <StaggerItem key={service.id}>
               <TiltCard className="h-full">
-                <div className="bg-card rounded-2xl overflow-hidden border border-border shadow-lg hover:shadow-xl hover:border-accent/50 transition-all duration-300 group flex flex-col h-full">
+                <div
+                  className="bg-card rounded-2xl overflow-hidden border border-border hover:border-accent/50 transition-all duration-300 group flex flex-col h-full"
+                  style={{ boxShadow: '0 2px 4px rgba(0,0,0,0.06),0 6px 16px rgba(0,0,0,0.08),0 16px 32px rgba(0,0,0,0.04)' }}
+                >
                   <div className="relative h-48 overflow-hidden">
-                    <motion.img
+                    <ServiceCardImage
                       src={`${import.meta.env.BASE_URL}${service.image.replace(/^\//, '')}`}
                       alt={service.hiTitle}
-                      className="w-full h-full object-cover"
-                      whileHover={{ scale: 1.08 }}
-                      transition={{ duration: 0.4 }}
+                      icon={service.icon}
+                      hiTitle={service.hiTitle}
+                      category={service.category}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/30 to-transparent" />
                     <div className="absolute bottom-0 left-0 p-4 w-full">
@@ -230,8 +243,11 @@ export default function Home({ lang }: { lang: Language }) {
                     </p>
                     <div className="pt-4 border-t border-border flex items-center justify-between mt-auto">
                       <div>
-                        <p className={`text-xs text-muted-foreground ${isHi ? 'font-hindi' : ''}`}>{t.services.startingAt}</p>
-                        <p className="font-bold text-lg text-primary">₹{service.price.toLocaleString('en-IN')}</p>
+                        <p className={`text-xs text-muted-foreground mb-0.5 ${isHi ? 'font-hindi' : ''}`}>{t.services.startingAt}</p>
+                        <div className="inline-flex items-baseline gap-0.5 bg-accent/10 px-3 py-1 rounded-full">
+                          <span className="text-sm font-bold text-accent leading-none">₹</span>
+                          <span className="font-bold text-lg text-primary leading-none">{service.price.toLocaleString('en-IN')}</span>
+                        </div>
                       </div>
                       <Link href={`/${lang}/services/${service.slug}`}>
                         <Button variant="outline" className={`rounded-full border-primary text-primary hover:bg-primary hover:text-white text-sm ${isHi ? 'font-hindi' : ''}`}>

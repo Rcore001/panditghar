@@ -7,6 +7,17 @@ import { DecorativeDivider } from '@/components/ui/decorative';
 import { Button } from '@/components/ui/button';
 import { SITE_URL } from '@/lib/config';
 import { ScrollReveal, StaggerContainer, StaggerItem, TiltCard } from '@/components/ui/animated';
+import { ServiceCardImage } from '@/components/ServiceCardImage';
+
+const CATEGORY_ICONS: Record<string, string> = {
+  all: '✨',
+  small: '🏠',
+  sanskar: '👶',
+  large: '📖',
+  festival: '🎉',
+  dosha: '⭐',
+  jyotish: '🔮',
+};
 
 export default function Services({ lang }: { lang: Language }) {
   const t = useTranslation(lang);
@@ -68,7 +79,7 @@ export default function Services({ lang }: { lang: Language }) {
               <motion.button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`px-5 py-2 rounded-full text-sm font-semibold transition-all border ${
+                className={`px-4 py-2 rounded-full text-sm font-semibold transition-all border flex items-center gap-1.5 ${
                   activeCategory === cat.id
                     ? 'bg-primary text-white border-primary shadow-md'
                     : 'bg-card border-border text-muted-foreground hover:border-primary hover:text-primary'
@@ -79,7 +90,8 @@ export default function Services({ lang }: { lang: Language }) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.04, duration: 0.3 }}
               >
-                {isHi ? cat.hiLabel : cat.enLabel}
+                <span className="text-base leading-none">{CATEGORY_ICONS[cat.id]}</span>
+                <span>{isHi ? cat.hiLabel : cat.enLabel}</span>
               </motion.button>
             ))}
           </div>
@@ -100,14 +112,17 @@ export default function Services({ lang }: { lang: Language }) {
               {filtered.map((service) => (
                 <StaggerItem key={service.id}>
                   <TiltCard className="h-full" intensity={6}>
-                    <div className="bg-card rounded-2xl overflow-hidden border border-border shadow-lg flex flex-col h-full group hover:shadow-xl hover:border-accent/50 transition-all duration-300">
+                    <div
+                      className="bg-card rounded-2xl overflow-hidden border border-border flex flex-col h-full group hover:border-accent/50 transition-all duration-300"
+                      style={{ boxShadow: '0 2px 4px rgba(0,0,0,0.06),0 6px 16px rgba(0,0,0,0.08),0 16px 32px rgba(0,0,0,0.04)' }}
+                    >
                       <div className="relative h-48 overflow-hidden">
-                        <motion.img
+                        <ServiceCardImage
                           src={`${import.meta.env.BASE_URL}${service.image.replace(/^\//, '')}`}
                           alt={service.hiTitle}
-                          className="w-full h-full object-cover"
-                          whileHover={{ scale: 1.09 }}
-                          transition={{ duration: 0.4 }}
+                          icon={service.icon}
+                          hiTitle={service.hiTitle}
+                          category={service.category}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/30 to-transparent" />
                         {/* Category badge */}
@@ -132,7 +147,10 @@ export default function Services({ lang }: { lang: Language }) {
                           {service.shastreeyRef}
                         </div>
                         <div className="mt-auto pt-3 border-t border-border flex items-center justify-between">
-                          <p className="font-bold text-xl text-primary">₹{service.price.toLocaleString('en-IN')}</p>
+                          <div className="inline-flex items-baseline gap-0.5 bg-accent/10 px-3 py-1.5 rounded-full">
+                            <span className="text-sm font-bold text-accent leading-none">₹</span>
+                            <span className="font-bold text-lg text-primary leading-none">{service.price.toLocaleString('en-IN')}</span>
+                          </div>
                           <Link href={`/${lang}/services/${service.slug}`}>
                             <Button variant="outline" size="sm" className={`rounded-full border-primary text-primary hover:bg-primary hover:text-white ${isHi ? 'font-hindi' : ''}`}>
                               {t.services.viewDetails}

@@ -9,6 +9,7 @@ import NotFound from './not-found';
 import { motion } from 'framer-motion';
 import { WHATSAPP_NUMBER } from '@/lib/data';
 import { ScrollReveal, StaggerContainer, StaggerItem } from '@/components/ui/animated';
+import { ServiceCardImage } from '@/components/ServiceCardImage';
 
 interface FAQ {
   q_hi: string;
@@ -1172,10 +1173,13 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
       />
 
       <div className="relative h-72 md:h-96 overflow-hidden">
-        <img
+        <ServiceCardImage
           src={`${import.meta.env.BASE_URL}${service.image.replace(/^\//, '')}`}
           alt={title}
-          className="w-full h-full object-cover"
+          icon={service.icon}
+          hiTitle={service.hiTitle}
+          category={service.category}
+          showHoverZoom={false}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/60 to-transparent" />
         <div className="absolute inset-0 flex flex-col justify-end p-8 max-w-7xl mx-auto w-full left-0 right-0">
