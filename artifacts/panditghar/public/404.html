@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PanditGhar.in</title>
+  <script>
+    // GitHub Pages SPA redirect trick.
+    // When GitHub Pages serves 404.html for a deep route, this script stores
+    // the full path in sessionStorage and redirects to the base URL. The
+    // index.html then picks it up and restores the original route.
+    var l = window.location;
+    var basePath = '/panditghar'; // Change to your repo name if different
+    var isGHPages = l.hostname.endsWith('.github.io');
+    var redirect = l.pathname + l.search;
+    sessionStorage.setItem('spa-redirect', redirect);
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      (isGHPages ? basePath : '') + '/?p=1'
+    );
+  </script>
+</head>
+<body>
+  <noscript>Redirecting to PanditGhar.in&hellip;</noscript>
+</body>
+</html>

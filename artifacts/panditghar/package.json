@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite --config vite.config.ts --host 0.0.0.0",
     "build": "tsx scripts/generate-sitemap.ts && vite build --config vite.config.ts",
+    "build:vercel": "BASE_PATH=/ tsx scripts/generate-sitemap.ts && BASE_PATH=/ vite build --config vite.config.ts",
+    "build:ghpages": "tsx scripts/generate-sitemap.ts && BASE_PATH=${GHPAGES_BASE:-/panditghar/} vite build --config vite.config.ts",
     "generate-sitemap": "tsx scripts/generate-sitemap.ts",
     "serve": "vite preview --config vite.config.ts --host 0.0.0.0",
     "typecheck": "tsc -p tsconfig.json --noEmit"

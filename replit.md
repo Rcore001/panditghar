@@ -59,6 +59,66 @@ React + Vite frontend for PanditGhar.in — a Hindu puja booking platform for Ba
 - SEO-optimized with structured data, sitemap, robots.txt
 - Saffron/maroon color theme with Hindi typography
 
+#### Deployment: Vercel
+
+The easiest platform for deploying PanditGhar.in. Zero config needed — the `vercel.json` already handles everything.
+
+**Steps:**
+1. Push the repo to GitHub.
+2. Go to [vercel.com](https://vercel.com), import the repository.
+3. In Project Settings, set:
+   - **Root Directory**: `artifacts/panditghar` (or leave empty — `vercel.json` sets the build command)
+   - **Build Command**: `cd ../.. && pnpm --filter @workspace/panditghar run build:vercel`
+   - **Output Directory**: `artifacts/panditghar/dist/public`
+4. No env vars are required for a static deploy. Add `CUSTOM_DOMAIN=panditghar.in` if using a custom domain.
+5. Click **Deploy**.
+
+**Custom domain**: In Vercel project settings → Domains, add `panditghar.in` and `www.panditghar.in`, then point your DNS to Vercel's nameservers.
+
+**Local Vercel build test:**
+```bash
+pnpm --filter @workspace/panditghar run build:vercel
+# Output is at: artifacts/panditghar/dist/public/
+```
+
+#### Deployment: GitHub Pages
+
+**Steps:**
+1. Push the repo to GitHub (name the repo `panditghar` for the default base path `/panditghar/`).
+2. In GitHub repo → Settings → Pages, set source to **GitHub Actions**.
+3. The workflow at `.github/workflows/deploy-panditghar.yml` will run automatically on every push to `main`.
+4. Optional: Set repository variables in GitHub → Settings → Variables:
+   - `GHPAGES_BASE`: Set to `/panditghar/` (default) or `/` if using a custom domain.
+   - `CUSTOM_DOMAIN`: Set to `panditghar.in` if you have a custom domain (writes a `CNAME` file).
+5. Wait for the Action to complete, then access at `https://<your-github-username>.github.io/panditghar/en`.
+
+**Custom domain on GitHub Pages:** Set `CUSTOM_DOMAIN=panditghar.in` as a repo variable. In your DNS, add a CNAME record pointing `panditghar.in` to `<username>.github.io`.
+
+**Local GitHub Pages build test:**
+```bash
+GHPAGES_BASE=/panditghar/ pnpm --filter @workspace/panditghar run build:ghpages
+# Output is at: artifacts/panditghar/dist/public/
+```
+
+#### Build Scripts Summary
+
+| Script | Purpose |
+|---|---|
+| `pnpm --filter @workspace/panditghar run build` | Default build (BASE_PATH=/) for Replit deploy |
+| `pnpm --filter @workspace/panditghar run build:vercel` | Vercel build (BASE_PATH=/) |
+| `pnpm --filter @workspace/panditghar run build:ghpages` | GitHub Pages build (BASE_PATH from GHPAGES_BASE env var) |
+| `pnpm --filter @workspace/panditghar run generate-sitemap` | Regenerate sitemap.xml only |
+
+#### Public Assets in Build
+
+All files in `artifacts/panditghar/public/` are automatically copied by Vite into `dist/public/`:
+- `images/` — service and background images
+- `favicon.svg` — site icon
+- `opengraph.jpg` — OG social image
+- `sitemap.xml` — auto-generated at build time (run `generate-sitemap` to regenerate)
+- `robots.txt` — search engine directives
+- `404.html` — GitHub Pages SPA routing redirect trick
+
 ## Packages
 
 ### `artifacts/api-server` (`@workspace/api-server`)
