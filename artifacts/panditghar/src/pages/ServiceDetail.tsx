@@ -1137,6 +1137,79 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
     }))
   };
 
+  const howToStepsEn: Record<string, { name: string; text: string }[]> = {
+    "griha-pravesh": [
+      { name: "Contact & Book", text: "WhatsApp PanditGhar.in at +91 93295 66101 to confirm date, time and Muhurat for Griha Pravesh. Book at least 7 days in advance." },
+      { name: "Receive Samagri List", text: "Receive the complete Pooja Samagri list via WhatsApp. Arrange items or let our team procure at actuals." },
+      { name: "Ganesh Puja", text: "Pandit Ji performs Ganesh Puja to remove all obstacles before the main ceremony." },
+      { name: "Vastu Shanti Homa", text: "A Homa (fire ritual) is performed to appease Vastu Devata and purify the space." },
+      { name: "Navagraha Puja", text: "All nine planets are worshipped to ensure harmonious cosmic energies in the new home." },
+      { name: "Griha Pravesh Ritual", text: "The family enters the home right foot first, wife carrying a pot of boiling milk — symbolising abundance." },
+    ],
+    "satyanarayan": [
+      { name: "Book & Set Muhurat", text: "Book Pandit Ji on Poornima or an auspicious Thursday. WhatsApp +91 93295 66101." },
+      { name: "Prepare Puja Space", text: "Clean and decorate the puja area with flowers, mango leaves, and install an idol or photo of Lord Vishnu." },
+      { name: "Sankalpa", text: "Pandit Ji takes a formal vow (Sankalpa) stating the purpose of the Katha." },
+      { name: "Ganesh Puja", text: "Lord Ganesha is worshipped first to remove obstacles." },
+      { name: "Shodashopachara Puja of Satyanarayan", text: "Sixteen forms of devotional offering are made to Lord Vishnu with Panchamrit Abhishek." },
+      { name: "Five-Chapter Katha Recitation", text: "Pandit Ji recites all five chapters of the Satyanarayan Katha from Skanda Purana, Reva Khanda." },
+      { name: "Aarti & Prasad Distribution", text: "Aarti is performed and Sheera (semolina sweet) and Panchamrit prasad is distributed." },
+    ],
+    "vivah": [
+      { name: "Book Pandit & Muhurat", text: "Book 2-3 months in advance. Pandit Ji prepares the Vivah Muhurat from the couple's Kundali." },
+      { name: "Ganesh Puja", text: "Ceremony begins with Ganesh Puja to bless the auspicious occasion." },
+      { name: "Navgrah Puja", text: "All nine planets are invoked to ensure a blissful married life." },
+      { name: "Varmala & Kanyadaan", text: "The couple exchanges garlands. Father performs Kanyadaan — the sacred giving away of the bride." },
+      { name: "Saptapadi — Seven Vows", text: "The couple takes seven steps together around the sacred fire, making seven sacred vows as per Paraskara Grihya Sutra." },
+      { name: "Sindoor Daan & Mangalsutra", text: "Groom applies sindoor and ties Mangalsutra, completing the Vivah Sanskar." },
+    ],
+  };
+
+  const howToStepsHi: Record<string, { name: string; text: string }[]> = {
+    "griha-pravesh": [
+      { name: "संपर्क एवं बुकिंग", text: "PanditGhar.in को +91 93295 66101 पर व्हाट्सएप करें। गृह प्रवेश के लिए कम से कम 7 दिन पहले बुकिंग करें।" },
+      { name: "सामग्री सूची प्राप्त करें", text: "व्हाट्सएप पर पूरी पूजा सामग्री सूची प्राप्त करें। स्वयं व्यवस्था करें या हमारी टीम आपकी ओर से खरीद सकती है।" },
+      { name: "गणपति पूजा", text: "मुख्य समारोह से पहले सभी बाधाओं को दूर करने के लिए पंडित जी गणेश पूजा करते हैं।" },
+      { name: "वास्तु शांति हवन", text: "वास्तु देवता को प्रसन्न करने और स्थान को शुद्ध करने के लिए हवन किया जाता है।" },
+      { name: "नवग्रह पूजा", text: "नए घर में शुभ ऊर्जाओं के लिए नौ ग्रहों की पूजा की जाती है।" },
+      { name: "गृह प्रवेश", text: "परिवार दाएं पैर से प्रवेश करता है, गृहिणी उफनते दूध का बर्तन लेकर — समृद्धि का प्रतीक।" },
+    ],
+    "satyanarayan": [
+      { name: "बुकिंग व मुहूर्त", text: "पूर्णिमा या शुभ गुरुवार को पंडित जी बुक करें। व्हाट्सएप करें +91 93295 66101।" },
+      { name: "पूजा स्थान तैयार करें", text: "फूलों और आम के पत्तों से सजाएं और भगवान विष्णु की मूर्ति या फोटो स्थापित करें।" },
+      { name: "संकल्प", text: "पंडित जी कथा का उद्देश्य बताते हुए औपचारिक संकल्प लेते हैं।" },
+      { name: "गणेश पूजा", text: "बाधाओं को दूर करने के लिए पहले भगवान गणेश की पूजा।" },
+      { name: "सत्यनारायण षोडशोपचार पूजा", text: "पंचामृत अभिषेक के साथ भगवान विष्णु को सोलह रूपों में भेंट।" },
+      { name: "पाँच अध्याय कथा", text: "पंडित जी स्कन्द पुराण के रेवा खण्ड से सत्यनारायण कथा के पाँच अध्याय सुनाते हैं।" },
+      { name: "आरती और प्रसाद", text: "आरती की जाती है और शीरा (सूजी की मिठाई) व पंचामृत प्रसाद वितरित किया जाता है।" },
+    ],
+    "vivah": [
+      { name: "पंडित बुकिंग व मुहूर्त", text: "2-3 महीने पहले बुक करें। पंडित जी जन्म कुंडली से विवाह मुहूर्त तैयार करते हैं।" },
+      { name: "गणेश पूजा", text: "शुभ अवसर का आशीर्वाद लेने के लिए गणेश पूजा से शुरुआत।" },
+      { name: "नवग्रह पूजा", text: "सुखमय वैवाहिक जीवन के लिए नौ ग्रहों का आह्वान।" },
+      { name: "वरमाला और कन्यादान", text: "वर-वधू माला बदलते हैं। पिता कन्यादान — वधू का पवित्र समर्पण करते हैं।" },
+      { name: "सप्तपदी — सात फेरे", text: "दंपत्ति पारस्कर गृह्यसूत्र के अनुसार पवित्र अग्नि के चारों ओर सात कदम और सात वचन लेते हैं।" },
+      { name: "सिंदूर दान और मंगलसूत्र", text: "वर सिंदूर लगाता है और मंगलसूत्र बांधता है — विवाह संस्कार संपन्न।" },
+    ],
+  };
+
+  const howToStepsForService = isHi
+    ? (howToStepsHi[service.id] || null)
+    : (howToStepsEn[service.id] || null);
+
+  const howToSchema = howToStepsForService ? {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": isHi ? `${title} विधि — चरण-दर-चरण` : `How to Perform ${title} — Step-by-Step`,
+    "description": desc,
+    "step": howToStepsForService.map((step, i) => ({
+      "@type": "HowToStep",
+      "position": i + 1,
+      "name": step.name,
+      "text": step.text
+    }))
+  } : null;
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -1144,22 +1217,29 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
     "provider": {
       "@type": "LocalBusiness",
       "name": "PanditGhar.in",
-      "areaServed": "Bangalore"
+      "url": "https://panditghar.in",
+      "telephone": "+919329566101",
+      "areaServed": [
+        "Whitefield","HSR Layout","Koramangala","Indiranagar","Marathahalli",
+        "Electronic City","JP Nagar","Yelahanka","Hebbal","Sarjapur Road","Bangalore"
+      ]
     },
     "description": desc,
     "offers": {
       "@type": "Offer",
       "price": service.price,
-      "priceCurrency": "INR"
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
     },
-    "image": service.image
+    "image": `https://panditghar.in${service.image}`
   };
 
   const relatedServices = services
     .filter(s => s.category === service.category && s.id !== service.id)
     .slice(0, 3);
 
-  const combinedSchema = [schema, faqSchema];
+  const combinedSchema: object[] = [schema, faqSchema];
+  if (howToSchema) combinedSchema.push(howToSchema);
 
   const whatsappMsg = encodeURIComponent(
     isHi
@@ -1170,8 +1250,12 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
   return (
     <div className="pb-16">
       <SEO
-        title={`${title} in Bangalore | PanditGhar.in`}
-        description={desc}
+        title={isHi
+          ? `${title} बेंगलुरु में | मूल्य, सामग्री व बुकिंग — PanditGhar.in`
+          : `${title} in Bangalore | Price, Samagri & Booking — PanditGhar.in`}
+        description={isHi
+          ? `बेंगलुरु में ${title} के लिए प्रामाणिक उत्तर भारतीय पंडित बुक करें। शास्त्रीय विधि, पूरी सामग्री, ₹${service.price.toLocaleString('en-IN')} से शुरू। सभी क्षेत्रों में सेवा।`
+          : `Book authentic North Indian Pandit for ${title} in Bangalore. Shastreey rituals, complete samagri, starting ₹${service.price.toLocaleString('en-IN')}. All areas covered.`}
         lang={lang}
         path={`/${lang}/services/${service.slug}`}
         schema={combinedSchema}

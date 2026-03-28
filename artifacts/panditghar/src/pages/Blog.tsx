@@ -824,19 +824,29 @@ export default function Blog({ lang }: { lang: Language }) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "name": isHi ? "PanditGhar.in ब्लॉग — वैदिक ज्ञान" : "PanditGhar.in Blog — Vedic Knowledge",
+    "name": isHi ? "PanditGhar.in ब्लॉग — वैदिक ज्ञान" : "PanditGhar.in Blog — Vedic Ritual Guide Bangalore",
     "description": isHi
-      ? "वैदिक अनुष्ठानों, पूजाओं और शुभ मुहूर्त के बारे में शास्त्रों पर आधारित जानकारी।"
-      : "Shastreey information about Vedic rituals, poojas, and auspicious muhurats.",
+      ? "बेंगलुरु के लिए वैदिक अनुष्ठानों, पूजा विधि और शुभ मुहूर्त के बारे में शास्त्रों पर आधारित जानकारी।"
+      : "Shastreey guides on Vedic puja rituals, muhurat, and samagri for Bangalore — by PanditGhar.in.",
     "url": `https://panditghar.in/${lang}/blog`,
-    "inLanguage": lang === 'hi' ? "hi-IN" : "en-IN"
+    "inLanguage": lang === 'hi' ? "hi-IN" : "en-IN",
+    "publisher": {
+      "@type": "Organization",
+      "name": "PanditGhar.in",
+      "url": "https://panditghar.in",
+      "logo": { "@type": "ImageObject", "url": "https://panditghar.in/favicon.svg" }
+    }
   };
 
   return (
     <div className="pt-24 pb-16">
       <SEO
-        title={isHi ? "ब्लॉग | वैदिक अनुष्ठान मार्गदर्शिका | PanditGhar.in" : "Blog | Vedic Ritual Guide | PanditGhar.in"}
-        description={isHi ? "वैदिक अनुष्ठानों, पूजाओं और शुभ मुहूर्त के बारे में शास्त्रों पर आधारित जानकारी।" : "Shastreey information about Vedic rituals, poojas, and auspicious muhurats in Bangalore."}
+        title={isHi
+          ? "वैदिक पूजा विधि मार्गदर्शिका — बेंगलुरु | PanditGhar.in ब्लॉग"
+          : "Vedic Puja Ritual Guide — Bangalore | PanditGhar.in Blog"}
+        description={isHi
+          ? "बेंगलुरु के लिए गृह प्रवेश विधि, विवाह मुहूर्त 2026, सत्यनारायण कथा, मुंडन संस्कार व अधिक पर शास्त्रीय मार्गदर्शिकाएं।"
+          : "Shastreey guides on Griha Pravesh Vidhi, Vivah Muhurat 2026, Satyanarayan Katha, Mundan Sanskar & more for Bangalore."}
         lang={lang}
         path={`/${lang}/blog`}
         schema={schema}
@@ -912,29 +922,53 @@ export function BlogPost({ lang, slug }: { lang: Language; slug: string }) {
 
   const text = isHi ? content.hi : content.en;
 
+  const isoDate = (() => {
+    try {
+      const [day, month, year] = post.date.split(' ');
+      const months: Record<string, string> = {
+        January:'01',February:'02',March:'03',April:'04',May:'05',June:'06',
+        July:'07',August:'08',September:'09',October:'10',November:'11',December:'12'
+      };
+      return `${year}-${months[month]||'01'}-${day.padStart(2,'0')}`;
+    } catch { return post.date; }
+  })();
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": isHi ? post.hiTitle : post.enTitle,
     "description": isHi ? post.hiExcerpt : post.enExcerpt,
-    "datePublished": post.date,
+    "datePublished": isoDate,
+    "dateModified": isoDate,
+    "image": post.image ? `https://panditghar.in${post.image}` : "https://panditghar.in/images/pandit-portrait.png",
     "author": {
-      "@type": "Organization",
-      "name": "PanditGhar.in"
+      "@type": "Person",
+      "name": "PanditGhar.in Editorial",
+      "url": "https://panditghar.in"
     },
     "publisher": {
       "@type": "Organization",
       "name": "PanditGhar.in",
-      "url": "https://panditghar.in"
+      "url": "https://panditghar.in",
+      "logo": { "@type": "ImageObject", "url": "https://panditghar.in/favicon.svg" }
     },
-    "inLanguage": lang === 'hi' ? "hi-IN" : "en-IN"
+    "mainEntityOfPage": { "@type": "WebPage", "@id": `https://panditghar.in/${lang}/blog/${slug}` },
+    "inLanguage": lang === 'hi' ? "hi-IN" : "en-IN",
+    "about": { "@type": "Thing", "name": "Hindu Puja Rituals, Bangalore" },
+    "keywords": isHi
+      ? `${post.hiTitle}, पूजा विधि, बेंगलुरु, पंडित, ${post.shastreeyRef}`
+      : `${post.enTitle}, puja guide, Bangalore pandit, Vedic ritual, ${post.shastreeyRef}`
   };
 
   return (
     <div className="pt-24 pb-16">
       <SEO
-        title={isHi ? `${post.hiTitle} | PanditGhar.in` : `${post.enTitle} | PanditGhar.in`}
-        description={isHi ? post.hiExcerpt : post.enExcerpt}
+        title={isHi
+          ? `${post.hiTitle} — बेंगलुरु पूजा गाइड | PanditGhar.in`
+          : `${post.enTitle} — Bangalore Puja Guide | PanditGhar.in`}
+        description={isHi
+          ? `${post.hiExcerpt} — बेंगलुरु में पंडित बुकिंग के लिए PanditGhar.in से संपर्क करें।`
+          : `${post.enExcerpt} — Contact PanditGhar.in for Pandit booking in Bangalore.`}
         lang={lang}
         path={`/${lang}/blog/${slug}`}
         schema={schema}
