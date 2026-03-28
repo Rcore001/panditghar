@@ -321,7 +321,7 @@ export default function Home({ lang }: { lang: Language }) {
         {/* Hero banner with image + overlay text */}
         <div className="relative h-[280px] md:h-[380px] overflow-hidden">
           <img
-            src={`${import.meta.env.BASE_URL}images/sangh-anushthaan-hero.png`}
+            src={`${import.meta.env.BASE_URL}images/sangh-anushthaan-hero.jpg`}
             alt={isHi ? 'संघ पूजा महायज्ञ' : 'Sangh Puja Mahayagna'}
             className="w-full h-full object-cover"
           />
