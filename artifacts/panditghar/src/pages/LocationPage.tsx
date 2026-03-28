@@ -38,17 +38,26 @@ export default function LocationPage({ lang }: { lang: Language }) {
       "@type": "LocalBusiness",
       "name": "PanditGhar.in",
       "url": SITE_URL,
+      "telephone": "+919329566101",
       "areaServed": [
         { "@type": "City", "name": "Bangalore" },
-        { "@type": "Place", "name": area.name }
-      ]
+        { "@type": "Place", "name": `${area.name}, Bangalore` }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": area.name,
+        "addressRegion": "Karnataka",
+        "addressCountry": "IN"
+      }
     },
     "description": desc,
     "offers": {
       "@type": "Offer",
       "price": service.price,
-      "priceCurrency": "INR"
-    }
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+    },
+    "image": `https://panditghar.in${service.image}`
   };
 
   const includedItems = [
@@ -62,8 +71,12 @@ export default function LocationPage({ lang }: { lang: Language }) {
   return (
     <div className="pt-24 pb-16 bg-background">
       <SEO
-        title={`${title} | PanditGhar.in`}
-        description={desc}
+        title={isHi
+          ? `${area.name} में ${service.hiTitle} — पंडित बुकिंग, मूल्य | PanditGhar.in`
+          : `${service.enTitle} in ${area.name}, Bangalore — Pandit Booking & Price | PanditGhar.in`}
+        description={isHi
+          ? `${area.name}, बेंगलुरु में ${service.hiTitle} के लिए प्रामाणिक उत्तर भारतीय पंडित। ₹${service.price.toLocaleString('en-IN')} से शुरू। पूरी पूजा सामग्री सहित।`
+          : `Authentic North Indian Pandit for ${service.enTitle} in ${area.name}, Bangalore. Starting ₹${service.price.toLocaleString('en-IN')}. Complete samagri included.`}
         lang={lang}
         path={`/${lang}/bangalore/${params.area}/${params.service}`}
         schema={schema}

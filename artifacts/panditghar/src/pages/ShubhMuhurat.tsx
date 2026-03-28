@@ -71,11 +71,23 @@ export default function ShubhMuhurat({ lang }: { lang: Language }) {
     name: title,
     description: desc,
     url: `${SITE_URL}/${lang}/shubh-muhurat-2026`,
-    about: {
-      '@type': 'Thing',
-      name: isHi ? 'हिंदू पंचांग 2026–2027 — वैदिक ज्योतिष' : 'Hindu Panchang 2026–2027 — Vedic Astrology',
+    inLanguage: lang === 'hi' ? 'hi-IN' : 'en-IN',
+    about: [
+      { '@type': 'Thing', name: isHi ? 'हिंदू पंचांग 2026–2027' : 'Hindu Panchang 2026–2027 — Vedic Astrology' },
+      { '@type': 'Event', name: isHi ? 'विवाह मुहूर्त 2026 बेंगलुरु' : 'Vivah Muhurat 2026 Bangalore' },
+      { '@type': 'Event', name: isHi ? 'गृह प्रवेश मुहूर्त 2026 बेंगलुरु' : 'Griha Pravesh Muhurat 2026 Bangalore' },
+    ],
+    provider: {
+      '@type': 'LocalBusiness',
+      name: 'PanditGhar.in',
+      url: SITE_URL,
+      telephone: '+919329566101',
     },
-    provider: { '@type': 'LocalBusiness', name: 'PanditGhar.in' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'PanditGhar.in',
+      url: SITE_URL,
+    },
   };
 
   const vyaparIconMap: Record<string, React.ElementType> = { Car, Home, Store };
@@ -103,8 +115,12 @@ export default function ShubhMuhurat({ lang }: { lang: Language }) {
   return (
     <div className="pt-24 pb-20 bg-background min-h-screen">
       <SEO
-        title={`${title} | PanditGhar.in`}
-        description={desc}
+        title={isHi
+          ? `विवाह व गृह प्रवेश मुहूर्त 2026 बेंगलुरु | शुभ मुहूर्त पंचांग — PanditGhar.in`
+          : `Vivah & Griha Pravesh Muhurat 2026 Bangalore | Shubh Muhurat Panchang — PanditGhar.in`}
+        description={isHi
+          ? `बेंगलुरु के लिए 2026–2027 में विवाह, गृह प्रवेश, सत्यनारायण, मुंडन, नामकरण के शुभ मुहूर्त। वैदिक ज्योतिष आधारित पंचांग।`
+          : `Auspicious Vivah, Griha Pravesh, Satyanarayan, Mundan & Namkaran Muhurat dates for 2026–2027 in Bangalore. Vedic Panchang.`}
         lang={lang}
         path={`/${lang}/shubh-muhurat-2026`}
         schema={schema}
