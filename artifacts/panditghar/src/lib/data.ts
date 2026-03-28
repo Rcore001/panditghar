@@ -24,7 +24,7 @@ export interface Service {
   hiContent: string;
   icon: string;
   image: string;
-  category: 'small' | 'large' | 'sanskar' | 'festival' | 'dosha';
+  category: 'small' | 'large' | 'sanskar' | 'festival' | 'dosha' | 'jyotish';
   samagri: string[];
 }
 
@@ -510,6 +510,150 @@ export const services: Service[] = [
     samagri: ["काले तिल", "जौ", "चावल", "कुश (दर्भ)", "तांबे का कलश", "गंगाजल", "जनेऊ", "पिंड सामग्री (आटे के गोले)", "पान व सुपारी"]
   },
   {
+    id: "rudrachandi",
+    slug: "rudrachandi-path-bangalore",
+    enTitle: "Rudrachandi Path",
+    hiTitle: "रुद्रचण्डी पाठ",
+    price: 11000,
+    icon: "⚡",
+    image: "/images/services/rudrachandi.png",
+    category: "large",
+    shastreeyRef: "प्रमाण: मार्कण्डेय पुराण, दुर्गा सप्तशती (Markandeya Purana, Durga Saptashati)",
+    enDesc: "A powerful combined recitation of Rudrashtadhyayi and Durga Saptashati for protection and victory.",
+    hiDesc: "सुरक्षा और विजय के लिए रुद्राष्टाध्यायी और दुर्गा सप्तशती का शक्तिशाली संयुक्त पाठ।",
+    enContent: "Rudrachandi Path is a combined recitation of Shri Rudra (Yajurveda) and Durga Saptashati (Markandeya Purana). Rудра represents Lord Shiva's protective and destructive aspect while Chandi (Durga) embodies divine feminine power. Together they create an invincible shield of protection. This path is performed for removal of enemies, severe doshas, Kaal Sarp dosh, and to gain victory in legal or personal disputes. Includes Havan, Rudra Ashtadhyayi, all 13 chapters of Saptashati, and full Navarna Mantra japa.",
+    hiContent: "रुद्रचण्डी पाठ श्री रुद्र (यजुर्वेद) और दुर्गा सप्तशती (मार्कण्डेय पुराण) का संयुक्त पाठ है। रुद्र भगवान शिव के रक्षक और संहारक रूप का प्रतिनिधित्व करते हैं जबकि चण्डी (दुर्गा) दिव्य स्त्री शक्ति का अवतार है। साथ मिलकर वे सुरक्षा की अजेय ढाल बनाते हैं। यह पाठ शत्रुओं से मुक्ति, गंभीर दोषों, काल सर्प दोष के निवारण और कानूनी या व्यक्तिगत विवादों में विजय के लिए किया जाता है। इसमें हवन, रुद्र अष्टाध्यायी, सप्तशती के सभी 13 अध्याय और पूर्ण नवार्ण मंत्र जाप शामिल हैं।",
+    samagri: ["हवन कुंड व आम की लकड़ी", "देसी घी", "तिल व जौ", "नवग्रह समिधा", "लाल पुष्प", "नारियल", "बेलपत्र", "धूप व दीपक", "कलश", "लाल वस्त्र", "सिन्दूर", "सप्तशती पुस्तक"]
+  },
+  {
+    id: "navchandi",
+    slug: "navchandi-path-bangalore",
+    enTitle: "Navchandi Path",
+    hiTitle: "नवचण्डी पाठ",
+    price: 15000,
+    icon: "🌟",
+    image: "/images/services/navchandi.png",
+    category: "large",
+    shastreeyRef: "प्रमाण: मार्कण्डेय पुराण, देवी भागवत (Markandeya Purana, Devi Bhagavata)",
+    enDesc: "Nine complete recitations of Durga Saptashati for immense divine blessings and fulfillment of wishes.",
+    hiDesc: "अपार दिव्य आशीर्वाद और मनोकामना पूर्ति के लिए दुर्गा सप्तशती के नौ संपूर्ण पाठ।",
+    enContent: "Navchandi Path involves nine complete consecutive recitations of Durga Saptashati (700 shlokas from Markandeya Purana). The number nine is sacred to Maa Durga representing the Navdurga. This grand path is performed over one or two days with multiple pandits reciting simultaneously. It is prescribed for removal of all types of obstacles, sudden calamities, chronic illness, and to seek the supreme blessings of Maa Bhagawati. Includes Kalaash Sthapana, Havan, and Devi Puja with sixteen Upachars.",
+    hiContent: "नवचण्डी पाठ में दुर्गा सप्तशती (मार्कण्डेय पुराण से 700 श्लोक) के नौ पूर्ण क्रमागत पाठ शामिल हैं। नौ की संख्या नवदुर्गा का प्रतिनिधित्व करते हुए माँ दुर्गा को पवित्र है। यह भव्य पाठ एक या दो दिन में कई पंडितों द्वारा एक साथ किया जाता है। यह सभी प्रकार की बाधाओं, अचानक विपत्तियों, दीर्घकालिक बीमारी को दूर करने और माँ भगवती के परम आशीर्वाद के लिए निर्धारित है। इसमें कलाश स्थापना, हवन और षोडशोपचार देवी पूजा शामिल है।",
+    samagri: ["हवन कुंड व आम की लकड़ी", "देसी घी", "नवग्रह समिधा", "लाल पुष्प (9 प्रकार)", "9 नारियल", "कलश (9)", "लाल वस्त्र (9)", "सिन्दूर", "काजल", "पान (108)", "मिठाई", "फल", "सप्तशती पुस्तक (9)"]
+  },
+  {
+    id: "satchandi",
+    slug: "satchandi-path-bangalore",
+    enTitle: "Satchandi Path",
+    hiTitle: "सतचण्डी पाठ",
+    price: 51000,
+    icon: "🔥",
+    image: "/images/services/satchandi.png",
+    category: "large",
+    shastreeyRef: "प्रमाण: मार्कण्डेय पुराण, तंत्र शास्त्र (Markandeya Purana, Tantra Shastra)",
+    enDesc: "The most powerful 100-recitation Chandi path — an extremely rare and potent mahayagna.",
+    hiDesc: "सबसे शक्तिशाली 100 पाठ चण्डी पाठ — एक अत्यंत दुर्लभ और शक्तिशाली महायज्ञ।",
+    enContent: "Satchandi Path is the apex of Shakti worship — the complete recitation of Durga Saptashati 100 times (Shat = 100, Chandi = Saptashati). This mahayagna is performed over 7 to 11 days by a group of learned pandits. Prescribed in Tantra Shastra for the most difficult life situations: severe black magic (abhichar), intractable doshas, liberation of the deceased, or to propitiate Maa Chandi for extraordinary blessings. Includes elaborate Navarna Mantra Anushthana, 100 Havans, and grand Purnabhishek.",
+    hiContent: "सतचण्डी पाठ शक्ति पूजा का सर्वोच्च स्तर है — दुर्गा सप्तशती का 100 बार पूर्ण पाठ (शत = 100, चण्डी = सप्तशती)। यह महायज्ञ 7 से 11 दिन तक विद्वान पंडितों के समूह द्वारा किया जाता है। तंत्र शास्त्र में सबसे कठिन जीवन परिस्थितियों के लिए निर्धारित: गंभीर काला जादू (अभिचार), अजेय दोष, दिवंगत आत्मा की मुक्ति, या असाधारण आशीर्वाद के लिए माँ चण्डी को प्रसन्न करना। इसमें विस्तृत नवार्ण मंत्र अनुष्ठान, 100 हवन और भव्य पूर्णाभिषेक शामिल हैं।",
+    samagri: ["विशाल हवन कुंड", "100 किग्रा देसी घी", "नवग्रह समिधा (100 सेट)", "100 नारियल", "लाल पुष्प (विशाल मात्रा)", "1008 पान", "सोना/चाँदी (भेंट)", "सप्तशती पुस्तक (100)", "विशेष तांत्रिक सामग्री", "पंचरत्न"]
+  },
+  {
+    id: "laghu-rudra",
+    slug: "laghu-rudra-puja-bangalore",
+    enTitle: "Laghu Rudra",
+    hiTitle: "लघु रुद्र",
+    price: 11000,
+    icon: "🌊",
+    image: "/images/services/laghu-rudra.png",
+    category: "large",
+    shastreeyRef: "प्रमाण: यजुर्वेद, शिव पुराण (Yajurveda, Shiva Purana)",
+    enDesc: "11 recitations of Shri Rudram with Rudrabhishek — highly meritorious puja for Shiva's supreme grace.",
+    hiDesc: "श्री रुद्रम के 11 पाठ और रुद्राभिषेक — शिव की परम कृपा के लिए अत्यंत पुण्यदायी पूजा।",
+    enContent: "Laghu Rudra is a complete Rudrabhishek anushthana involving 11 recitations of Shri Rudram and Chamakam from the Yajurveda (Ekadash Rudri), making it 11 times more potent than a single Rudrabhishek. The Shiva Purana states that Laghu Rudra removes all sins, grants moksha to ancestors, heals chronic diseases, and bestows supreme peace. Performed by multiple pandits, this takes 6-8 hours. It is prescribed for Shani Dosha, Kaal Sarp Dosh, and major life obstacles.",
+    hiContent: "लघु रुद्र एक पूर्ण रुद्राभिषेक अनुष्ठान है जिसमें यजुर्वेद की श्री रुद्रम और चमकम के 11 पाठ (एकादश रुद्री) शामिल हैं, जिससे यह एक साधारण रुद्राभिषेक से 11 गुना अधिक शक्तिशाली हो जाता है। शिव पुराण कहता है कि लघु रुद्र सभी पापों को नष्ट करता है, पूर्वजों को मोक्ष देता है, पुराने रोगों को ठीक करता है और परम शांति प्रदान करता है। कई पंडितों द्वारा किया गया यह 6-8 घंटे लेता है। शनि दोष, काल सर्प दोष और बड़ी जीवन बाधाओं के लिए निर्धारित।",
+    samagri: ["11 बेलपत्र (1008 x 11)", "पंचामृत (दूध, दही, घी, शहद, चीनी) बड़ी मात्रा", "गंगाजल", "धतूरा", "सफेद पुष्प", "चंदन", "विभूति (भस्म)", "रुद्राक्ष माला", "देसी घी के 11 दीपक", "11 नारियल", "कलश"]
+  },
+  {
+    id: "namak-chamak-rudrabhishek",
+    slug: "namak-chamak-rudrabhishek-bangalore",
+    enTitle: "Namak Chamak Rudrabhishek",
+    hiTitle: "नमक चामक रुद्राभिषेक",
+    price: 5100,
+    icon: "💧",
+    image: "/images/services/namak-chamak-rudrabhishek.png",
+    category: "small",
+    shastreeyRef: "प्रमाण: यजुर्वेद, कृष्ण यजुर्वेद (Yajurveda — Namakam & Chamakam)",
+    enDesc: "Traditional Rudrabhishek with full chanting of Namakam (Shri Rudram) and Chamakam from Yajurveda.",
+    hiDesc: "यजुर्वेद के नमकम (श्री रुद्रम) और चमकम के पूर्ण पाठ के साथ पारंपरिक रुद्राभिषेक।",
+    enContent: "Namak Chamak Rudrabhishek is the most classical form of Rudrabhishek where the complete Namakam (Shri Rudra — 11 Anuvakas) and Chamakam (Praises to Shiva — 11 Anuvakas) from the Krishna Yajurveda are chanted in full. 'Namak' refers to the Namakam portion which lists Rudra's 1000 names, and 'Chamak' refers to boons sought from Shiva. This puja bestows good health, removes Vaastu and Graha doshas, and brings peace to the entire household.",
+    hiContent: "नमक चामक रुद्राभिषेक रुद्राभिषेक का सबसे शास्त्रीय रूप है जहाँ कृष्ण यजुर्वेद से पूर्ण नमकम (श्री रुद्र — 11 अनुवाक) और चमकम (शिव की स्तुति — 11 अनुवाक) का पाठ किया जाता है। 'नमक' उस नमकम भाग को संदर्भित करता है जो रुद्र के 1000 नामों को सूचीबद्ध करता है, और 'चमक' शिव से माँगे गए वरदानों को। यह पूजा अच्छा स्वास्थ्य प्रदान करती है, वास्तु और ग्रह दोषों को दूर करती है और पूरे घर में शांति लाती है।",
+    samagri: ["पंचामृत (दूध, दही, घी, शहद, चीनी)", "बेलपत्र (108)", "धतूरा", "सफेद पुष्प", "गंगाजल", "चंदन", "विभूति (भस्म)", "रुद्राक्ष", "देसी घी का दीपक", "नारियल", "पान व सुपारी"]
+  },
+  {
+    id: "kundli-nirman",
+    slug: "kundli-nirman-bangalore",
+    enTitle: "Kundli Nirman",
+    hiTitle: "कुंडली निर्माण",
+    price: 1100,
+    icon: "📜",
+    image: "/images/services/kundli-nirman.png",
+    category: "jyotish",
+    shastreeyRef: "प्रमाण: बृहत् पाराशर होरा शास्त्र, ज्योतिष शास्त्र (Brihat Parashara Hora Shastra)",
+    enDesc: "Detailed Vedic birth chart (Janam Kundali) prepared with precise planetary positions and life analysis.",
+    hiDesc: "सटीक ग्रह स्थिति और जीवन विश्लेषण के साथ विस्तृत वैदिक जन्म कुंडली का निर्माण।",
+    enContent: "Kundli Nirman (birth chart creation) is the foundation of Vedic astrology as codified in the Brihat Parashara Hora Shastra by Maharshi Parashara. Based on exact birth date, time, and place, a complete Janam Kundali is prepared showing all 12 houses, planetary positions (Graha Sthiti), Dasha periods, Yoga formations, and Lagna. The chart includes: Rashi Chart, Navamsha, Bhava Chart, and a personalized life report covering education, career, marriage, health, and spiritual path.",
+    hiContent: "कुंडली निर्माण (जन्म चार्ट निर्माण) वैदिक ज्योतिष की नींव है जैसा कि महर्षि पराशर द्वारा बृहत् पाराशर होरा शास्त्र में संहिताबद्ध किया गया है। जन्म की सटीक तारीख, समय और स्थान के आधार पर सभी 12 भावों, ग्रह स्थिति, दशा काल, योग निर्माण और लग्न के साथ पूरी जन्म कुंडली तैयार की जाती है। चार्ट में शामिल हैं: राशि चार्ट, नवांश, भाव चार्ट और शिक्षा, करियर, विवाह, स्वास्थ्य और आध्यात्मिक पथ को कवर करने वाली व्यक्तिगत जीवन रिपोर्ट।",
+    samagri: []
+  },
+  {
+    id: "kundli-milan",
+    slug: "kundli-milan-bangalore",
+    enTitle: "Kundli Milan",
+    hiTitle: "कुंडली मिलान",
+    price: 1500,
+    icon: "💑",
+    image: "/images/services/kundli-milan.png",
+    category: "jyotish",
+    shastreeyRef: "प्रमाण: बृहत् पाराशर होरा शास्त्र, मुहूर्त चिंतामणि (Brihat Parashara Hora Shastra, Muhurta Chintamani)",
+    enDesc: "Comprehensive horoscope matching for marriage using the 36-point Ashtakoot system.",
+    hiDesc: "विवाह के लिए 36 अंक अष्टकूट पद्धति से व्यापक कुंडली मिलान।",
+    enContent: "Kundli Milan (horoscope matching) is essential before marriage in the Vedic tradition. Using the Ashtakoot (8-factor) system from the Brihat Parashara Hora Shastra and Muhurta Chintamani, 36 points are evaluated including: Varna, Vashya, Tara, Yoni, Graha Maitri, Gana, Bhakoot (Rashi Adhipati), and Nadi. Mangal Dosha, Rajju Dosha, and Vedha are also analyzed. A minimum of 18/36 is required for a compatible match. The full report includes remedies for any deficiency found.",
+    hiContent: "वैदिक परंपरा में विवाह से पहले कुंडली मिलान आवश्यक है। बृहत् पाराशर होरा शास्त्र और मुहूर्त चिंतामणि से अष्टकूट (8 कारक) प्रणाली का उपयोग करके 36 अंकों का मूल्यांकन किया जाता है जिसमें शामिल हैं: वर्ण, वश्य, तारा, योनि, ग्रह मैत्री, गण, भकूट (राशि अधिपति) और नाड़ी। मंगल दोष, राजू दोष और वेध का भी विश्लेषण किया जाता है। अनुकूल मिलान के लिए न्यूनतम 18/36 अंक आवश्यक हैं। पूर्ण रिपोर्ट में पाई गई किसी भी कमी के लिए उपाय शामिल हैं।",
+    samagri: []
+  },
+  {
+    id: "jyotish-paramarsh",
+    slug: "jyotish-paramarsh-bangalore",
+    enTitle: "Jyotish Paramarsh",
+    hiTitle: "ज्योतिष परामर्श",
+    price: 2100,
+    icon: "🔭",
+    image: "/images/services/jyotish-paramarsh.png",
+    category: "jyotish",
+    shastreeyRef: "प्रमाण: बृहत् जातक, सारावली, फलदीपिका (Brihat Jataka, Saravali, Phaladeepika)",
+    enDesc: "Personal astrology consultation to understand your Dasha, planetary effects, and remedies.",
+    hiDesc: "आपकी दशा, ग्रह प्रभाव और उपायों को समझने के लिए व्यक्तिगत ज्योतिष परामर्श।",
+    enContent: "Jyotish Paramarsh is a personal one-on-one consultation with our expert Jyotishi, deeply trained in Brihat Jataka (Varahamihira), Saravali, and Phaladeepika. The session covers: current Dasha-Antardasha analysis, active transits (Gochar), specific life concerns (career, marriage, health, finance), identification of active Yogas (Raj Yoga, Dhana Yoga, etc.), malefic planetary combinations and their effects, and personalized remedies including Mantra, Stotra, Ratna (gemstone), and Upay (ritual remedies). Sessions are available in person or via video call.",
+    hiContent: "ज्योतिष परामर्श एक व्यक्तिगत आमने-सामने परामर्श है जो बृहत् जातक (वराहमिहिर), सारावली और फलदीपिका में गहरे प्रशिक्षित हमारे विशेषज्ञ ज्योतिषी के साथ है। सत्र में शामिल हैं: वर्तमान दशा-अंतर्दशा विश्लेषण, सक्रिय गोचर, विशिष्ट जीवन चिंताएं (करियर, विवाह, स्वास्थ्य, वित्त), सक्रिय योगों की पहचान (राज योग, धन योग आदि), अशुभ ग्रह संयोजन और उनके प्रभाव, और मंत्र, स्तोत्र, रत्न और उपाय (अनुष्ठान उपाय) सहित व्यक्तिगत उपाय। सत्र व्यक्तिगत रूप से या वीडियो कॉल के माध्यम से उपलब्ध हैं।",
+    samagri: []
+  },
+  {
+    id: "vastu-paramarsh",
+    slug: "vastu-paramarsh-bangalore",
+    enTitle: "Vastu Paramarsh",
+    hiTitle: "वास्तु परामर्श",
+    price: 3100,
+    icon: "🧭",
+    image: "/images/services/vastu-paramarsh.png",
+    category: "jyotish",
+    shastreeyRef: "प्रमाण: मयमत, विश्वकर्मा प्रकाश, वास्तु शास्त्र (Mayamata, Vishwakarma Prakasha, Vastu Shastra)",
+    enDesc: "Expert Vastu consultation for home or office to correct energy flows and directions.",
+    hiDesc: "ऊर्जा प्रवाह और दिशाओं को सुधारने के लिए घर या कार्यालय के लिए विशेषज्ञ वास्तु परामर्श।",
+    enContent: "Vastu Paramarsh is an expert consultation based on classical Vastu Shastra texts including Mayamata and Vishwakarma Prakasha. Our Vastu consultant analyzes the complete Vastu of your home or office: entrance direction (Mukha), placement of rooms (Brahmasthan, kitchen, bedroom, pooja room), water bodies, slopes, underground utilities, and the 45 energy fields (Vastu Purusha Mandala). The report provides practical, non-structural corrective measures such as Yantra placement, color therapy, mirror correction, and elemental balancing — without demolition.",
+    hiContent: "वास्तु परामर्श मयमत और विश्वकर्मा प्रकाश सहित शास्त्रीय वास्तु शास्त्र ग्रंथों पर आधारित एक विशेषज्ञ परामर्श है। हमारे वास्तु सलाहकार आपके घर या कार्यालय के संपूर्ण वास्तु का विश्लेषण करते हैं: प्रवेश दिशा (मुख), कमरों का स्थान (ब्रह्मस्थान, रसोई, शयनकक्ष, पूजा कक्ष), जल निकाय, ढलान, भूमिगत उपयोगिताएं और 45 ऊर्जा क्षेत्र (वास्तु पुरुष मंडल)। रिपोर्ट यंत्र स्थापना, रंग चिकित्सा, दर्पण सुधार और तत्व संतुलन जैसे व्यावहारिक, गैर-संरचनात्मक सुधारात्मक उपाय प्रदान करती है — बिना तोड़-फोड़ के।",
+    samagri: []
+  },
+  {
     id: "antim-sanskar",
     slug: "antim-sanskar-bangalore",
     enTitle: "Antim Sanskar",
@@ -534,6 +678,7 @@ export const serviceCategories = [
   { id: 'large', hiLabel: 'कथा / सप्ताह', enLabel: 'Katha Events' },
   { id: 'festival', hiLabel: 'त्यौहार पूजा', enLabel: 'Festival Pujas' },
   { id: 'dosha', hiLabel: 'दोष शांति', enLabel: 'Dosha Shanti' },
+  { id: 'jyotish', hiLabel: 'ज्योतिष व वास्तु', enLabel: 'Jyotish & Vastu' },
 ];
 
 export const locations = [
