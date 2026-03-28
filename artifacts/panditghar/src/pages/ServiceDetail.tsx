@@ -1161,14 +1161,25 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
     ];
   }
 
-  function extractHowToStepsHi(text: string, serviceNameHi: string): { name: string; text: string }[] {
-    return [
+  function extractHowToStepsHi(hiContent: string, serviceNameHi: string): { name: string; text: string }[] {
+    const commonStart = [
       { name: "बुकिंग व मुहूर्त", text: `${serviceNameHi} के लिए PanditGhar.in को +91 93295 66101 पर व्हाट्सएप करें। बुकिंग फॉर्म भरें और शुभ मुहूर्त निर्धारित करें।` },
       { name: "सामग्री सूची", text: "व्हाट्सएप पर पूरी पूजा सामग्री सूची प्राप्त करें। स्वयं व्यवस्था करें या हमारी टीम आपकी ओर से खरीद सकती है।" },
-      { name: "संकल्प", text: `पंडित जी ${serviceNameHi} का उद्देश्य स्थापित करते हुए औपचारिक संकल्प लेते हैं।` },
-      { name: "गणपति पूजा", text: "सभी बाधाओं को दूर करने के लिए पहले भगवान गणेश की पूजा की जाती है।" },
-      { name: "मुख्य विधि", text: `${serviceNameHi} की मुख्य वैदिक विधि — मंत्रोच्चार, हवन और शास्त्रों के अनुसार आहुतियों के साथ संपन्न की जाती है।` },
-      { name: "आरती और प्रसाद", text: "आरती की जाती है और परिवार के सभी सदस्यों व अतिथियों को प्रसाद दिया जाता है।" },
+    ];
+    const sentenceRegex = /[^।!?]*(?:पूजा|हवन|मंत्र|आरती|संकल्प|अभिषेक|पाठ|विधि|प्रसाद|दान|स्थापन|आहुति|होम|चालीसा)[^।!?]*[।!?]/g;
+    const rawMatches = Array.from(hiContent.matchAll(sentenceRegex)).map(m => m[0].trim()).filter(s => s.length > 20 && s.length < 200);
+    const dedupedMatches = rawMatches.filter((s, i, arr) => arr.findIndex(x => x.slice(0, 30) === s.slice(0, 30)) === i).slice(0, 5);
+    const ritualSteps = dedupedMatches.length >= 2
+      ? dedupedMatches.map((s, i) => ({ name: `चरण ${i + 1}`, text: s }))
+      : [
+          { name: "संकल्प", text: `पंडित जी ${serviceNameHi} का उद्देश्य स्थापित करते हुए औपचारिक संकल्प लेते हैं।` },
+          { name: "गणपति पूजा", text: "सभी बाधाओं को दूर करने के लिए पहले भगवान गणेश की पूजा की जाती है।" },
+          { name: "मुख्य विधि", text: `${serviceNameHi} की मुख्य वैदिक विधि — मंत्रोच्चार, हवन और शास्त्रों के अनुसार आहुतियों के साथ संपन्न की जाती है।` },
+          { name: "आरती और प्रसाद", text: "आरती की जाती है और परिवार के सभी सदस्यों व अतिथियों को प्रसाद दिया जाता है।" },
+        ];
+    return [
+      ...commonStart,
+      ...ritualSteps,
       { name: "आशीर्वाद", text: `पंडित जी ${serviceNameHi} के बाद की परंपराओं के बारे में मार्गदर्शन और आशीर्वाद देते हैं।` },
     ];
   }
