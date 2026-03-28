@@ -5,7 +5,7 @@ import { SITE_URL } from '@/lib/config';
 import { DecorativeDivider, OmIcon } from '@/components/ui/decorative';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
-import { CheckCircle2, Star } from 'lucide-react';
+import { CheckCircle2, Star, MessageCircle } from 'lucide-react';
 import { BookingForm } from '@/components/BookingForm';
 import {
   ScrollReveal,
@@ -18,6 +18,49 @@ import {
   GlowPulse,
 } from '@/components/ui/animated';
 import { ServiceCardImage } from '@/components/ServiceCardImage';
+
+const sanghPackages = [
+  {
+    count: 11,
+    icon: '🔥',
+    enName: 'Laghu Anushthaan',
+    hiName: 'लघु अनुष्ठान',
+    enType: 'Ekadash Rudri, small group yagnas',
+    hiType: 'एकादश रुद्री, लघु समूह यज्ञ',
+  },
+  {
+    count: 21,
+    icon: '⚡',
+    enName: 'Madhyam Anushthaan',
+    hiName: 'मध्यम अनुष्ठान',
+    enType: 'Navchandi, group havans',
+    hiType: 'नवचण्डी, समूह हवन',
+  },
+  {
+    count: 51,
+    icon: '🌟',
+    enName: 'Brihat Yagna',
+    hiName: 'बृहत् यज्ञ',
+    enType: 'Satchandi, community yagnas',
+    hiType: 'सतचण्डी, सामुदायिक यज्ञ',
+  },
+  {
+    count: 108,
+    icon: '🔱',
+    enName: 'Maha Anushthaan',
+    hiName: 'महा अनुष्ठान',
+    enType: 'Sahastra Abhishek, Sahastra Chandi',
+    hiType: 'सहस्र अभिषेक, सहस्र चण्डी',
+  },
+  {
+    count: 1008,
+    icon: '🕉️',
+    enName: 'Mahayagna',
+    hiName: 'महायज्ञ',
+    enType: 'Laksha Chandi — supreme grand yagna',
+    hiType: 'लक्षचण्डी — परम महायज्ञ',
+  },
+];
 
 export default function Home({ lang }: { lang: Language }) {
   const t = useTranslation(lang);
@@ -158,7 +201,7 @@ export default function Home({ lang }: { lang: Language }) {
           <div className="flex flex-wrap justify-around items-center gap-4 px-6 font-medium text-sm sm:text-base">
             <div className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5" /> 20+ Years Exp.</div>
             <div className="hidden md:block w-px h-6 bg-secondary/20" />
-            <div className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5" /> North Indian Brahmin</div>
+            <div className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5" /> 500+ Expert Pandits</div>
             <div className="hidden md:block w-px h-6 bg-secondary/20" />
             <div className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5" /> Samagri Included</div>
             <div className="hidden lg:block w-px h-6 bg-secondary/20" />
@@ -174,9 +217,9 @@ export default function Home({ lang }: { lang: Language }) {
         <section className="py-10 px-4">
           <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { num: 1800, suffix: '+', label: isHi ? 'परिवार सेवित' : 'Families Served' },
+              { num: 5000, suffix: '+', label: isHi ? 'परिवार सेवित' : 'Families Served' },
               { num: 20, suffix: '+', label: isHi ? 'वर्षों का अनुभव' : 'Years Experience' },
-              { num: 50, suffix: '+', label: isHi ? 'सेवाएं उपलब्ध' : 'Services Available' },
+              { num: 500, suffix: '+', label: isHi ? 'विशेषज्ञ पंडित' : 'Expert Pandits' },
               { num: 30, suffix: '+', label: isHi ? 'क्षेत्र कवर' : 'Areas Covered' },
             ].map((stat, i) => (
               <motion.div
@@ -271,6 +314,101 @@ export default function Home({ lang }: { lang: Language }) {
             </Link>
           </div>
         </ScrollReveal>
+      </section>
+
+      {/* ─── Sangh Anushthaan / Agency Section ─── */}
+      <section className="relative overflow-hidden">
+        {/* Hero banner with image + overlay text */}
+        <div className="relative h-[280px] md:h-[380px] overflow-hidden">
+          <img
+            src={`${import.meta.env.BASE_URL}images/sangh-anushthaan-hero.png`}
+            alt={isHi ? 'संघ पूजा महायज्ञ' : 'Sangh Puja Mahayagna'}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(61,10,10,0.75) 0%, rgba(61,10,10,0.55) 50%, rgba(61,10,10,0.95) 100%)' }} />
+          <FloatingSymbol symbol="ॐ" size={72} x="5%" y="10%" duration={10} delay={0} opacity={0.07} />
+          <FloatingSymbol symbol="ॐ" size={44} x="88%" y="60%" duration={12} delay={2} opacity={0.05} />
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10">
+            <ScrollReveal>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 border border-accent/40 backdrop-blur-sm mb-4">
+                <OmIcon className="w-4 h-4 text-accent" />
+                <span className={`text-accent text-sm font-medium ${isHi ? 'font-hindi' : ''}`}>
+                  {isHi ? 'पंडितगृह संस्था — बड़े अनुष्ठान विशेषज्ञ' : 'PanditGhar Agency — Large-Scale Ritual Specialists'}
+                </span>
+              </div>
+              <h2 className={`text-3xl md:text-5xl font-display font-bold text-accent mb-4 drop-shadow-lg ${isHi ? 'font-hindi' : ''}`}>
+                {isHi ? 'संघ पूजा एवं बड़े अनुष्ठान' : 'Sangh Puja & Bade Anushthaan'}
+              </h2>
+              <p className={`text-base md:text-lg text-white/85 max-w-2xl leading-relaxed ${isHi ? 'font-hindi' : ''}`}>
+                {isHi
+                  ? 'मंदिर, सोसायटी, कॉर्पोरेट एवं पारिवारिक अनुष्ठानों हेतु — 11 से 1008 पंडितों की व्यवस्था'
+                  : 'For temples, societies, corporate events & family ceremonies — 11 to 1008 pandits arranged'}
+              </p>
+            </ScrollReveal>
+          </div>
+        </div>
+
+        {/* Package Cards + CTA */}
+        <div className="bg-gradient-maroon py-12 px-4 sm:px-6 lg:px-8">
+          <FloatingOrb size={180} color="rgba(255,153,0,0.06)" x="0%" y="0%" duration={10} />
+          <FloatingOrb size={120} color="rgba(255,204,0,0.05)" x="80%" y="50%" duration={8} delay={2} />
+
+          <StaggerContainer className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-10">
+            {sanghPackages.map((pkg) => (
+              <StaggerItem key={pkg.count}>
+                <a
+                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(isHi ? `नमस्ते, मुझे ${pkg.hiName} (${pkg.count} पंडित) के लिए जानकारी चाहिए।` : `Namaste, I am interested in the ${pkg.enName} package (${pkg.count} pandits). Please share details.`)}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block h-full"
+                >
+                  <div className="bg-white/10 backdrop-blur-sm border border-accent/30 rounded-2xl p-5 text-center hover:bg-white/20 hover:border-accent/70 transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between min-h-[180px]">
+                    <div>
+                      <div className="text-3xl mb-2">{pkg.icon}</div>
+                      <div className="text-4xl font-bold text-accent font-display mb-0.5 leading-none">{pkg.count}</div>
+                      <div className={`text-white/50 text-xs mb-2 uppercase tracking-wide ${isHi ? 'font-hindi' : ''}`}>
+                        {isHi ? 'पंडित' : 'Pandits'}
+                      </div>
+                      <div className={`text-white font-semibold text-sm mb-1 ${isHi ? 'font-hindi' : ''}`}>
+                        {isHi ? pkg.hiName : pkg.enName}
+                      </div>
+                      <div className={`text-white/65 text-xs leading-snug ${isHi ? 'font-hindi' : ''}`}>
+                        {isHi ? pkg.hiType : pkg.enType}
+                      </div>
+                    </div>
+                    <div className={`mt-4 text-accent/70 text-xs font-medium group-hover:text-accent transition-colors ${isHi ? 'font-hindi' : ''}`}>
+                      {isHi ? 'कोटेशन लें →' : 'Get Quote →'}
+                    </div>
+                  </div>
+                </a>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+
+          {/* WhatsApp CTA */}
+          <ScrollReveal delay={0.15}>
+            <div className="text-center">
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(isHi ? 'नमस्ते, मुझे संघ पूजा / बड़े अनुष्ठान के लिए कोटेशन चाहिए।' : 'Namaste, I would like a quote for a Sangh Puja or large-scale Anushthaan.')}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <GlowPulse className="w-80 h-20 bg-green-400/20 left-1/2 -translate-x-1/2 bottom-0 rounded-full" />
+                <Button className="relative bg-[#25D366] hover:bg-[#1da855] text-white rounded-full px-10 py-7 text-lg font-semibold border-none shadow-xl hover:shadow-2xl transition-all gap-3">
+                  <MessageCircle className="w-6 h-6" />
+                  <span className={isHi ? 'font-hindi' : ''}>
+                    {isHi ? 'व्हाट्सएप पर कस्टम कोटेशन पाएं' : 'Get a Custom Quote on WhatsApp'}
+                  </span>
+                </Button>
+              </a>
+              <p className={`mt-4 text-white/55 text-sm max-w-xl mx-auto leading-relaxed ${isHi ? 'font-hindi' : ''}`}>
+                {isHi
+                  ? 'सभी पैकेज में शामिल: स्थान सजावट, पूजा सामग्री, पूर्ण समन्वय एवं अनुभवी पंडित दल'
+                  : 'All packages include: venue setup, complete samagri, full coordination & experienced pandit team'}
+              </p>
+            </div>
+          </ScrollReveal>
+        </div>
       </section>
 
       {/* ─── Shastreey Intro ─── */}
