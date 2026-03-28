@@ -828,3 +828,151 @@ export const muhurats = [
   { date: "9 Dec 2026", day: "Wednesday", occasion: "Uttara Bhadra Nakshatra", time: "08:00 AM - 12:30 PM", type: "Vivah / Akhand Ramayan" },
   { date: "15 Dec 2026", day: "Tuesday", occasion: "Mrigashira Nakshatra", time: "09:00 AM - 01:00 PM", type: "Vivah / Griha Pravesh" },
 ];
+
+export const satyanarayan2026: { date: string; day_en: string; day_hi: string; maas_en: string; maas_hi: string }[] = [
+  { date: "03 Jan", day_en: "Saturday", day_hi: "शनिवार", maas_en: "Paush Purnima", maas_hi: "पौष पूर्णिमा" },
+  { date: "01 Feb", day_en: "Sunday", day_hi: "रविवार", maas_en: "Magha Purnima", maas_hi: "माघ पूर्णिमा" },
+  { date: "03 Mar", day_en: "Tuesday", day_hi: "मंगलवार", maas_en: "Phalguna Purnima", maas_hi: "फाल्गुन पूर्णिमा" },
+  { date: "01 Apr", day_en: "Wednesday", day_hi: "बुधवार", maas_en: "Chaitra Purnima", maas_hi: "चैत्र पूर्णिमा" },
+  { date: "01 May", day_en: "Friday", day_hi: "शुक्रवार", maas_en: "Vaishakha Purnima", maas_hi: "वैशाख पूर्णिमा" },
+  { date: "31 May", day_en: "Sunday", day_hi: "रविवार", maas_en: "Jyeshtha Adhika Purnima", maas_hi: "ज्येष्ठ अधिक पूर्णिमा" },
+  { date: "29 Jun", day_en: "Monday", day_hi: "सोमवार", maas_en: "Jyeshtha Purnima", maas_hi: "ज्येष्ठ पूर्णिमा" },
+  { date: "29 Jul", day_en: "Wednesday", day_hi: "बुधवार", maas_en: "Ashadha / Guru Purnima", maas_hi: "आषाढ़ / गुरु पूर्णिमा" },
+  { date: "28 Aug", day_en: "Friday", day_hi: "शुक्रवार", maas_en: "Shravana Purnima", maas_hi: "श्रावण पूर्णिमा" },
+  { date: "26 Sep", day_en: "Saturday", day_hi: "शनिवार", maas_en: "Bhadrapada Purnima", maas_hi: "भाद्रपद पूर्णिमा" },
+  { date: "26 Oct", day_en: "Monday", day_hi: "सोमवार", maas_en: "Ashwin / Sharad Purnima", maas_hi: "आश्विन / शरद पूर्णिमा" },
+  { date: "24 Nov", day_en: "Tuesday", day_hi: "मंगलवार", maas_en: "Kartika Purnima", maas_hi: "कार्तिक पूर्णिमा" },
+  { date: "23 Dec", day_en: "Wednesday", day_hi: "बुधवार", maas_en: "Margashirsha Purnima", maas_hi: "मार्गशीर्ष पूर्णिमा" },
+];
+
+export const satyanarayan2027: { date: string; day_en: string; day_hi: string; maas_en: string; maas_hi: string }[] = [
+  { date: "22 Jan", day_en: "Friday", day_hi: "शुक्रवार", maas_en: "Paush Purnima", maas_hi: "पौष पूर्णिमा" },
+  { date: "20 Feb", day_en: "Saturday", day_hi: "शनिवार", maas_en: "Magha Purnima", maas_hi: "माघ पूर्णिमा" },
+  { date: "22 Mar", day_en: "Monday", day_hi: "सोमवार", maas_en: "Phalguna Purnima", maas_hi: "फाल्गुन पूर्णिमा" },
+  { date: "20 Apr", day_en: "Tuesday", day_hi: "मंगलवार", maas_en: "Chaitra Purnima", maas_hi: "चैत्र पूर्णिमा" },
+  { date: "20 May", day_en: "Thursday", day_hi: "गुरुवार", maas_en: "Vaishakha Purnima", maas_hi: "वैशाख पूर्णिमा" },
+  { date: "18 Jun", day_en: "Friday", day_hi: "शुक्रवार", maas_en: "Jyeshtha Purnima", maas_hi: "ज्येष्ठ पूर्णिमा" },
+  { date: "18 Jul", day_en: "Sunday", day_hi: "रविवार", maas_en: "Ashadha Purnima", maas_hi: "आषाढ़ पूर्णिमा" },
+  { date: "17 Aug", day_en: "Tuesday", day_hi: "मंगलवार", maas_en: "Shravana Purnima", maas_hi: "श्रावण पूर्णिमा" },
+  { date: "15 Sep", day_en: "Wednesday", day_hi: "बुधवार", maas_en: "Bhadrapada Purnima", maas_hi: "भाद्रपद पूर्णिमा" },
+  { date: "15 Oct", day_en: "Friday", day_hi: "शुक्रवार", maas_en: "Ashwin Purnima", maas_hi: "आश्विन पूर्णिमा" },
+  { date: "14 Nov", day_en: "Sunday", day_hi: "रविवार", maas_en: "Kartika Purnima", maas_hi: "कार्तिक पूर्णिमा" },
+  { date: "13 Dec", day_en: "Monday", day_hi: "सोमवार", maas_en: "Margashirsha Purnima", maas_hi: "मार्गशीर्ष पूर्णिमा" },
+];
+
+export const vivahMuhurat2026: { month_en: string; month_hi: string; dates: number[]; note_en?: string; note_hi?: string }[] = [
+  { month_en: "February", month_hi: "फरवरी", dates: [5, 6, 8, 10, 12, 14, 19, 20, 21, 24, 25, 26] },
+  { month_en: "March", month_hi: "मार्च", dates: [2, 3, 4, 7, 8, 9, 11, 12] },
+  { month_en: "April", month_hi: "अप्रैल", dates: [15, 20, 21, 25, 26, 27, 28, 29] },
+  { month_en: "May", month_hi: "मई", dates: [1, 3, 5, 6, 7, 8, 13, 14] },
+  { month_en: "June", month_hi: "जून", dates: [21, 22, 23, 24, 25, 26, 27, 29] },
+  { month_en: "July", month_hi: "जुलाई", dates: [1, 6, 7, 11], note_en: "Chaturmas begins after this — no further marriages", note_hi: "इसके बाद चातुर्मास शुरू — विवाह वर्जित" },
+  { month_en: "August – October", month_hi: "अगस्त – अक्टूबर", dates: [], note_en: "Chaturmas period — marriages not permitted", note_hi: "चातुर्मास काल — विवाह वर्जित" },
+  { month_en: "November", month_hi: "नवंबर", dates: [21, 24, 25, 26], note_en: "After Devuthani Ekadashi (15 Nov)", note_hi: "देवउठनी एकादशी (15 नव.) के बाद" },
+  { month_en: "December", month_hi: "दिसंबर", dates: [2, 3, 4, 5, 6, 11, 12] },
+];
+
+export const vivahMuhurat2027: { month_en: string; month_hi: string; dates: number[] }[] = [
+  { month_en: "January", month_hi: "जनवरी", dates: [14, 18, 24, 31] },
+  { month_en: "April", month_hi: "अप्रैल", dates: [18, 22, 23, 25, 28] },
+  { month_en: "May", month_hi: "मई", dates: [3, 7, 9, 16, 23, 24, 30, 31] },
+  { month_en: "June", month_hi: "जून", dates: [10, 13, 16, 21] },
+];
+
+export const grahaPraveshMuhurat2026: { month_en: string; month_hi: string; dates: number[] }[] = [
+  { month_en: "February", month_hi: "फरवरी", dates: [6, 11, 19, 20, 21, 25, 26] },
+  { month_en: "March", month_hi: "मार्च", dates: [4, 5, 6, 9, 13, 14] },
+  { month_en: "April", month_hi: "अप्रैल", dates: [20, 23, 29] },
+  { month_en: "May", month_hi: "मई", dates: [1, 4, 6, 8, 11, 13] },
+  { month_en: "June", month_hi: "जून", dates: [24, 26, 27] },
+  { month_en: "July", month_hi: "जुलाई", dates: [1, 2, 6] },
+  { month_en: "November", month_hi: "नवंबर", dates: [11, 14, 20, 25, 26] },
+  { month_en: "December", month_hi: "दिसंबर", dates: [2, 3, 4, 10, 12, 14] },
+];
+
+export const namkaranRules = {
+  shubhVaar: {
+    en: "Monday, Wednesday, Thursday, Friday",
+    hi: "सोमवार, बुधवार, गुरुवार और शुक्रवार",
+  },
+  shubhNakshatra: {
+    en: "Ashwini, Rohini, Mrigashira, Pushya, Hasta, Chitra, Swati, Anuradha, Shravan, Revati",
+    hi: "अश्विनी, रोहिणी, मृगशिरा, पुष्य, हस्त, चित्रा, स्वाति, अनुराधा, श्रवण और रेवती",
+  },
+  varjit: {
+    en: "Rikta Tithis (4th, 9th, 14th), Amavasya, and Eclipse periods",
+    hi: "रिक्ता तिथियां (4, 9, 14), अमावस्या और ग्रहण काल",
+  },
+};
+
+export const mundanRules = {
+  niyam: {
+    en: "For boys: odd birth years (1st, 3rd, 5th year) · For girls: even birth years (2nd, 4th year)",
+    hi: "लड़कों के लिए जन्म के विषम वर्ष (1, 3, 5) में · लड़कियों के लिए सम वर्ष (2, 4) में",
+  },
+  shubhMaah: {
+    en: "Magha, Phalguna, Chaitra, Vaishakha, Jyeshtha, Ashadha (before Devshayani Ekadashi)",
+    hi: "माघ, फाल्गुन, चैत्र, वैशाख, ज्येष्ठ और आषाढ़ (देवशयनी एकादशी से पहले)",
+  },
+  abujhMuhurat: {
+    en: "Akshaya Tritiya, Ram Navami, and Basant Panchami — ideal without consulting Panchang",
+    hi: "अक्षय तृतीया, राम नवमी और बसंत पंचमी — बिना पंचांग देखे उत्तम",
+  },
+};
+
+export const vyaparRules: { type_en: string; type_hi: string; iconName: string; rule_en: string; rule_hi: string }[] = [
+  {
+    type_en: "Vehicle (Vahan) Purchase",
+    type_hi: "वाहन खरीद",
+    iconName: "Car",
+    rule_en: "Thursday & Friday · Pushya, Punarvasu, Swati nakshatra preferred",
+    rule_hi: "गुरुवार और शुक्रवार · पुष्य, पुनर्वसु, स्वाति नक्षत्र में",
+  },
+  {
+    type_en: "Land / Property Purchase",
+    type_hi: "भूमि / संपत्ति खरीद",
+    iconName: "Home",
+    rule_en: "Tuesday is most auspicious (Mars is the lord of land)",
+    rule_hi: "मंगलवार सबसे उत्तम (मंगल भूमि का कारक है)",
+  },
+  {
+    type_en: "New Business / Shop Opening",
+    type_hi: "नई दुकान / व्यापार प्रारंभ",
+    iconName: "Store",
+    rule_en: "Wednesday & Thursday · Fixed Lagna: Vrishabha, Singh, Vrishchik or Kumbha",
+    rule_hi: "बुधवार और गुरुवार को वृषभ, सिंह, वृश्चिक या कुंभ लग्न (स्थिर लग्न) में",
+  },
+];
+
+export const abujhMuhuratList: { name_en: string; name_hi: string; use_en: string; use_hi: string }[] = [
+  {
+    name_en: "Basant Panchami",
+    name_hi: "बसंत पंचमी",
+    use_en: "Sagai, Vidyarambh, and all new auspicious beginnings",
+    use_hi: "सगाई, विद्यारंभ और नए शुभ कार्यों के लिए",
+  },
+  {
+    name_en: "Gudi Padwa / Chaitra Navratri Pratipada",
+    name_hi: "गुड़ी पड़वा / चैत्र नवरात्रि प्रतिपदा",
+    use_en: "Inauguration of new home or business",
+    use_hi: "नए घर या व्यापार की शुरुआत के लिए",
+  },
+  {
+    name_en: "Akshaya Tritiya (Akha Teej)",
+    name_hi: "अक्षय तृतीया (अखा तीज)",
+    use_en: "Best for buying gold and for marriage ceremonies",
+    use_hi: "सोना खरीदने और विवाह के लिए सर्वोत्तम",
+  },
+  {
+    name_en: "Vijayadashami (Dussehra)",
+    name_hi: "विजयादशमी (दशहरा)",
+    use_en: "Vehicle and property purchase",
+    use_hi: "वाहन और संपत्ति खरीदने के लिए",
+  },
+  {
+    name_en: "Devuthani Ekadashi",
+    name_hi: "देवउठनी एकादशी",
+    use_en: "All auspicious events and commencement of the marriage season",
+    use_hi: "सभी मंगल कार्यों और विवाह सीजन की शुरुआत के लिए",
+  },
+];
