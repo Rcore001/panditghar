@@ -4,13 +4,14 @@ import { SEO } from '@/components/SEO';
 import { DecorativeDivider } from '@/components/ui/decorative';
 import { Button } from '@/components/ui/button';
 import { BookingForm } from '@/components/BookingForm';
-import { CheckCircle2, ChevronRight, BookOpen, PhoneCall, AlertCircle, ShoppingBag, Car } from 'lucide-react';
+import { CheckCircle2, BookOpen, PhoneCall, AlertCircle, ShoppingBag, Car } from 'lucide-react';
 import NotFound from './not-found';
 import { motion } from 'framer-motion';
 import { WHATSAPP_NUMBER } from '@/lib/data';
 import { ScrollReveal, StaggerContainer, StaggerItem } from '@/components/ui/animated';
 import { ServiceCardImage } from '@/components/ServiceCardImage';
 import { SITE_URL } from '@/lib/config';
+import { Breadcrumb } from '@/components/Breadcrumb';
 
 interface FAQ {
   q_hi: string;
@@ -1198,17 +1199,15 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
         />
         <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/60 to-transparent" />
         <div className="absolute inset-0 flex flex-col justify-end p-8 max-w-7xl mx-auto w-full left-0 right-0">
-          <nav className="flex text-sm text-white/60 mb-4 items-center gap-1">
-            <Link href={`/${lang}`} className="hover:text-accent transition-colors">
-              {isHi ? 'होम' : 'Home'}
-            </Link>
-            <ChevronRight className="w-3 h-3" />
-            <Link href={`/${lang}/services`} className="hover:text-accent transition-colors">
-              {isHi ? 'सेवाएं' : 'Services'}
-            </Link>
-            <ChevronRight className="w-3 h-3" />
-            <span className="text-white/90">{title}</span>
-          </nav>
+          <Breadcrumb
+            items={[
+              { label: isHi ? 'सेवाएं' : 'Services', href: `/${lang}/services` },
+              { label: title },
+            ]}
+            lang={lang}
+            inverted
+            className="mb-4"
+          />
           <h1 className={`text-4xl md:text-5xl font-display font-bold text-accent mb-2 drop-shadow-md ${isHi ? 'font-hindi' : ''}`}>
             {title}
           </h1>

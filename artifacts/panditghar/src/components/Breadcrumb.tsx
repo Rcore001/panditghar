@@ -12,9 +12,10 @@ interface BreadcrumbProps {
   items: BreadcrumbItem[];
   lang: Language;
   className?: string;
+  inverted?: boolean;
 }
 
-export function Breadcrumb({ items, lang, className = '' }: BreadcrumbProps) {
+export function Breadcrumb({ items, lang, className = '', inverted = false }: BreadcrumbProps) {
   const isHi = lang === 'hi';
   const homeLabel = isHi ? 'होम' : 'Home';
 
@@ -34,6 +35,11 @@ export function Breadcrumb({ items, lang, className = '' }: BreadcrumbProps) {
     })),
   };
 
+  const baseColor = inverted ? 'text-white/60' : 'text-muted-foreground';
+  const linkHover = inverted ? 'hover:text-accent' : 'hover:text-primary';
+  const lastColor = inverted ? 'text-white/90' : 'text-foreground';
+  const chevronColor = inverted ? 'text-white/30' : 'text-muted-foreground/50';
+
   return (
     <>
       <script
@@ -42,7 +48,7 @@ export function Breadcrumb({ items, lang, className = '' }: BreadcrumbProps) {
       />
       <nav
         aria-label="breadcrumb"
-        className={`flex items-center flex-wrap gap-1 text-sm text-muted-foreground ${isHi ? 'font-hindi' : ''} ${className}`}
+        className={`flex items-center flex-wrap gap-1 text-sm ${baseColor} ${isHi ? 'font-hindi' : ''} ${className}`}
       >
         {allItems.map((item, index) => {
           const isLast = index === allItems.length - 1;
@@ -52,16 +58,16 @@ export function Breadcrumb({ items, lang, className = '' }: BreadcrumbProps) {
               {item.href && !isLast ? (
                 <Link
                   href={item.href}
-                  className="hover:text-primary transition-colors"
+                  className={`${linkHover} transition-colors`}
                 >
                   {item.label}
                 </Link>
               ) : (
-                <span className={isLast ? 'text-foreground font-medium' : ''}>
+                <span className={isLast ? `${lastColor} font-medium` : ''}>
                   {item.label}
                 </span>
               )}
-              {!isLast && <ChevronRight className="w-3.5 h-3.5 shrink-0 text-muted-foreground/50" />}
+              {!isLast && <ChevronRight className={`w-3.5 h-3.5 shrink-0 ${chevronColor}`} />}
             </span>
           );
         })}

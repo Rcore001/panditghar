@@ -7,6 +7,7 @@ import { MapPin, CheckCircle2 } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
 import { motion } from 'framer-motion';
 import { ScrollReveal, StaggerContainer, StaggerItem, TiltCard } from '@/components/ui/animated';
+import { Breadcrumb } from '@/components/Breadcrumb';
 
 export default function LocationPage({ lang }: { lang: Language }) {
   const [match, params] = useRoute("/:lang/bangalore/:area/:service");
@@ -69,6 +70,15 @@ export default function LocationPage({ lang }: { lang: Language }) {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-6">
+          <Breadcrumb
+            items={[
+              { label: isHi ? 'सेवाएं' : 'Services', href: `/${lang}/services` },
+              { label: isHi ? `${area.name}` : `${area.name}, Bangalore` },
+            ]}
+            lang={lang}
+          />
+        </div>
         <ScrollReveal direction="up">
           <div className="bg-gradient-maroon rounded-3xl p-8 md:p-12 text-white shadow-2xl relative overflow-hidden mb-12">
             <div className="absolute top-0 right-0 p-8 opacity-20">
