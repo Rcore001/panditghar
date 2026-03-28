@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Language, useTranslation } from '@/lib/data';
 import { SEO } from '@/components/SEO';
@@ -796,6 +797,25 @@ A: Navgrah Puja involves ritual worship and mantra chanting. Navgrah Homa adds a
   }
 };
 
+function BlogCardImage({ src, alt, icon }: { src?: string; alt: string; icon: string }) {
+  const [imgFailed, setImgFailed] = useState(false);
+  if (!src || imgFailed) {
+    return (
+      <div className="bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center w-full h-full text-7xl">
+        {icon}
+      </div>
+    );
+  }
+  return (
+    <img
+      src={src}
+      alt={alt}
+      className="w-full h-full object-cover"
+      onError={() => setImgFailed(true)}
+    />
+  );
+}
+
 export default function Blog({ lang }: { lang: Language }) {
   const t = useTranslation(lang);
   const isHi = lang === 'hi';
@@ -840,26 +860,12 @@ export default function Blog({ lang }: { lang: Language }) {
           {blogPosts.map((post) => (
             <StaggerItem key={post.slug}>
               <TiltCard intensity={4} className="bg-card rounded-2xl border border-border shadow-md overflow-hidden flex flex-col md:flex-row">
-                <div className="relative min-w-[220px] w-full md:w-[220px] h-[180px] md:h-auto flex-shrink-0 overflow-hidden">
-                  {post.image && (
-                    <img
-                      src={post.image}
-                      alt={isHi ? post.hiTitle : post.enTitle}
-                      className="w-full h-full object-cover"
-                      onError={(e) => {
-                        const t = e.currentTarget as HTMLImageElement;
-                        t.style.display = 'none';
-                        const fb = t.nextElementSibling as HTMLElement | null;
-                        if (fb) fb.style.display = 'flex';
-                      }}
-                    />
-                  )}
-                  <div
-                    className="bg-gradient-to-br from-primary/20 to-secondary/20 items-center justify-center w-full h-full text-7xl absolute inset-0"
-                    style={{ display: post.image ? 'none' : 'flex' }}
-                  >
-                    {post.icon}
-                  </div>
+                <div className="min-w-[220px] w-full md:w-[220px] h-[180px] md:h-auto flex-shrink-0 overflow-hidden">
+                  <BlogCardImage
+                    src={post.image}
+                    alt={isHi ? post.hiTitle : post.enTitle}
+                    icon={post.icon}
+                  />
                 </div>
                 <div className="p-8 flex-1">
                   <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
