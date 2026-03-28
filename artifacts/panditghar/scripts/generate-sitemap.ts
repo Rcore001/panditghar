@@ -123,3 +123,31 @@ ${entries.join('\n\n')}
 const outPath = resolve(import.meta.dirname, '..', 'public', 'sitemap.xml');
 writeFileSync(outPath, xml, 'utf-8');
 console.log(`[sitemap] Generated ${entries.length} URL entries → ${outPath}`);
+
+// Generate 404.html with the correct base path derived from GHPAGES_BASE (or / for Vercel).
+// This keeps the SPA redirect trick aligned with the actual build base path.
+const ghpagesBase = (process.env.GHPAGES_BASE ?? process.env.BASE_PATH ?? '/panditghar/').replace(/\/$/, '');
+const html404 = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PanditGhar.in</title>
+  <script>
+    var l = window.location;
+    var basePath = '${ghpagesBase}';
+    var isPathBased = basePath !== '';
+    sessionStorage.setItem('spa-redirect', l.pathname + l.search);
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      (isPathBased ? basePath : '') + '/?p=1'
+    );
+  </script>
+</head>
+<body>
+  <noscript>Redirecting to PanditGhar.in&hellip;</noscript>
+</body>
+</html>
+`;
+const out404Path = resolve(import.meta.dirname, '..', 'public', '404.html');
+writeFileSync(out404Path, html404, 'utf-8');
+console.log(`[sitemap] Generated 404.html with basePath="${ghpagesBase}" → ${out404Path}`);
