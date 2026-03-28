@@ -190,15 +190,15 @@ export function AnimatedCounter({
   className?: string;
 }) {
   const [value, setValue] = useState(0);
-  const [started, setStarted] = useState(false);
+  const startedRef = useRef(false);
   const ref = useRef<HTMLSpanElement>(null);
   const controlsRef = useRef<ReturnType<typeof animate> | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !started) {
-          setStarted(true);
+        if (entry.isIntersecting && !startedRef.current) {
+          startedRef.current = true;
           controlsRef.current = animate(0, target, {
             duration,
             onUpdate: (v) => setValue(Math.floor(v)),
@@ -212,9 +212,8 @@ export function AnimatedCounter({
     if (ref.current) observer.observe(ref.current);
     return () => {
       observer.disconnect();
-      controlsRef.current?.stop();
     };
-  }, [target, duration, started]);
+  }, [target, duration]);
 
   return (
     <span ref={ref} className={className}>
