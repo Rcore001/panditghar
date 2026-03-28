@@ -48,6 +48,17 @@ Every package extends `tsconfig.base.json` which sets `composite: true`. The roo
 - `pnpm run build` — runs `typecheck` first, then recursively runs `build` in all packages that define it
 - `pnpm run typecheck` — runs `tsc --build --emitDeclarationOnly` using project references
 
+## Artifacts
+
+### `artifacts/panditghar` (`@workspace/panditghar`)
+
+React + Vite frontend for PanditGhar.in — a Hindu puja booking platform for Bangalore. Features:
+- Bilingual (Hindi/English) with language toggle via `/hi` and `/en` URL prefixes
+- Pages: Home, Services, ServiceDetail, LocationPage, ShubhMuhurat, About, Contact, Blog
+- Booking form that saves to DB and redirects to WhatsApp
+- SEO-optimized with structured data, sitemap, robots.txt
+- Saffron/maroon color theme with Hindi typography
+
 ## Packages
 
 ### `artifacts/api-server` (`@workspace/api-server`)

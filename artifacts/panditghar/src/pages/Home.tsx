@@ -1,0 +1,223 @@
+import { Link } from 'wouter';
+import { motion } from 'framer-motion';
+import { Language, useTranslation, services, WHATSAPP_NUMBER } from '@/lib/data';
+import { SITE_URL } from '@/lib/config';
+import { DecorativeDivider, OmIcon } from '@/components/ui/decorative';
+import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { CheckCircle2, Star } from 'lucide-react';
+import { BookingForm } from '@/components/BookingForm';
+
+export default function Home({ lang }: { lang: Language }) {
+  const t = useTranslation(lang);
+  const isHi = lang === 'hi';
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "PanditGhar.in",
+    "image": `${SITE_URL}/images/pandit-portrait.png`,
+    "description": t.hero.subtitle,
+    "url": `${SITE_URL}/${lang}`,
+    "telephone": `+91${WHATSAPP_NUMBER}`,
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bangalore",
+      "addressRegion": "Karnataka",
+      "addressCountry": "IN"
+    }
+  };
+
+  return (
+    <div className="pt-20">
+      <SEO 
+        title={isHi ? "बेंगलुरु में प्रामाणिक उत्तर भारतीय पंडित | PanditGhar.in" : "Authentic North Indian Pandit in Bangalore | PanditGhar.in"}
+        description={t.hero.subtitle}
+        lang={lang}
+        path={`/${lang}`}
+        schema={schema}
+      />
+
+      {/* Hero Section */}
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={`${import.meta.env.BASE_URL}images/hero-sacred.png`}
+            alt="Sacred Pooja Background" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/80 to-transparent"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-12 pb-24">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-2xl text-white"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-6">
+              <OmIcon className="w-4 h-4 text-accent" />
+              <span className={`text-sm font-medium tracking-wide ${isHi ? 'font-hindi' : ''}`}>
+                {isHi ? 'शास्त्रों द्वारा प्रमाणित' : 'Shastreey Certified'}
+              </span>
+            </div>
+            
+            <h1 className={`text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6 text-gradient-gold ${isHi ? 'font-hindi' : ''}`}>
+              {t.hero.h1}
+            </h1>
+            
+            <p className={`text-xl md:text-2xl text-white/90 mb-10 leading-relaxed ${isHi ? 'font-hindi' : ''}`}>
+              {t.hero.subtitle}
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <Link href={`/${lang}/book`}>
+                <Button className="w-full sm:w-auto bg-gradient-saffron hover:shadow-glow-saffron text-white rounded-full px-8 py-7 text-lg font-semibold border-none transition-all">
+                  {t.hero.ctaPrimary}
+                </Button>
+              </Link>
+              <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noreferrer">
+                <Button variant="outline" className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border-white/30 rounded-full px-8 py-7 text-lg font-semibold backdrop-blur-sm transition-all">
+                  {t.hero.ctaSecondary}
+                </Button>
+              </a>
+            </div>
+
+            <div className="flex items-center gap-4 text-sm text-white/80">
+              <div className="flex -space-x-2">
+                {[1,2,3,4].map(i => (
+                  <div key={i} className="w-8 h-8 rounded-full bg-accent border-2 border-secondary flex items-center justify-center text-xs font-bold text-secondary">
+                    {String.fromCharCode(64+i)}
+                  </div>
+                ))}
+              </div>
+              <p className={isHi ? 'font-hindi' : ''}>{t.hero.trusted}</p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Trust Badges */}
+      <div className="bg-accent text-secondary py-4 shadow-md relative z-20 -mt-8 mx-4 sm:mx-8 rounded-2xl md:mx-auto md:max-w-5xl border border-accent-foreground/10">
+        <div className="flex flex-wrap justify-around items-center gap-4 px-6 font-medium text-sm sm:text-base">
+          <div className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5" /> 15+ Years Exp.</div>
+          <div className="hidden md:block w-px h-6 bg-secondary/20"></div>
+          <div className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5" /> North Indian Brahmin</div>
+          <div className="hidden md:block w-px h-6 bg-secondary/20"></div>
+          <div className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5" /> Samagri Included</div>
+          <div className="hidden lg:block w-px h-6 bg-secondary/20"></div>
+          <div className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5" /> All Bangalore Covered</div>
+        </div>
+      </div>
+
+      <DecorativeDivider />
+
+      {/* Services Grid */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className={`text-4xl md:text-5xl font-display font-bold text-secondary mb-4 ${isHi ? 'font-hindi' : ''}`}>
+            {t.services.title}
+          </h2>
+          <p className={`text-lg text-muted-foreground ${isHi ? 'font-hindi' : ''}`}>
+            {t.services.subtitle}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.slice(0, 6).map((service, index) => (
+            <motion.div 
+              key={service.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="bg-card rounded-2xl overflow-hidden border border-border shadow-lg hover:shadow-xl hover:border-accent/50 transition-all duration-300 group flex flex-col"
+            >
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={`${import.meta.env.BASE_URL}${service.image.replace(/^\//, '')}`}
+                  alt={service.hiTitle}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/30 to-transparent" />
+                <div className="absolute bottom-0 left-0 p-4 w-full">
+                  <h3 className="text-xl font-display font-bold text-accent font-hindi leading-tight drop-shadow-md">
+                    {service.hiTitle}
+                  </h3>
+                  {!isHi && (
+                    <p className="text-white/80 text-sm mt-0.5">{service.enTitle}</p>
+                  )}
+                </div>
+              </div>
+              <div className="p-6 flex flex-col flex-1">
+                <p className={`text-muted-foreground mb-4 line-clamp-2 text-sm ${isHi ? 'font-hindi' : ''}`}>
+                  {isHi ? service.hiDesc : service.enDesc}
+                </p>
+                <div className="pt-4 border-t border-border flex items-center justify-between mt-auto">
+                  <div>
+                    <p className={`text-xs text-muted-foreground ${isHi ? 'font-hindi' : ''}`}>{t.services.startingAt}</p>
+                    <p className="font-bold text-lg text-primary">₹{service.price.toLocaleString('en-IN')}</p>
+                  </div>
+                  <Link href={`/${lang}/services/${service.slug}`}>
+                    <Button variant="outline" className={`rounded-full border-primary text-primary hover:bg-primary hover:text-white text-sm ${isHi ? 'font-hindi' : ''}`}>
+                      {t.services.viewDetails}
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+        
+        <div className="mt-12 text-center">
+           <Link href={`/${lang}/services`}>
+              <Button className="bg-secondary text-white hover:bg-secondary/90 rounded-full px-8 py-6 text-lg font-semibold">
+                {isHi ? 'सभी सेवाएं देखें' : 'View All Services'}
+              </Button>
+           </Link>
+        </div>
+      </section>
+
+      {/* Shastreey Intro Section */}
+      <section className="py-20 bg-gradient-maroon text-white relative overflow-hidden my-16">
+        <div className="absolute top-[-20%] right-[-10%] opacity-10">
+           <OmIcon className="w-[500px] h-[500px]" />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center gap-12">
+          <div className="flex-1">
+            <h2 className={`text-4xl md:text-5xl font-display font-bold mb-6 text-accent ${isHi ? 'font-hindi' : ''}`}>
+              {isHi ? 'प्रमाणिक वैदिक परंपरा' : 'Authentic Vedic Tradition'}
+            </h2>
+            <p className={`text-lg mb-6 text-white/90 leading-relaxed ${isHi ? 'font-hindi' : ''}`}>
+              {isHi 
+                ? 'हमारे सभी अनुष्ठान पूर्ण रूप से वेदों, पुराणों और गृह्य सूत्रों पर आधारित हैं। हम यह सुनिश्चित करते हैं कि हर पूजा सही मुहूर्त में और उचित मंत्रोच्चार के साथ संपन्न हो।'
+                : 'All our rituals are strictly based on the Vedas, Puranas, and Grihya Sutras. We ensure every pooja is performed in the correct muhurat with precise mantra chanting.'}
+            </p>
+            <div className="bg-black/20 border border-accent/30 p-6 rounded-xl backdrop-blur-sm">
+              <p className={`font-medium italic ${isHi ? 'font-hindi' : ''}`}>
+                "मन्त्रहीनं क्रियाहीनं यत्कृतं पूजनं हरेः।<br/>
+                सर्वं तन्निष्फलं याति तस्मात् यत्नेन पूजयेत्॥"
+              </p>
+            </div>
+          </div>
+          <div className="flex-1 w-full relative">
+            <div className="aspect-square max-w-md mx-auto rounded-full overflow-hidden border-4 border-accent/50 shadow-glow-gold relative">
+              <img 
+                src={`${import.meta.env.BASE_URL}images/pandit-portrait.png`}
+                alt="Pandit Ji"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Booking Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto" id="book-now">
+        <BookingForm lang={lang} />
+      </section>
+
+    </div>
+  );
+}
