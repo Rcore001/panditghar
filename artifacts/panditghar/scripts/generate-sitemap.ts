@@ -65,10 +65,10 @@ const corePages: { path: string; priority: string; changefreq: string; lastmod: 
   { path: '/blog', priority: '0.8', changefreq: 'weekly', lastmod: TODAY },
 ];
 
-function hreflangPair(hiUrl: string, enUrl: string, isHome = false): string {
-  const xDefault = isHome ? `\n    <xhtml:link rel="alternate" hreflang="x-default" href="${enUrl}"/>` : '';
+function hreflangPair(hiUrl: string, enUrl: string): string {
   return `\n    <xhtml:link rel="alternate" hreflang="hi" href="${hiUrl}"/>
-    <xhtml:link rel="alternate" hreflang="en" href="${enUrl}"/>${xDefault}`;
+    <xhtml:link rel="alternate" hreflang="en" href="${enUrl}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="${enUrl}"/>`;
 }
 
 function urlEntry(loc: string, hreflang: string, lastmod: string, changefreq: string, priority: string): string {
@@ -85,9 +85,8 @@ const entries: string[] = [];
 for (const page of corePages) {
   const hiUrl = `${SITE_URL}/hi${page.path}`;
   const enUrl = `${SITE_URL}/en${page.path}`;
-  const isHome = page.path === '';
-  entries.push(urlEntry(hiUrl, hreflangPair(hiUrl, enUrl, isHome), page.lastmod, page.changefreq, page.priority));
-  entries.push(urlEntry(enUrl, hreflangPair(hiUrl, enUrl, isHome), page.lastmod, page.changefreq, page.priority));
+  entries.push(urlEntry(hiUrl, hreflangPair(hiUrl, enUrl), page.lastmod, page.changefreq, page.priority));
+  entries.push(urlEntry(enUrl, hreflangPair(hiUrl, enUrl), page.lastmod, page.changefreq, page.priority));
 }
 
 for (const svc of serviceSlugData) {

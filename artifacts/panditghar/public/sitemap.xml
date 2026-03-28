@@ -26,6 +26,7 @@
     <loc>https://panditghar.in/hi/about</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/about"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/about"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -35,6 +36,7 @@
     <loc>https://panditghar.in/en/about</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/about"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/about"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -44,6 +46,7 @@
     <loc>https://panditghar.in/hi/services</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -53,6 +56,7 @@
     <loc>https://panditghar.in/en/services</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -62,6 +66,7 @@
     <loc>https://panditghar.in/hi/contact</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/contact"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/contact"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -71,6 +76,7 @@
     <loc>https://panditghar.in/en/contact</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/contact"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/contact"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -80,6 +86,7 @@
     <loc>https://panditghar.in/hi/shubh-muhurat-2026</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/shubh-muhurat-2026"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/shubh-muhurat-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/shubh-muhurat-2026"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -89,6 +96,7 @@
     <loc>https://panditghar.in/en/shubh-muhurat-2026</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/shubh-muhurat-2026"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/shubh-muhurat-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/shubh-muhurat-2026"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -98,6 +106,7 @@
     <loc>https://panditghar.in/hi/book</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/book"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/book"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/book"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -107,6 +116,7 @@
     <loc>https://panditghar.in/en/book</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/book"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/book"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/book"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -116,6 +126,7 @@
     <loc>https://panditghar.in/hi/blog</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/blog"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/blog"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -125,6 +136,7 @@
     <loc>https://panditghar.in/en/blog</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/blog"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/blog"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -134,6 +146,7 @@
     <loc>https://panditghar.in/hi/services/griha-pravesh-pooja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/griha-pravesh-pooja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/griha-pravesh-pooja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/griha-pravesh-pooja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
@@ -143,6 +156,7 @@
     <loc>https://panditghar.in/en/services/griha-pravesh-pooja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/griha-pravesh-pooja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/griha-pravesh-pooja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/griha-pravesh-pooja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
@@ -152,6 +166,7 @@
     <loc>https://panditghar.in/hi/services/satyanarayan-katha-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/satyanarayan-katha-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/satyanarayan-katha-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/satyanarayan-katha-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
@@ -161,6 +176,7 @@
     <loc>https://panditghar.in/en/services/satyanarayan-katha-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/satyanarayan-katha-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/satyanarayan-katha-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/satyanarayan-katha-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
@@ -170,6 +186,7 @@
     <loc>https://panditghar.in/hi/services/vivah-pandit-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/vivah-pandit-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/vivah-pandit-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/vivah-pandit-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
@@ -179,6 +196,7 @@
     <loc>https://panditghar.in/en/services/vivah-pandit-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/vivah-pandit-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/vivah-pandit-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/vivah-pandit-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
@@ -188,6 +206,7 @@
     <loc>https://panditghar.in/hi/services/rudrabhishek-pooja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/rudrabhishek-pooja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/rudrabhishek-pooja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/rudrabhishek-pooja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -197,6 +216,7 @@
     <loc>https://panditghar.in/en/services/rudrabhishek-pooja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/rudrabhishek-pooja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/rudrabhishek-pooja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/rudrabhishek-pooja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -206,6 +226,7 @@
     <loc>https://panditghar.in/hi/services/namkaran-pooja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/namkaran-pooja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/namkaran-pooja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/namkaran-pooja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -215,6 +236,7 @@
     <loc>https://panditghar.in/en/services/namkaran-pooja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/namkaran-pooja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/namkaran-pooja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/namkaran-pooja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -224,6 +246,7 @@
     <loc>https://panditghar.in/hi/services/mundan-pooja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/mundan-pooja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/mundan-pooja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/mundan-pooja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -233,6 +256,7 @@
     <loc>https://panditghar.in/en/services/mundan-pooja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/mundan-pooja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/mundan-pooja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/mundan-pooja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -242,6 +266,7 @@
     <loc>https://panditghar.in/hi/services/ganesh-puja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/ganesh-puja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/ganesh-puja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/ganesh-puja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -251,6 +276,7 @@
     <loc>https://panditghar.in/en/services/ganesh-puja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/ganesh-puja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/ganesh-puja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/ganesh-puja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -260,6 +286,7 @@
     <loc>https://panditghar.in/hi/services/lakshmi-puja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/lakshmi-puja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/lakshmi-puja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/lakshmi-puja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -269,6 +296,7 @@
     <loc>https://panditghar.in/en/services/lakshmi-puja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/lakshmi-puja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/lakshmi-puja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/lakshmi-puja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -278,6 +306,7 @@
     <loc>https://panditghar.in/hi/services/navgrah-puja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/navgrah-puja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/navgrah-puja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/navgrah-puja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -287,6 +316,7 @@
     <loc>https://panditghar.in/en/services/navgrah-puja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/navgrah-puja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/navgrah-puja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/navgrah-puja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -296,6 +326,7 @@
     <loc>https://panditghar.in/hi/services/vastu-shanti-pooja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/vastu-shanti-pooja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/vastu-shanti-pooja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/vastu-shanti-pooja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -305,6 +336,7 @@
     <loc>https://panditghar.in/en/services/vastu-shanti-pooja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/vastu-shanti-pooja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/vastu-shanti-pooja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/vastu-shanti-pooja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -314,6 +346,7 @@
     <loc>https://panditghar.in/hi/services/mangal-dosh-puja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/mangal-dosh-puja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/mangal-dosh-puja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/mangal-dosh-puja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -323,6 +356,7 @@
     <loc>https://panditghar.in/en/services/mangal-dosh-puja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/mangal-dosh-puja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/mangal-dosh-puja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/mangal-dosh-puja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -332,6 +366,7 @@
     <loc>https://panditghar.in/hi/services/kaal-sarp-dosh-puja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/kaal-sarp-dosh-puja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/kaal-sarp-dosh-puja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/kaal-sarp-dosh-puja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -341,6 +376,7 @@
     <loc>https://panditghar.in/en/services/kaal-sarp-dosh-puja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/kaal-sarp-dosh-puja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/kaal-sarp-dosh-puja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/kaal-sarp-dosh-puja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -350,6 +386,7 @@
     <loc>https://panditghar.in/hi/services/hanuman-puja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/hanuman-puja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/hanuman-puja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/hanuman-puja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -359,6 +396,7 @@
     <loc>https://panditghar.in/en/services/hanuman-puja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/hanuman-puja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/hanuman-puja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/hanuman-puja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -368,6 +406,7 @@
     <loc>https://panditghar.in/hi/services/durga-puja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/durga-puja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/durga-puja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/durga-puja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -377,6 +416,7 @@
     <loc>https://panditghar.in/en/services/durga-puja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/durga-puja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/durga-puja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/durga-puja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -386,6 +426,7 @@
     <loc>https://panditghar.in/hi/services/saraswati-puja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/saraswati-puja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/saraswati-puja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/saraswati-puja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -395,6 +436,7 @@
     <loc>https://panditghar.in/en/services/saraswati-puja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/saraswati-puja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/saraswati-puja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/saraswati-puja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -404,6 +446,7 @@
     <loc>https://panditghar.in/hi/services/kanya-puja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/kanya-puja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/kanya-puja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/kanya-puja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -413,6 +456,7 @@
     <loc>https://panditghar.in/en/services/kanya-puja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/kanya-puja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/kanya-puja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/kanya-puja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -422,6 +466,7 @@
     <loc>https://panditghar.in/hi/services/annaprashan-pooja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/annaprashan-pooja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/annaprashan-pooja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/annaprashan-pooja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -431,6 +476,7 @@
     <loc>https://panditghar.in/en/services/annaprashan-pooja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/annaprashan-pooja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/annaprashan-pooja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/annaprashan-pooja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -440,6 +486,7 @@
     <loc>https://panditghar.in/hi/services/yagyopaveet-sanskar-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/yagyopaveet-sanskar-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/yagyopaveet-sanskar-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/yagyopaveet-sanskar-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -449,6 +496,7 @@
     <loc>https://panditghar.in/en/services/yagyopaveet-sanskar-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/yagyopaveet-sanskar-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/yagyopaveet-sanskar-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/yagyopaveet-sanskar-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -458,6 +506,7 @@
     <loc>https://panditghar.in/hi/services/sagai-engagement-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/sagai-engagement-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/sagai-engagement-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/sagai-engagement-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -467,6 +516,7 @@
     <loc>https://panditghar.in/en/services/sagai-engagement-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/sagai-engagement-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/sagai-engagement-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/sagai-engagement-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -476,6 +526,7 @@
     <loc>https://panditghar.in/hi/services/navratri-puja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/navratri-puja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/navratri-puja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/navratri-puja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -485,6 +536,7 @@
     <loc>https://panditghar.in/en/services/navratri-puja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/navratri-puja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/navratri-puja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/navratri-puja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -494,6 +546,7 @@
     <loc>https://panditghar.in/hi/services/diwali-puja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/diwali-puja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/diwali-puja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/diwali-puja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -503,6 +556,7 @@
     <loc>https://panditghar.in/en/services/diwali-puja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/diwali-puja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/diwali-puja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/diwali-puja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -512,6 +566,7 @@
     <loc>https://panditghar.in/hi/services/janmashtami-puja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/janmashtami-puja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/janmashtami-puja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/janmashtami-puja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -521,6 +576,7 @@
     <loc>https://panditghar.in/en/services/janmashtami-puja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/janmashtami-puja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/janmashtami-puja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/janmashtami-puja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -530,6 +586,7 @@
     <loc>https://panditghar.in/hi/services/maha-shivaratri-puja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/maha-shivaratri-puja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/maha-shivaratri-puja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/maha-shivaratri-puja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -539,6 +596,7 @@
     <loc>https://panditghar.in/en/services/maha-shivaratri-puja-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/maha-shivaratri-puja-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/maha-shivaratri-puja-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/maha-shivaratri-puja-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -548,6 +606,7 @@
     <loc>https://panditghar.in/hi/services/pitru-paksha-shradh-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/pitru-paksha-shradh-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/pitru-paksha-shradh-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/pitru-paksha-shradh-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -557,6 +616,7 @@
     <loc>https://panditghar.in/en/services/pitru-paksha-shradh-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/pitru-paksha-shradh-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/pitru-paksha-shradh-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/pitru-paksha-shradh-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -566,6 +626,7 @@
     <loc>https://panditghar.in/hi/services/antim-sanskar-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/antim-sanskar-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/antim-sanskar-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/antim-sanskar-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -575,6 +636,7 @@
     <loc>https://panditghar.in/en/services/antim-sanskar-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/antim-sanskar-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/antim-sanskar-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/antim-sanskar-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -584,6 +646,7 @@
     <loc>https://panditghar.in/hi/services/bhagvat-mahapuran-katha-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/bhagvat-mahapuran-katha-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/bhagvat-mahapuran-katha-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/bhagvat-mahapuran-katha-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
@@ -593,6 +656,7 @@
     <loc>https://panditghar.in/en/services/bhagvat-mahapuran-katha-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/bhagvat-mahapuran-katha-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/bhagvat-mahapuran-katha-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/bhagvat-mahapuran-katha-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
@@ -602,6 +666,7 @@
     <loc>https://panditghar.in/hi/services/sundarkand-path-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/sundarkand-path-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/sundarkand-path-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/sundarkand-path-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
@@ -611,6 +676,7 @@
     <loc>https://panditghar.in/en/services/sundarkand-path-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/sundarkand-path-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/sundarkand-path-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/sundarkand-path-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
@@ -620,6 +686,7 @@
     <loc>https://panditghar.in/hi/services/ram-katha-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/ram-katha-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/ram-katha-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/ram-katha-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
@@ -629,6 +696,7 @@
     <loc>https://panditghar.in/en/services/ram-katha-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/ram-katha-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/ram-katha-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/ram-katha-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
@@ -638,6 +706,7 @@
     <loc>https://panditghar.in/hi/services/shiv-mahapuran-katha-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/shiv-mahapuran-katha-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/shiv-mahapuran-katha-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/shiv-mahapuran-katha-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
@@ -647,6 +716,7 @@
     <loc>https://panditghar.in/en/services/shiv-mahapuran-katha-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/shiv-mahapuran-katha-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/shiv-mahapuran-katha-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/shiv-mahapuran-katha-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
@@ -656,6 +726,7 @@
     <loc>https://panditghar.in/hi/services/devi-bhagvat-katha-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/devi-bhagvat-katha-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/devi-bhagvat-katha-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/devi-bhagvat-katha-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
@@ -665,6 +736,7 @@
     <loc>https://panditghar.in/en/services/devi-bhagvat-katha-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/devi-bhagvat-katha-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/devi-bhagvat-katha-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/devi-bhagvat-katha-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
@@ -674,6 +746,7 @@
     <loc>https://panditghar.in/hi/services/akhand-ramayan-path-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/akhand-ramayan-path-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/akhand-ramayan-path-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/akhand-ramayan-path-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
@@ -683,6 +756,7 @@
     <loc>https://panditghar.in/en/services/akhand-ramayan-path-bangalore</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/services/akhand-ramayan-path-bangalore"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/services/akhand-ramayan-path-bangalore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/services/akhand-ramayan-path-bangalore"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
@@ -692,6 +766,7 @@
     <loc>https://panditghar.in/hi/bangalore/whitefield/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/whitefield/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/whitefield/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/whitefield/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -701,6 +776,7 @@
     <loc>https://panditghar.in/en/bangalore/whitefield/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/whitefield/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/whitefield/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/whitefield/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -710,6 +786,7 @@
     <loc>https://panditghar.in/hi/bangalore/hsr-layout/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/hsr-layout/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/hsr-layout/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/hsr-layout/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -719,6 +796,7 @@
     <loc>https://panditghar.in/en/bangalore/hsr-layout/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/hsr-layout/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/hsr-layout/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/hsr-layout/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -728,6 +806,7 @@
     <loc>https://panditghar.in/hi/bangalore/marathahalli/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/marathahalli/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/marathahalli/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/marathahalli/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -737,6 +816,7 @@
     <loc>https://panditghar.in/en/bangalore/marathahalli/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/marathahalli/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/marathahalli/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/marathahalli/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -746,6 +826,7 @@
     <loc>https://panditghar.in/hi/bangalore/electronic-city/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/electronic-city/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/electronic-city/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/electronic-city/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -755,6 +836,7 @@
     <loc>https://panditghar.in/en/bangalore/electronic-city/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/electronic-city/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/electronic-city/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/electronic-city/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -764,6 +846,7 @@
     <loc>https://panditghar.in/hi/bangalore/jp-nagar/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/jp-nagar/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/jp-nagar/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/jp-nagar/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -773,6 +856,7 @@
     <loc>https://panditghar.in/en/bangalore/jp-nagar/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/jp-nagar/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/jp-nagar/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/jp-nagar/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -782,6 +866,7 @@
     <loc>https://panditghar.in/hi/bangalore/koramangala/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/koramangala/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/koramangala/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/koramangala/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -791,6 +876,7 @@
     <loc>https://panditghar.in/en/bangalore/koramangala/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/koramangala/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/koramangala/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/koramangala/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -800,6 +886,7 @@
     <loc>https://panditghar.in/hi/bangalore/indiranagar/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/indiranagar/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/indiranagar/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/indiranagar/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -809,6 +896,7 @@
     <loc>https://panditghar.in/en/bangalore/indiranagar/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/indiranagar/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/indiranagar/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/indiranagar/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -818,6 +906,7 @@
     <loc>https://panditghar.in/hi/bangalore/jayanagar/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/jayanagar/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/jayanagar/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/jayanagar/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -827,6 +916,7 @@
     <loc>https://panditghar.in/en/bangalore/jayanagar/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/jayanagar/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/jayanagar/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/jayanagar/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -836,6 +926,7 @@
     <loc>https://panditghar.in/hi/bangalore/yelahanka/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/yelahanka/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/yelahanka/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/yelahanka/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -845,6 +936,7 @@
     <loc>https://panditghar.in/en/bangalore/yelahanka/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/yelahanka/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/yelahanka/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/yelahanka/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -854,6 +946,7 @@
     <loc>https://panditghar.in/hi/bangalore/hebbal/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/hebbal/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/hebbal/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/hebbal/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -863,6 +956,7 @@
     <loc>https://panditghar.in/en/bangalore/hebbal/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/hebbal/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/hebbal/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/hebbal/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -872,6 +966,7 @@
     <loc>https://panditghar.in/hi/bangalore/sarjapur-road/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/sarjapur-road/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/sarjapur-road/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/sarjapur-road/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -881,6 +976,7 @@
     <loc>https://panditghar.in/en/bangalore/sarjapur-road/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/sarjapur-road/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/sarjapur-road/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/sarjapur-road/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -890,6 +986,7 @@
     <loc>https://panditghar.in/hi/bangalore/btm-layout/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/btm-layout/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/btm-layout/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/btm-layout/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -899,6 +996,7 @@
     <loc>https://panditghar.in/en/bangalore/btm-layout/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/btm-layout/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/btm-layout/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/btm-layout/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -908,6 +1006,7 @@
     <loc>https://panditghar.in/hi/bangalore/bannerghatta-road/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/bannerghatta-road/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/bannerghatta-road/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/bannerghatta-road/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -917,6 +1016,7 @@
     <loc>https://panditghar.in/en/bangalore/bannerghatta-road/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/bannerghatta-road/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/bannerghatta-road/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/bannerghatta-road/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -926,6 +1026,7 @@
     <loc>https://panditghar.in/hi/bangalore/rajajinagar/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/rajajinagar/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/rajajinagar/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/rajajinagar/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -935,6 +1036,7 @@
     <loc>https://panditghar.in/en/bangalore/rajajinagar/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/rajajinagar/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/rajajinagar/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/rajajinagar/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -944,6 +1046,7 @@
     <loc>https://panditghar.in/hi/bangalore/malleshwaram/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/malleshwaram/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/malleshwaram/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/malleshwaram/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -953,6 +1056,7 @@
     <loc>https://panditghar.in/en/bangalore/malleshwaram/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/malleshwaram/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/malleshwaram/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/malleshwaram/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -962,6 +1066,7 @@
     <loc>https://panditghar.in/hi/bangalore/kr-puram/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/kr-puram/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/kr-puram/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/kr-puram/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -971,6 +1076,7 @@
     <loc>https://panditghar.in/en/bangalore/kr-puram/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/kr-puram/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/kr-puram/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/kr-puram/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -980,6 +1086,7 @@
     <loc>https://panditghar.in/hi/bangalore/hennur/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/hennur/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/hennur/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/hennur/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -989,6 +1096,7 @@
     <loc>https://panditghar.in/en/bangalore/hennur/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/hennur/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/hennur/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/hennur/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -998,6 +1106,7 @@
     <loc>https://panditghar.in/hi/bangalore/banashankari/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/banashankari/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/banashankari/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/banashankari/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -1007,6 +1116,7 @@
     <loc>https://panditghar.in/en/bangalore/banashankari/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/banashankari/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/banashankari/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/banashankari/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -1016,6 +1126,7 @@
     <loc>https://panditghar.in/hi/bangalore/vijayanagar/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/vijayanagar/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/vijayanagar/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/vijayanagar/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -1025,6 +1136,7 @@
     <loc>https://panditghar.in/en/bangalore/vijayanagar/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/vijayanagar/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/vijayanagar/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/vijayanagar/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -1034,6 +1146,7 @@
     <loc>https://panditghar.in/hi/bangalore/ulsoor/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/ulsoor/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/ulsoor/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/ulsoor/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -1043,6 +1156,7 @@
     <loc>https://panditghar.in/en/bangalore/ulsoor/pandit-for-pooja</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/bangalore/ulsoor/pandit-for-pooja"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/bangalore/ulsoor/pandit-for-pooja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/bangalore/ulsoor/pandit-for-pooja"/>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -1052,6 +1166,7 @@
     <loc>https://panditghar.in/hi/blog/griha-pravesh-vidhi</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/blog/griha-pravesh-vidhi"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/blog/griha-pravesh-vidhi"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/blog/griha-pravesh-vidhi"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -1061,6 +1176,7 @@
     <loc>https://panditghar.in/en/blog/griha-pravesh-vidhi</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/blog/griha-pravesh-vidhi"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/blog/griha-pravesh-vidhi"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/blog/griha-pravesh-vidhi"/>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -1070,6 +1186,7 @@
     <loc>https://panditghar.in/hi/blog/satyanarayan-katha-benefits</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/blog/satyanarayan-katha-benefits"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/blog/satyanarayan-katha-benefits"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/blog/satyanarayan-katha-benefits"/>
     <lastmod>2026-01-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -1079,6 +1196,7 @@
     <loc>https://panditghar.in/en/blog/satyanarayan-katha-benefits</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/blog/satyanarayan-katha-benefits"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/blog/satyanarayan-katha-benefits"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/blog/satyanarayan-katha-benefits"/>
     <lastmod>2026-01-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -1088,6 +1206,7 @@
     <loc>https://panditghar.in/hi/blog/vivah-muhurat-2026</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/blog/vivah-muhurat-2026"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/blog/vivah-muhurat-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/blog/vivah-muhurat-2026"/>
     <lastmod>2026-02-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -1097,6 +1216,7 @@
     <loc>https://panditghar.in/en/blog/vivah-muhurat-2026</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/blog/vivah-muhurat-2026"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/blog/vivah-muhurat-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/blog/vivah-muhurat-2026"/>
     <lastmod>2026-02-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -1106,6 +1226,7 @@
     <loc>https://panditghar.in/hi/blog/satyanarayan-katha-vidhi</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/blog/satyanarayan-katha-vidhi"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/blog/satyanarayan-katha-vidhi"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/blog/satyanarayan-katha-vidhi"/>
     <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -1115,6 +1236,7 @@
     <loc>https://panditghar.in/en/blog/satyanarayan-katha-vidhi</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/blog/satyanarayan-katha-vidhi"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/blog/satyanarayan-katha-vidhi"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/blog/satyanarayan-katha-vidhi"/>
     <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -1124,6 +1246,7 @@
     <loc>https://panditghar.in/hi/blog/mundan-sanskar-mahatva</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/blog/mundan-sanskar-mahatva"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/blog/mundan-sanskar-mahatva"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/blog/mundan-sanskar-mahatva"/>
     <lastmod>2026-02-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -1133,6 +1256,7 @@
     <loc>https://panditghar.in/en/blog/mundan-sanskar-mahatva</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/blog/mundan-sanskar-mahatva"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/blog/mundan-sanskar-mahatva"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/blog/mundan-sanskar-mahatva"/>
     <lastmod>2026-02-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -1142,6 +1266,7 @@
     <loc>https://panditghar.in/hi/blog/pooja-samagri-complete-list</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/blog/pooja-samagri-complete-list"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/blog/pooja-samagri-complete-list"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/blog/pooja-samagri-complete-list"/>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -1151,6 +1276,7 @@
     <loc>https://panditghar.in/en/blog/pooja-samagri-complete-list</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/blog/pooja-samagri-complete-list"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/blog/pooja-samagri-complete-list"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/blog/pooja-samagri-complete-list"/>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -1160,6 +1286,7 @@
     <loc>https://panditghar.in/hi/blog/navgrah-puja-significance</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/blog/navgrah-puja-significance"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/blog/navgrah-puja-significance"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/blog/navgrah-puja-significance"/>
     <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -1169,6 +1296,7 @@
     <loc>https://panditghar.in/en/blog/navgrah-puja-significance</loc>
     <xhtml:link rel="alternate" hreflang="hi" href="https://panditghar.in/hi/blog/navgrah-puja-significance"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panditghar.in/en/blog/navgrah-puja-significance"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panditghar.in/en/blog/navgrah-puja-significance"/>
     <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
