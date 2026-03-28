@@ -28,7 +28,7 @@ export function Footer({ lang }: { lang: Language }) {
               <div className="flex flex-col gap-2 pt-4">
                 <a href={`tel:+${WHATSAPP_NUMBER}`} className="flex items-center gap-2 hover:text-accent transition-colors">
                   <Phone className="w-4 h-4 text-accent" />
-                  <span>+91 98801 23456</span>
+                  <span>+91 93295 66101</span>
                 </a>
                 <a href="mailto:pandit@panditghar.in" className="flex items-center gap-2 hover:text-accent transition-colors">
                   <Mail className="w-4 h-4 text-accent" />

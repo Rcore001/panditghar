@@ -17,7 +17,7 @@ export default function Contact({ lang }: { lang: Language }) {
     "url": `${SITE_URL}/${lang}/contact`,
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+919880123456",
+      "telephone": "+919329566101",
       "contactType": "customer service",
       "availableLanguage": ["Hindi", "English"]
     }
@@ -29,7 +29,7 @@ export default function Contact({ lang }: { lang: Language }) {
       icon: <Phone className="w-6 h-6 text-primary" />,
       iconBg: 'bg-primary/10 group-hover:bg-primary/20',
       label: isHi ? 'फोन करें' : 'Call Us',
-      value: '+91 98801 23456',
+      value: '+91 93295 66101',
       valueClass: 'text-xl font-bold text-secondary',
       borderHover: 'hover:border-primary/50',
     },
@@ -39,7 +39,7 @@ export default function Contact({ lang }: { lang: Language }) {
       icon: <MessageCircle className="w-6 h-6 text-green-600" />,
       iconBg: 'bg-green-100 group-hover:bg-green-200',
       label: isHi ? 'वाट्सएप करें' : 'WhatsApp',
-      value: '+91 98801 23456',
+      value: '+91 93295 66101',
       valueClass: 'text-xl font-bold text-green-600',
       borderHover: 'hover:border-green-500/50',
     },

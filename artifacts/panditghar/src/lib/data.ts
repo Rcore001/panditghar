@@ -2,7 +2,7 @@ export type { Language } from './i18n';
 export { useTranslation, translations } from './i18n';
 import type { Language } from './i18n';
 
-export const WHATSAPP_NUMBER = "919880123456";
+export const WHATSAPP_NUMBER = "919329566101";
 
 export interface Location {
   id: string;

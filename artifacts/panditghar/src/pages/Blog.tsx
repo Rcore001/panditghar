@@ -939,7 +939,7 @@ export function BlogPost({ lang, slug }: { lang: Language; slug: string }) {
                 {isHi ? 'पूजा बुक करें' : 'Book a Pooja'}
               </Button>
             </Link>
-            <a href="https://wa.me/919880123456" target="_blank" rel="noreferrer">
+            <a href="https://wa.me/919329566101" target="_blank" rel="noreferrer">
               <Button variant="outline" className="rounded-full border-primary text-primary px-8 py-6">
                 {isHi ? 'वाट्सएप करें' : 'WhatsApp Us'}
               </Button>

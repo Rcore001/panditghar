@@ -89,7 +89,7 @@ export function Navbar({ lang }: { lang: Language }) {
             
             <a href={`tel:+${WHATSAPP_NUMBER}`} className="flex items-center gap-2 text-secondary hover:text-primary transition-colors">
               <Phone className="w-4 h-4" />
-              <span className="font-semibold">+91 98801 23456</span>
+              <span className="font-semibold">+91 93295 66101</span>
             </a>
 
             <Link href={`/${lang}/book`}>

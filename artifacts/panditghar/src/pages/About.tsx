@@ -18,7 +18,7 @@ export default function About({ lang }: { lang: Language }) {
     "jobTitle": isHi ? "उत्तर भारतीय पंडित" : "North Indian Brahmin Pandit",
     "description": isHi ? "15+ वर्षों के अनुभव के साथ वैदिक अनुष्ठान विशेषज्ञ" : "Expert in Vedic rituals with 15+ years of experience",
     "url": `${SITE_URL}/${lang}/about`,
-    "telephone": "+919880123456",
+    "telephone": "+919329566101",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Bangalore",
@@ -190,12 +190,12 @@ export default function About({ lang }: { lang: Language }) {
 
         <ScrollReveal delay={0.2}>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+919880123456">
+            <a href="tel:+919329566101">
               <Button variant="outline" className="rounded-full border-secondary text-secondary px-8 py-6 gap-2">
-                <Phone className="w-4 h-4" /> +91 98801 23456
+                <Phone className="w-4 h-4" /> +91 93295 66101
               </Button>
             </a>
-            <a href="https://wa.me/919880123456" target="_blank" rel="noreferrer">
+            <a href="https://wa.me/919329566101" target="_blank" rel="noreferrer">
               <Button className="bg-green-600 hover:bg-green-700 text-white rounded-full px-8 py-6 text-lg">
                 {isHi ? 'वाट्सएप करें' : 'WhatsApp Us'}
               </Button>

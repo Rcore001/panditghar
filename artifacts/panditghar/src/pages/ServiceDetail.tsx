@@ -1035,9 +1035,9 @@ const serviceFaqs: Record<string, FAQ[]> = {
     },
     {
       q_en: "Is PanditGhar.in available 24/7 for Antim Sanskar?",
-      a_en: "Yes, PanditGhar.in provides round-the-clock support for Antim Sanskar as death does not follow any schedule. Please call +91 98801 23456 anytime for immediate assistance. We reach your location within 1-2 hours across Bangalore.",
+      a_en: "Yes, PanditGhar.in provides round-the-clock support for Antim Sanskar as death does not follow any schedule. Please call +91 93295 66101 anytime for immediate assistance. We reach your location within 1-2 hours across Bangalore.",
       q_hi: "क्या PanditGhar.in अंतिम संस्कार के लिए 24/7 उपलब्ध है?",
-      a_hi: "हाँ, PanditGhar.in अंतिम संस्कार के लिए चौबीसों घंटे सहायता प्रदान करता है क्योंकि मृत्यु कोई समय नहीं देखती। तत्काल सहायता के लिए कभी भी +91 98801 23456 पर कॉल करें।"
+      a_hi: "हाँ, PanditGhar.in अंतिम संस्कार के लिए चौबीसों घंटे सहायता प्रदान करता है क्योंकि मृत्यु कोई समय नहीं देखती। तत्काल सहायता के लिए कभी भी +91 93295 66101 पर कॉल करें।"
     },
     {
       q_en: "What is the Dasagatra Puja and why is it important?",
@@ -1081,9 +1081,9 @@ const defaultFaqs: FAQ[] = [
   },
   {
     q_en: "How do I book this puja?",
-    a_en: "You can book directly via the form on this page, or WhatsApp us at +91 98801 23456. We confirm the booking within 30 minutes and share all further details.",
+    a_en: "You can book directly via the form on this page, or WhatsApp us at +91 93295 66101. We confirm the booking within 30 minutes and share all further details.",
     q_hi: "इस पूजा को कैसे बुक करें?",
-    a_hi: "आप इस पेज पर दिए गए फॉर्म के माध्यम से सीधे बुक कर सकते हैं, या हमें +91 98801 23456 पर व्हाट्सएप करें। हम 30 मिनट के भीतर बुकिंग की पुष्टि करते हैं और सभी आगे की जानकारी साझा करते हैं।"
+    a_hi: "आप इस पेज पर दिए गए फॉर्म के माध्यम से सीधे बुक कर सकते हैं, या हमें +91 93295 66101 पर व्हाट्सएप करें। हम 30 मिनट के भीतर बुकिंग की पुष्टि करते हैं और सभी आगे की जानकारी साझा करते हैं।"
   },
   {
     q_en: "Can the puja be rescheduled if needed?",
