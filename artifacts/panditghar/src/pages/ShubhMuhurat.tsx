@@ -65,30 +65,46 @@ export default function ShubhMuhurat({ lang }: { lang: Language }) {
     ? '2026–2027 के सभी प्रमुख संस्कारों और शुभ कार्यों के मुहूर्त — विवाह, गृह प्रवेश, सत्यनारायण, मुंडन और अधिक'
     : 'Auspicious dates for all major Hindu Sanskars in 2026–2027 — Vivah, Griha Pravesh, Satyanarayan, Mundan, and more';
 
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: title,
-    description: desc,
-    url: `${SITE_URL}/${lang}/shubh-muhurat-2026`,
-    inLanguage: lang === 'hi' ? 'hi-IN' : 'en-IN',
-    about: [
-      { '@type': 'Thing', name: isHi ? 'हिंदू पंचांग 2026–2027' : 'Hindu Panchang 2026–2027 — Vedic Astrology' },
-      { '@type': 'Event', name: isHi ? 'विवाह मुहूर्त 2026 बेंगलुरु' : 'Vivah Muhurat 2026 Bangalore' },
-      { '@type': 'Event', name: isHi ? 'गृह प्रवेश मुहूर्त 2026 बेंगलुरु' : 'Griha Pravesh Muhurat 2026 Bangalore' },
-    ],
-    provider: {
-      '@type': 'LocalBusiness',
-      name: 'PanditGhar.in',
-      url: SITE_URL,
-      telephone: '+919329566101',
+  const schema = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Dataset',
+      name: isHi ? 'हिंदू शुभ मुहूर्त पंचांग 2026–2027 — बेंगलुरु' : 'Hindu Shubh Muhurat Panchang 2026–2027 — Bangalore',
+      description: desc,
+      url: `${SITE_URL}/${lang}/shubh-muhurat-2026`,
+      inLanguage: lang === 'hi' ? 'hi-IN' : 'en-IN',
+      temporalCoverage: '2026/2027',
+      spatialCoverage: { '@type': 'Place', name: 'Bangalore, Karnataka, India' },
+      publisher: { '@type': 'Organization', name: 'PanditGhar.in', url: SITE_URL },
+      keywords: isHi
+        ? 'विवाह मुहूर्त 2026, गृह प्रवेश मुहूर्त 2026, सत्यनारायण मुहूर्त, हिंदू पंचांग, शुभ मुहूर्त बेंगलुरु'
+        : 'Vivah Muhurat 2026, Griha Pravesh Muhurat 2026, Satyanarayan Muhurat, Hindu Panchang, Shubh Muhurat Bangalore',
     },
-    publisher: {
-      '@type': 'Organization',
-      name: 'PanditGhar.in',
-      url: SITE_URL,
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Event',
+      name: isHi ? 'विवाह मुहूर्त 2026 — बेंगलुरु' : 'Vivah Muhurat 2026 — Bangalore',
+      description: isHi ? 'उत्तर भारतीय विवाह के लिए 2026 के शुभ मुहूर्त' : 'Auspicious dates for North Indian Vivah (wedding) in 2026',
+      startDate: '2026-01-01',
+      endDate: '2026-12-31',
+      location: { '@type': 'Place', name: 'Bangalore, Karnataka', address: { '@type': 'PostalAddress', addressLocality: 'Bangalore', addressRegion: 'Karnataka', addressCountry: 'IN' } },
+      organizer: { '@type': 'Organization', name: 'PanditGhar.in', url: SITE_URL, telephone: '+919329566101' },
+      eventStatus: 'https://schema.org/EventScheduled',
+      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     },
-  };
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Event',
+      name: isHi ? 'गृह प्रवेश मुहूर्त 2026 — बेंगलुरु' : 'Griha Pravesh Muhurat 2026 — Bangalore',
+      description: isHi ? 'नए घर में प्रवेश के लिए 2026 के शुभ मुहूर्त' : 'Auspicious dates for Griha Pravesh (housewarming) in 2026',
+      startDate: '2026-01-01',
+      endDate: '2026-12-31',
+      location: { '@type': 'Place', name: 'Bangalore, Karnataka', address: { '@type': 'PostalAddress', addressLocality: 'Bangalore', addressRegion: 'Karnataka', addressCountry: 'IN' } },
+      organizer: { '@type': 'Organization', name: 'PanditGhar.in', url: SITE_URL, telephone: '+919329566101' },
+      eventStatus: 'https://schema.org/EventScheduled',
+      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+    },
+  ];
 
   const vyaparIconMap: Record<string, React.ElementType> = { Car, Home, Store };
 

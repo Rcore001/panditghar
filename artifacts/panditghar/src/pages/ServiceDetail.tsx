@@ -11,6 +11,7 @@ import { WHATSAPP_NUMBER } from '@/lib/data';
 import { ScrollReveal, StaggerContainer, StaggerItem } from '@/components/ui/animated';
 import { ServiceCardImage } from '@/components/ServiceCardImage';
 import { Breadcrumb } from '@/components/Breadcrumb';
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
 
 interface FAQ {
   q_hi: string;
@@ -1414,22 +1415,22 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
                 <h3 className={`text-2xl font-display font-bold text-secondary mb-6 ${isHi ? 'font-hindi' : ''}`}>
                   {isHi ? 'सामान्य प्रश्न (FAQs)' : 'Frequently Asked Questions'}
                 </h3>
-                <div className="space-y-3">
+                <Accordion type="multiple" className="space-y-2">
                   {faqs.map((faq, i) => (
-                    <details
+                    <AccordionItem
                       key={i}
-                      className="group border border-border rounded-xl overflow-hidden hover:border-primary/30 transition-all"
+                      value={`faq-${i}`}
+                      className="border border-border rounded-xl overflow-hidden hover:border-primary/30 transition-colors px-2"
                     >
-                      <summary className={`flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-semibold text-secondary text-sm ${isHi ? 'font-hindi' : ''}`}>
-                        <span>{isHi ? faq.q_hi : faq.q_en}</span>
-                        <span className="text-primary text-lg shrink-0 group-open:rotate-45 transition-transform duration-200">+</span>
-                      </summary>
-                      <div className={`px-5 pb-4 text-sm text-muted-foreground leading-relaxed border-t border-border pt-3 ${isHi ? 'font-hindi' : ''}`}>
+                      <AccordionTrigger className={`font-semibold text-secondary text-sm hover:no-underline px-3 ${isHi ? 'font-hindi' : ''}`}>
+                        {isHi ? faq.q_hi : faq.q_en}
+                      </AccordionTrigger>
+                      <AccordionContent className={`text-muted-foreground leading-relaxed px-3 ${isHi ? 'font-hindi' : ''}`}>
                         {isHi ? faq.a_hi : faq.a_en}
-                      </div>
-                    </details>
+                      </AccordionContent>
+                    </AccordionItem>
                   ))}
-                </div>
+                </Accordion>
               </div>
             </ScrollReveal>
 

@@ -9,6 +9,29 @@ import { motion } from 'framer-motion';
 import { ScrollReveal, StaggerContainer, StaggerItem, TiltCard } from '@/components/ui/animated';
 import { Breadcrumb } from '@/components/Breadcrumb';
 
+const areaGeoCoords: Record<string, { lat: number; lng: number }> = {
+  "whitefield":        { lat: 12.9698, lng: 77.7500 },
+  "hsr-layout":        { lat: 12.9116, lng: 77.6389 },
+  "marathahalli":      { lat: 12.9591, lng: 77.7011 },
+  "electronic-city":   { lat: 12.8399, lng: 77.6770 },
+  "jp-nagar":          { lat: 12.9079, lng: 77.5921 },
+  "koramangala":       { lat: 12.9350, lng: 77.6245 },
+  "indiranagar":       { lat: 12.9784, lng: 77.6408 },
+  "jayanagar":         { lat: 12.9299, lng: 77.5826 },
+  "bannerghatta-road": { lat: 12.8878, lng: 77.5985 },
+  "btm-layout":        { lat: 12.9166, lng: 77.6101 },
+  "rajajinagar":       { lat: 13.0054, lng: 77.5535 },
+  "malleshwaram":      { lat: 13.0035, lng: 77.5690 },
+  "yelahanka":         { lat: 13.0991, lng: 77.5958 },
+  "hebbal":            { lat: 13.0358, lng: 77.5970 },
+  "sarjapur-road":     { lat: 12.9100, lng: 77.6871 },
+  "kr-puram":          { lat: 13.0072, lng: 77.6951 },
+  "hennur":            { lat: 13.0497, lng: 77.6411 },
+  "banashankari":      { lat: 12.9256, lng: 77.5466 },
+  "vijayanagar":       { lat: 12.9719, lng: 77.5327 },
+  "ulsoor":            { lat: 12.9784, lng: 77.6240 },
+};
+
 export default function LocationPage({ lang }: { lang: Language }) {
   const [match, params] = useRoute("/:lang/bangalore/:area/:service");
   const isHi = lang === 'hi';
@@ -19,6 +42,8 @@ export default function LocationPage({ lang }: { lang: Language }) {
   const service = services.find(s => params.service?.includes(s.id.split('-')[0])) || services[0];
 
   if (!area) return <NotFound />;
+
+  const areaCoords = areaGeoCoords[params.area] ?? { lat: 12.9716, lng: 77.5946 };
 
   const title = isHi
     ? `${area.name} में ${service.hiTitle} के लिए पंडित`
@@ -48,6 +73,11 @@ export default function LocationPage({ lang }: { lang: Language }) {
         "addressLocality": area.name,
         "addressRegion": "Karnataka",
         "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": areaCoords.lat,
+        "longitude": areaCoords.lng
       }
     },
     "description": desc,
