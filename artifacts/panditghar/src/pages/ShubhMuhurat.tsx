@@ -4,17 +4,7 @@ import { SEO } from '@/components/SEO';
 import { DecorativeDivider } from '@/components/ui/decorative';
 import { CalendarDays } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
-import { ScrollReveal } from '@/components/ui/animated';
-
-const rowVariants = {
-  hidden: { opacity: 0, y: 24, rotateX: 6 },
-  show: { opacity: 1, y: 0, rotateX: 0, transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } },
-};
-
-const tableBodyVariants = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.06 } },
-};
+import { ScrollReveal, StaggerContainer, StaggerItem } from '@/components/ui/animated';
 
 export default function ShubhMuhurat({ lang }: { lang: Language }) {
   const isHi = lang === 'hi';
@@ -37,9 +27,16 @@ export default function ShubhMuhurat({ lang }: { lang: Language }) {
     }
   };
 
+  const columns = [
+    { label: isHi ? 'तिथि' : 'Date', key: 'date' as const, className: 'font-semibold min-w-[110px]' },
+    { label: isHi ? 'दिन' : 'Day', key: 'day' as const, className: 'text-muted-foreground min-w-[80px]' },
+    { label: isHi ? 'अवसर' : 'Occasion', key: 'occasion' as const, className: 'flex-1' },
+    { label: isHi ? 'मुहूर्त' : 'Time', key: 'time' as const, className: 'text-primary font-medium min-w-[130px]' },
+  ];
+
   return (
     <div className="pt-24 pb-16 bg-background min-h-screen">
-      <SEO 
+      <SEO
         title={`${title} | PanditGhar.in`}
         description={desc}
         lang={lang}
@@ -56,7 +53,7 @@ export default function ShubhMuhurat({ lang }: { lang: Language }) {
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               className="inline-flex justify-center items-center w-20 h-20 rounded-full bg-accent/20 mb-6 text-accent"
             >
-               <CalendarDays className="w-10 h-10" />
+              <CalendarDays className="w-10 h-10" />
             </motion.div>
             <h1 className={`text-4xl md:text-5xl font-display font-bold text-secondary mb-4 ${isHi ? 'font-hindi' : ''}`}>
               {title}
@@ -67,52 +64,32 @@ export default function ShubhMuhurat({ lang }: { lang: Language }) {
           </div>
         </ScrollReveal>
 
-        <ScrollReveal direction="up" delay={0.1}>
-          <div className="bg-card rounded-2xl shadow-xl border border-border overflow-hidden">
-            <div className="overflow-x-auto">
-              <table className="w-full text-left border-collapse">
-                <thead>
-                  <tr className="bg-secondary text-secondary-foreground">
-                    <th className="py-4 px-6 font-display text-lg">{isHi ? 'तिथि (Date)' : 'Date'}</th>
-                    <th className="py-4 px-6 font-display text-lg">{isHi ? 'दिन (Day)' : 'Day'}</th>
-                    <th className="py-4 px-6 font-display text-lg">{isHi ? 'अवसर (Occasion)' : 'Occasion'}</th>
-                    <th className="py-4 px-6 font-display text-lg">{isHi ? 'मुहूर्त (Time)' : 'Muhurat Time'}</th>
-                    <th className="py-4 px-6 font-display text-lg">{isHi ? 'प्रकार (Type)' : 'Type'}</th>
-                  </tr>
-                </thead>
-                <motion.tbody
-                  className="divide-y divide-border"
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{ once: true, margin: '-60px' }}
-                  variants={tableBodyVariants}
-                  style={{ perspective: 800 }}
-                >
-                  {muhurats.map((m, i) => (
-                    <motion.tr
-                      key={i}
-                      variants={rowVariants}
-                      className="hover:bg-muted/50 transition-colors"
-                      style={{ perspective: 800 }}
-                    >
-                      <td className="py-4 px-6 font-semibold">{m.date}</td>
-                      <td className="py-4 px-6 text-muted-foreground">{m.day}</td>
-                      <td className="py-4 px-6">{m.occasion}</td>
-                      <td className="py-4 px-6 text-primary font-medium">{m.time}</td>
-                      <td className="py-4 px-6">
-                        <span className="bg-accent/20 text-secondary px-3 py-1 rounded-full text-sm font-medium">
-                          {m.type}
-                        </span>
-                      </td>
-                    </motion.tr>
-                  ))}
-                </motion.tbody>
-              </table>
-            </div>
+        {/* Column headers */}
+        <ScrollReveal direction="up" delay={0.08}>
+          <div className="hidden md:flex items-center gap-4 px-6 py-3 mb-2 bg-secondary text-secondary-foreground rounded-xl font-display font-semibold text-sm">
+            {columns.map(col => (
+              <span key={col.key} className={col.className}>{col.label}</span>
+            ))}
+            <span className="min-w-[110px]">{isHi ? 'प्रकार' : 'Type'}</span>
           </div>
         </ScrollReveal>
 
-        <ScrollReveal delay={0.15}>
+        {/* Staggered muhurat rows */}
+        <StaggerContainer className="space-y-2" staggerDelay={0.055}>
+          {muhurats.map((m, i) => (
+            <StaggerItem key={i} className="bg-card rounded-xl border border-border hover:shadow-md hover:border-primary/30 transition-all">
+              <div className="flex flex-wrap md:flex-nowrap items-center gap-3 px-6 py-4">
+                <span className="font-semibold min-w-[110px] text-secondary">{m.date}</span>
+                <span className="text-muted-foreground min-w-[80px] text-sm">{m.day}</span>
+                <span className="flex-1 text-foreground">{m.occasion}</span>
+                <span className="text-primary font-medium min-w-[130px] text-sm">{m.time}</span>
+                <span className="bg-accent/20 text-secondary px-3 py-1 rounded-full text-sm font-medium whitespace-nowrap">{m.type}</span>
+              </div>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
+
+        <ScrollReveal delay={0.1}>
           <div className={`mt-8 text-center text-muted-foreground text-sm ${isHi ? 'font-hindi' : ''}`}>
             * {isHi ? 'मुहूर्त पंचांग पर आधारित हैं। व्यक्तिगत कुण्डली के अनुसार मुहूर्त बदल सकता है।' : 'Muhurats are based on general Panchang. Specific timings may vary based on personal Kundali.'}
           </div>

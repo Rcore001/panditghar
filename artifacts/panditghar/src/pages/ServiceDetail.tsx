@@ -1201,11 +1201,8 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
           <div className="lg:col-span-2 space-y-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="bg-card rounded-3xl p-8 md:p-10 shadow-xl border border-border"
-            >
+            <ScrollReveal direction="up">
+            <div className="bg-card rounded-3xl p-8 md:p-10 shadow-xl border border-border">
               <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
                 <div>
                   <p className="text-sm text-muted-foreground mb-1">
@@ -1288,14 +1285,11 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
                   </ul>
                 </div>
               </div>
-            </motion.div>
+            </div>
+            </ScrollReveal>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="bg-card rounded-3xl p-8 md:p-10 shadow-xl border border-border"
-            >
+            <ScrollReveal direction="up" delay={0.07}>
+            <div className="bg-card rounded-3xl p-8 md:p-10 shadow-xl border border-border">
               <div className="flex items-center gap-3 mb-6">
                 <ShoppingBag className="w-6 h-6 text-primary shrink-0" />
                 <h2 className={`text-xl font-display font-bold text-secondary m-0 ${isHi ? 'font-hindi' : ''}`}>
@@ -1311,24 +1305,14 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
                       ? 'नीचे दी गई सामग्री इस पूजा के लिए आवश्यक है। आप इसे स्वयं बाज़ार से खरीद सकते हैं, या हमारी टीम आपके लिए व्यवस्था कर सकती है (वास्तविक लागत पर)।'
                       : 'The following items are required for this puja. You may arrange them yourself or our team can procure them on your behalf at actual cost.'}
                   </p>
-                  <motion.ul
-                    className="grid grid-cols-1 sm:grid-cols-2 gap-2"
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, margin: '-40px' }}
-                    variants={{ hidden: {}, show: { transition: { staggerChildren: 0.04 } } }}
-                  >
+                  <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-2" staggerDelay={0.04}>
                     {service.samagri.map((item, i) => (
-                      <motion.li
-                        key={i}
-                        variants={{ hidden: { opacity: 0, x: -12 }, show: { opacity: 1, x: 0, transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] } } }}
-                        className="flex items-center gap-2 text-sm text-foreground"
-                      >
-                        <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
+                      <StaggerItem key={i} className="flex items-center gap-2 text-sm text-foreground">
+                        <span className="w-2 h-2 rounded-full bg-primary shrink-0 inline-block" />
                         <span className={isHi ? 'font-hindi' : ''}>{item}</span>
-                      </motion.li>
+                      </StaggerItem>
                     ))}
-                  </motion.ul>
+                  </StaggerContainer>
                 </>
               ) : (
                 <div className="bg-muted rounded-xl p-6 border border-border">
@@ -1351,7 +1335,8 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
                   </div>
                 </div>
               )}
-            </motion.div>
+            </div>
+            </ScrollReveal>
 
             <DecorativeDivider />
 

@@ -2,7 +2,7 @@ import { Link } from 'wouter';
 import { OmIcon } from '@/components/ui/decorative';
 import { Language, useTranslation, services, locations, WHATSAPP_NUMBER } from '@/lib/data';
 import { MapPin, Phone, Mail } from 'lucide-react';
-import { ScrollReveal, StaggerContainer, StaggerItem } from '@/components/ui/animated';
+import { ScrollReveal } from '@/components/ui/animated';
 
 export function Footer({ lang }: { lang: Language }) {
   const t = useTranslation(lang).footer;
@@ -11,17 +11,17 @@ export function Footer({ lang }: { lang: Language }) {
   return (
     <footer className="bg-secondary text-secondary-foreground pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12" staggerDelay={0.1}>
-          
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+
           {/* Brand */}
-          <StaggerItem>
+          <ScrollReveal direction="up" delay={0}>
             <div className="space-y-4">
               <Link href={`/${lang}`} className="flex items-center gap-2">
                 <OmIcon className="w-8 h-8 text-accent" />
                 <span className="text-2xl font-display font-bold text-white">PanditGhar<span className="text-accent">.in</span></span>
               </Link>
               <p className={`text-secondary-foreground/80 leading-relaxed ${lang === 'hi' ? 'font-hindi' : ''}`}>
-                {lang === 'hi' 
+                {lang === 'hi'
                   ? 'बेंगलुरु में प्रामाणिक उत्तर भारतीय पंडित सेवाएं। सभी वैदिक अनुष्ठान शास्त्रों के अनुसार किए जाते हैं।'
                   : 'Authentic North Indian Pandit services in Bangalore. All Vedic rituals performed strictly as per Shastras.'}
               </p>
@@ -36,10 +36,10 @@ export function Footer({ lang }: { lang: Language }) {
                 </a>
               </div>
             </div>
-          </StaggerItem>
+          </ScrollReveal>
 
           {/* Quick Links */}
-          <StaggerItem>
+          <ScrollReveal direction="up" delay={0.1}>
             <div>
               <h3 className="text-xl font-display font-semibold text-white mb-4 border-b border-accent/20 pb-2 inline-block">{t.quickLinks}</h3>
               <ul className={`space-y-3 ${lang === 'hi' ? 'font-hindi' : ''}`}>
@@ -50,10 +50,10 @@ export function Footer({ lang }: { lang: Language }) {
                 <li><Link href={`/${lang}/book`} className="hover:text-accent transition-colors text-accent">{nav.bookNow}</Link></li>
               </ul>
             </div>
-          </StaggerItem>
+          </ScrollReveal>
 
           {/* Services */}
-          <StaggerItem>
+          <ScrollReveal direction="up" delay={0.2}>
             <div>
               <h3 className="text-xl font-display font-semibold text-white mb-4 border-b border-accent/20 pb-2 inline-block">{nav.services}</h3>
               <ul className={`space-y-3 ${lang === 'hi' ? 'font-hindi' : ''}`}>
@@ -66,16 +66,16 @@ export function Footer({ lang }: { lang: Language }) {
                 ))}
               </ul>
             </div>
-          </StaggerItem>
+          </ScrollReveal>
 
           {/* Locations */}
-          <StaggerItem>
+          <ScrollReveal direction="up" delay={0.3}>
             <div>
               <h3 className="text-xl font-display font-semibold text-white mb-4 border-b border-accent/20 pb-2 inline-block">{t.serviceAreas}</h3>
               <div className="flex flex-wrap gap-2">
                 {locations.map(loc => (
-                  <Link 
-                    key={loc.id} 
+                  <Link
+                    key={loc.id}
                     href={`/${lang}/bangalore/${loc.id}/pandit-for-pooja`}
                     className="text-sm bg-black/20 hover:bg-accent hover:text-secondary px-3 py-1.5 rounded-full transition-colors flex items-center gap-1"
                   >
@@ -85,11 +85,11 @@ export function Footer({ lang }: { lang: Language }) {
                 ))}
               </div>
             </div>
-          </StaggerItem>
+          </ScrollReveal>
 
-        </StaggerContainer>
+        </div>
 
-        <ScrollReveal direction="up" delay={0.1}>
+        <ScrollReveal direction="up" delay={0.15}>
           <div className="pt-8 border-t border-accent/20 text-center text-secondary-foreground/60 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
             <p className={lang === 'hi' ? 'font-hindi' : ''}>{t.copyright}</p>
             <div className="flex gap-4">

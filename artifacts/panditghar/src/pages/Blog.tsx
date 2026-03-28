@@ -834,7 +834,8 @@ export default function Blog({ lang }: { lang: Language }) {
       </section>
 
       <section className="py-16 px-4 max-w-5xl mx-auto">
-        <StaggerContainer className="grid md:grid-cols-1 gap-8" staggerDelay={0.1}>
+        <ScrollReveal direction="up" delay={0} className="mb-0">
+          <StaggerContainer className="grid md:grid-cols-1 gap-8" staggerDelay={0.1}>
           {blogPosts.map((post) => (
             <StaggerItem key={post.slug}>
               <TiltCard intensity={4} className="bg-card rounded-2xl border border-border shadow-md overflow-hidden flex flex-col md:flex-row">
@@ -862,7 +863,8 @@ export default function Blog({ lang }: { lang: Language }) {
               </TiltCard>
             </StaggerItem>
           ))}
-        </StaggerContainer>
+          </StaggerContainer>
+        </ScrollReveal>
       </section>
     </div>
   );

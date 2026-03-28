@@ -6,7 +6,7 @@ import NotFound from './not-found';
 import { MapPin, CheckCircle2 } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
 import { motion } from 'framer-motion';
-import { ScrollReveal, StaggerContainer, StaggerItem } from '@/components/ui/animated';
+import { ScrollReveal, StaggerContainer, StaggerItem, TiltCard } from '@/components/ui/animated';
 
 export default function LocationPage({ lang }: { lang: Language }) {
   const [match, params] = useRoute("/:lang/bangalore/:area/:service");
@@ -123,21 +123,23 @@ export default function LocationPage({ lang }: { lang: Language }) {
             </ScrollReveal>
 
             <ScrollReveal direction="left" delay={0.08}>
-              <div className="bg-card border border-border rounded-2xl p-6">
-                <h3 className="text-lg font-bold text-secondary mb-4">
-                  {isHi ? 'हमारी सेवा में क्या शामिल है' : 'What is Included'}
-                </h3>
-                <StaggerContainer className="space-y-3" staggerDelay={0.07}>
-                  {includedItems.map((item, i) => (
-                    <StaggerItem key={i}>
-                      <div className="flex items-center gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
-                        <span className="text-sm">{item}</span>
-                      </div>
-                    </StaggerItem>
-                  ))}
-                </StaggerContainer>
-              </div>
+              <TiltCard intensity={5}>
+                <div className="bg-card border border-border rounded-2xl p-6">
+                  <h3 className="text-lg font-bold text-secondary mb-4">
+                    {isHi ? 'हमारी सेवा में क्या शामिल है' : 'What is Included'}
+                  </h3>
+                  <StaggerContainer className="space-y-3" staggerDelay={0.07}>
+                    {includedItems.map((item, i) => (
+                      <StaggerItem key={i}>
+                        <div className="flex items-center gap-3">
+                          <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
+                          <span className="text-sm">{item}</span>
+                        </div>
+                      </StaggerItem>
+                    ))}
+                  </StaggerContainer>
+                </div>
+              </TiltCard>
             </ScrollReveal>
 
             <ScrollReveal direction="left" delay={0.12}>
