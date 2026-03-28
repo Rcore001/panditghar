@@ -10,7 +10,6 @@ import { motion } from 'framer-motion';
 import { WHATSAPP_NUMBER } from '@/lib/data';
 import { ScrollReveal, StaggerContainer, StaggerItem } from '@/components/ui/animated';
 import { ServiceCardImage } from '@/components/ServiceCardImage';
-import { SITE_URL } from '@/lib/config';
 import { Breadcrumb } from '@/components/Breadcrumb';
 
 interface FAQ {
@@ -1156,21 +1155,11 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
     "image": service.image
   };
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": isHi ? "होम" : "Home", "item": `${SITE_URL}/${lang}` },
-      { "@type": "ListItem", "position": 2, "name": isHi ? "सेवाएं" : "Services", "item": `${SITE_URL}/${lang}/services` },
-      { "@type": "ListItem", "position": 3, "name": title },
-    ]
-  };
-
   const relatedServices = services
     .filter(s => s.category === service.category && s.id !== service.id)
     .slice(0, 3);
 
-  const combinedSchema = [schema, faqSchema, breadcrumbSchema];
+  const combinedSchema = [schema, faqSchema];
 
   const whatsappMsg = encodeURIComponent(
     isHi
