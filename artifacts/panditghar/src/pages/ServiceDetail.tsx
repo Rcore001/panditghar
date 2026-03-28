@@ -1298,22 +1298,48 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
               <div className="flex items-center gap-3 mb-6">
                 <ShoppingBag className="w-6 h-6 text-primary shrink-0" />
                 <h2 className={`text-xl font-display font-bold text-secondary m-0 ${isHi ? 'font-hindi' : ''}`}>
-                  {isHi ? 'पूजा सामग्री सूची' : 'Pooja Samagri Required'}
+                  {service.samagri.length > 0
+                    ? (isHi ? 'पूजा सामग्री सूची' : 'Pooja Samagri Required')
+                    : (isHi ? 'परामर्श सेवा' : 'Consultation Service')}
                 </h2>
               </div>
-              <p className={`text-sm text-muted-foreground mb-5 ${isHi ? 'font-hindi' : ''}`}>
-                {isHi
-                  ? 'नीचे दी गई सामग्री इस पूजा के लिए आवश्यक है। आप इसे स्वयं बाज़ार से खरीद सकते हैं, या हमारी टीम आपके लिए व्यवस्था कर सकती है (वास्तविक लागत पर)।'
-                  : 'The following items are required for this puja. You may arrange them yourself or our team can procure them on your behalf at actual cost.'}
-              </p>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {service.samagri.map((item, i) => (
-                  <li key={i} className="flex items-center gap-2 text-sm text-foreground">
-                    <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
-                    <span className={isHi ? 'font-hindi' : ''}>{item}</span>
-                  </li>
-                ))}
-              </ul>
+              {service.samagri.length > 0 ? (
+                <>
+                  <p className={`text-sm text-muted-foreground mb-5 ${isHi ? 'font-hindi' : ''}`}>
+                    {isHi
+                      ? 'नीचे दी गई सामग्री इस पूजा के लिए आवश्यक है। आप इसे स्वयं बाज़ार से खरीद सकते हैं, या हमारी टीम आपके लिए व्यवस्था कर सकती है (वास्तविक लागत पर)।'
+                      : 'The following items are required for this puja. You may arrange them yourself or our team can procure them on your behalf at actual cost.'}
+                  </p>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    {service.samagri.map((item, i) => (
+                      <li key={i} className="flex items-center gap-2 text-sm text-foreground">
+                        <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
+                        <span className={isHi ? 'font-hindi' : ''}>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              ) : (
+                <div className="bg-muted rounded-xl p-6 border border-border">
+                  <p className={`text-sm text-muted-foreground leading-relaxed ${isHi ? 'font-hindi' : ''}`}>
+                    {isHi
+                      ? 'यह एक परामर्श सेवा है। किसी भौतिक सामग्री की आवश्यकता नहीं है। आप सत्र व्यक्तिगत रूप से (हमारे कार्यालय / आपके घर) या वीडियो कॉल के माध्यम से बुक कर सकते हैं। बुकिंग के बाद हमारी टीम आपसे समय और माध्यम की पुष्टि के लिए संपर्क करेगी।'
+                      : 'This is a consultation service — no physical items are required. Sessions are available in person (our office / your home) or via video call. After booking, our team will contact you to confirm the time and mode of consultation.'}
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-3">
+                    {[
+                      isHi ? '📋 जन्म तिथि, समय व स्थान' : '📋 Birth date, time & place',
+                      isHi ? '🕐 1 घंटे का सत्र' : '🕐 1-hour session',
+                      isHi ? '📞 वीडियो कॉल उपलब्ध' : '📞 Video call available',
+                      isHi ? '📄 लिखित रिपोर्ट' : '📄 Written report',
+                    ].map((item, i) => (
+                      <span key={i} className={`inline-flex items-center gap-1.5 text-xs bg-primary/10 text-primary px-3 py-1.5 rounded-full font-medium ${isHi ? 'font-hindi' : ''}`}>
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
             </motion.div>
 
             <DecorativeDivider />
