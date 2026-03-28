@@ -1,5 +1,4 @@
 import { Switch, Route, Router as WouterRouter, Redirect } from "wouter";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { HelmetProvider } from "react-helmet-async";
@@ -20,7 +19,6 @@ import Contact from "@/pages/Contact";
 import Blog, { BlogPost } from "@/pages/Blog";
 import { BookingForm } from "@/components/BookingForm";
 
-const queryClient = new QueryClient();
 
 function BookingPage({ lang }: { lang: Language }) {
   const isHi = lang === 'hi';
@@ -126,16 +124,14 @@ function Router() {
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <HelmetProvider>
-        <TooltipProvider>
-          <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
-            <Router />
-          </WouterRouter>
-          <Toaster />
-        </TooltipProvider>
-      </HelmetProvider>
-    </QueryClientProvider>
+    <HelmetProvider>
+      <TooltipProvider>
+        <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+          <Router />
+        </WouterRouter>
+        <Toaster />
+      </TooltipProvider>
+    </HelmetProvider>
   );
 }
 
