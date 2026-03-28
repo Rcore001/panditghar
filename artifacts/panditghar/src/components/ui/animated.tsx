@@ -212,6 +212,7 @@ export function AnimatedCounter({
     if (ref.current) observer.observe(ref.current);
     return () => {
       observer.disconnect();
+      controlsRef.current?.stop();
     };
   }, [target, duration]);
 
