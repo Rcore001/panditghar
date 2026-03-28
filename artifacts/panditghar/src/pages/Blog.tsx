@@ -4,6 +4,7 @@ import { SEO } from '@/components/SEO';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { CalendarDays, Clock } from 'lucide-react';
+import { ScrollReveal, StaggerContainer, StaggerItem, TiltCard } from '@/components/ui/animated';
 
 const blogPosts = [
   {
@@ -814,49 +815,54 @@ export default function Blog({ lang }: { lang: Language }) {
       />
 
       <section className="bg-gradient-maroon text-white py-20 px-4 text-center">
-        <h1 className={`text-4xl md:text-5xl font-display font-bold mb-4 text-accent ${isHi ? 'font-hindi' : ''}`}>
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className={`text-4xl md:text-5xl font-display font-bold mb-4 text-accent ${isHi ? 'font-hindi' : ''}`}
+        >
           {isHi ? 'ब्लॉग — वैदिक ज्ञान' : 'Blog — Vedic Knowledge'}
-        </h1>
-        <p className={`text-xl text-white/80 max-w-2xl mx-auto ${isHi ? 'font-hindi' : ''}`}>
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className={`text-xl text-white/80 max-w-2xl mx-auto ${isHi ? 'font-hindi' : ''}`}
+        >
           {isHi ? 'शास्त्रों पर आधारित प्रामाणिक जानकारी' : 'Authentic knowledge based on the Shastras'}
-        </p>
+        </motion.p>
       </section>
 
       <section className="py-16 px-4 max-w-5xl mx-auto">
-        <div className="grid md:grid-cols-1 gap-8">
-          {blogPosts.map((post, i) => (
-            <motion.article
-              key={post.slug}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="bg-card rounded-2xl border border-border shadow-md overflow-hidden flex flex-col md:flex-row"
-            >
-              <div className="bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center p-12 text-7xl min-w-[160px]">
-                {post.icon}
-              </div>
-              <div className="p-8 flex-1">
-                <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
-                  <span className="flex items-center gap-1.5"><CalendarDays className="w-4 h-4" /> {post.date}</span>
-                  <span className="flex items-center gap-1.5"><Clock className="w-4 h-4" /> {post.readTime} read</span>
+        <StaggerContainer className="grid md:grid-cols-1 gap-8" staggerDelay={0.1}>
+          {blogPosts.map((post) => (
+            <StaggerItem key={post.slug}>
+              <TiltCard intensity={4} className="bg-card rounded-2xl border border-border shadow-md overflow-hidden flex flex-col md:flex-row">
+                <div className="bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center p-12 text-7xl min-w-[160px]">
+                  {post.icon}
                 </div>
-                <h2 className={`text-2xl font-display font-bold text-secondary mb-3 ${isHi ? 'font-hindi' : ''}`}>
-                  {isHi ? post.hiTitle : post.enTitle}
-                </h2>
-                <p className={`text-muted-foreground mb-3 ${isHi ? 'font-hindi' : ''}`}>
-                  {isHi ? post.hiExcerpt : post.enExcerpt}
-                </p>
-                <p className="text-xs text-primary/70 italic mb-5">📜 {post.shastreeyRef}</p>
-                <Link href={`/${lang}/blog/${post.slug}`}>
-                  <Button variant="outline" className="rounded-full border-primary text-primary hover:bg-primary hover:text-white">
-                    {isHi ? 'पूरा पढ़ें →' : 'Read More →'}
-                  </Button>
-                </Link>
-              </div>
-            </motion.article>
+                <div className="p-8 flex-1">
+                  <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                    <span className="flex items-center gap-1.5"><CalendarDays className="w-4 h-4" /> {post.date}</span>
+                    <span className="flex items-center gap-1.5"><Clock className="w-4 h-4" /> {post.readTime} read</span>
+                  </div>
+                  <h2 className={`text-2xl font-display font-bold text-secondary mb-3 ${isHi ? 'font-hindi' : ''}`}>
+                    {isHi ? post.hiTitle : post.enTitle}
+                  </h2>
+                  <p className={`text-muted-foreground mb-3 ${isHi ? 'font-hindi' : ''}`}>
+                    {isHi ? post.hiExcerpt : post.enExcerpt}
+                  </p>
+                  <p className="text-xs text-primary/70 italic mb-5">📜 {post.shastreeyRef}</p>
+                  <Link href={`/${lang}/blog/${post.slug}`}>
+                    <Button variant="outline" className="rounded-full border-primary text-primary hover:bg-primary hover:text-white">
+                      {isHi ? 'पूरा पढ़ें →' : 'Read More →'}
+                    </Button>
+                  </Link>
+                </div>
+              </TiltCard>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </section>
     </div>
   );

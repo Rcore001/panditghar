@@ -1,8 +1,20 @@
+import { motion } from 'framer-motion';
 import { Language, muhurats, useTranslation } from '@/lib/data';
 import { SEO } from '@/components/SEO';
 import { DecorativeDivider } from '@/components/ui/decorative';
 import { CalendarDays } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
+import { ScrollReveal } from '@/components/ui/animated';
+
+const rowVariants = {
+  hidden: { opacity: 0, y: 24, rotateX: 6 },
+  show: { opacity: 1, y: 0, rotateX: 0, transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } },
+};
+
+const tableBodyVariants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.06 } },
+};
 
 export default function ShubhMuhurat({ lang }: { lang: Language }) {
   const isHi = lang === 'hi';
@@ -36,52 +48,75 @@ export default function ShubhMuhurat({ lang }: { lang: Language }) {
       />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <div className="inline-flex justify-center items-center w-20 h-20 rounded-full bg-accent/20 mb-6 text-accent">
-             <CalendarDays className="w-10 h-10" />
+        <ScrollReveal direction="up">
+          <div className="text-center mb-12">
+            <motion.div
+              initial={{ scale: 0.7, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              className="inline-flex justify-center items-center w-20 h-20 rounded-full bg-accent/20 mb-6 text-accent"
+            >
+               <CalendarDays className="w-10 h-10" />
+            </motion.div>
+            <h1 className={`text-4xl md:text-5xl font-display font-bold text-secondary mb-4 ${isHi ? 'font-hindi' : ''}`}>
+              {title}
+            </h1>
+            <p className={`text-lg text-muted-foreground ${isHi ? 'font-hindi' : ''}`}>
+              {desc}
+            </p>
           </div>
-          <h1 className={`text-4xl md:text-5xl font-display font-bold text-secondary mb-4 ${isHi ? 'font-hindi' : ''}`}>
-            {title}
-          </h1>
-          <p className={`text-lg text-muted-foreground ${isHi ? 'font-hindi' : ''}`}>
-            {desc}
-          </p>
-        </div>
+        </ScrollReveal>
 
-        <div className="bg-card rounded-2xl shadow-xl border border-border overflow-hidden">
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr className="bg-secondary text-secondary-foreground">
-                  <th className="py-4 px-6 font-display text-lg">{isHi ? 'तिथि (Date)' : 'Date'}</th>
-                  <th className="py-4 px-6 font-display text-lg">{isHi ? 'दिन (Day)' : 'Day'}</th>
-                  <th className="py-4 px-6 font-display text-lg">{isHi ? 'अवसर (Occasion)' : 'Occasion'}</th>
-                  <th className="py-4 px-6 font-display text-lg">{isHi ? 'मुहूर्त (Time)' : 'Muhurat Time'}</th>
-                  <th className="py-4 px-6 font-display text-lg">{isHi ? 'प्रकार (Type)' : 'Type'}</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-border">
-                {muhurats.map((m, i) => (
-                  <tr key={i} className="hover:bg-muted/50 transition-colors">
-                    <td className="py-4 px-6 font-semibold">{m.date}</td>
-                    <td className="py-4 px-6 text-muted-foreground">{m.day}</td>
-                    <td className="py-4 px-6">{m.occasion}</td>
-                    <td className="py-4 px-6 text-primary font-medium">{m.time}</td>
-                    <td className="py-4 px-6">
-                      <span className="bg-accent/20 text-secondary px-3 py-1 rounded-full text-sm font-medium">
-                        {m.type}
-                      </span>
-                    </td>
+        <ScrollReveal direction="up" delay={0.1}>
+          <div className="bg-card rounded-2xl shadow-xl border border-border overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="bg-secondary text-secondary-foreground">
+                    <th className="py-4 px-6 font-display text-lg">{isHi ? 'तिथि (Date)' : 'Date'}</th>
+                    <th className="py-4 px-6 font-display text-lg">{isHi ? 'दिन (Day)' : 'Day'}</th>
+                    <th className="py-4 px-6 font-display text-lg">{isHi ? 'अवसर (Occasion)' : 'Occasion'}</th>
+                    <th className="py-4 px-6 font-display text-lg">{isHi ? 'मुहूर्त (Time)' : 'Muhurat Time'}</th>
+                    <th className="py-4 px-6 font-display text-lg">{isHi ? 'प्रकार (Type)' : 'Type'}</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <motion.tbody
+                  className="divide-y divide-border"
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, margin: '-60px' }}
+                  variants={tableBodyVariants}
+                  style={{ perspective: 800 }}
+                >
+                  {muhurats.map((m, i) => (
+                    <motion.tr
+                      key={i}
+                      variants={rowVariants}
+                      className="hover:bg-muted/50 transition-colors"
+                      style={{ perspective: 800 }}
+                    >
+                      <td className="py-4 px-6 font-semibold">{m.date}</td>
+                      <td className="py-4 px-6 text-muted-foreground">{m.day}</td>
+                      <td className="py-4 px-6">{m.occasion}</td>
+                      <td className="py-4 px-6 text-primary font-medium">{m.time}</td>
+                      <td className="py-4 px-6">
+                        <span className="bg-accent/20 text-secondary px-3 py-1 rounded-full text-sm font-medium">
+                          {m.type}
+                        </span>
+                      </td>
+                    </motion.tr>
+                  ))}
+                </motion.tbody>
+              </table>
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
 
-        <div className={`mt-8 text-center text-muted-foreground text-sm ${isHi ? 'font-hindi' : ''}`}>
-          * {isHi ? 'मुहूर्त पंचांग पर आधारित हैं। व्यक्तिगत कुण्डली के अनुसार मुहूर्त बदल सकता है।' : 'Muhurats are based on general Panchang. Specific timings may vary based on personal Kundali.'}
-        </div>
+        <ScrollReveal delay={0.15}>
+          <div className={`mt-8 text-center text-muted-foreground text-sm ${isHi ? 'font-hindi' : ''}`}>
+            * {isHi ? 'मुहूर्त पंचांग पर आधारित हैं। व्यक्तिगत कुण्डली के अनुसार मुहूर्त बदल सकता है।' : 'Muhurats are based on general Panchang. Specific timings may vary based on personal Kundali.'}
+          </div>
+        </ScrollReveal>
       </div>
       <DecorativeDivider />
     </div>

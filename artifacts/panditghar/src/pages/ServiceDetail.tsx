@@ -8,6 +8,7 @@ import { CheckCircle2, ChevronRight, BookOpen, PhoneCall, AlertCircle, ShoppingB
 import NotFound from './not-found';
 import { motion } from 'framer-motion';
 import { WHATSAPP_NUMBER } from '@/lib/data';
+import { ScrollReveal, StaggerContainer, StaggerItem } from '@/components/ui/animated';
 
 interface FAQ {
   q_hi: string;
@@ -1310,14 +1311,24 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
                       ? 'नीचे दी गई सामग्री इस पूजा के लिए आवश्यक है। आप इसे स्वयं बाज़ार से खरीद सकते हैं, या हमारी टीम आपके लिए व्यवस्था कर सकती है (वास्तविक लागत पर)।'
                       : 'The following items are required for this puja. You may arrange them yourself or our team can procure them on your behalf at actual cost.'}
                   </p>
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <motion.ul
+                    className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, margin: '-40px' }}
+                    variants={{ hidden: {}, show: { transition: { staggerChildren: 0.04 } } }}
+                  >
                     {service.samagri.map((item, i) => (
-                      <li key={i} className="flex items-center gap-2 text-sm text-foreground">
+                      <motion.li
+                        key={i}
+                        variants={{ hidden: { opacity: 0, x: -12 }, show: { opacity: 1, x: 0, transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] } } }}
+                        className="flex items-center gap-2 text-sm text-foreground"
+                      >
                         <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
                         <span className={isHi ? 'font-hindi' : ''}>{item}</span>
-                      </li>
+                      </motion.li>
                     ))}
-                  </ul>
+                  </motion.ul>
                 </>
               ) : (
                 <div className="bg-muted rounded-xl p-6 border border-border">
@@ -1344,23 +1355,27 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
 
             <DecorativeDivider />
 
-            <div className="bg-card rounded-3xl p-8 border border-border shadow-md">
-              <h3 className={`text-2xl font-display font-bold text-secondary mb-6 ${isHi ? 'font-hindi' : ''}`}>
-                {isHi ? 'सामान्य प्रश्न (FAQs)' : 'Frequently Asked Questions'}
-              </h3>
-              <div className="space-y-6">
-                {faqs.map((faq, i) => (
-                  <div key={i} className="border-b border-border pb-5 last:border-0">
-                    <h4 className={`font-bold text-base mb-2 text-secondary ${isHi ? 'font-hindi' : ''}`}>
-                      {isHi ? faq.q_hi : faq.q_en}
-                    </h4>
-                    <p className={`text-muted-foreground text-sm ${isHi ? 'font-hindi' : ''}`}>
-                      {isHi ? faq.a_hi : faq.a_en}
-                    </p>
-                  </div>
-                ))}
+            <ScrollReveal direction="up" delay={0.05}>
+              <div className="bg-card rounded-3xl p-8 border border-border shadow-md">
+                <h3 className={`text-2xl font-display font-bold text-secondary mb-6 ${isHi ? 'font-hindi' : ''}`}>
+                  {isHi ? 'सामान्य प्रश्न (FAQs)' : 'Frequently Asked Questions'}
+                </h3>
+                <StaggerContainer className="space-y-6" staggerDelay={0.07}>
+                  {faqs.map((faq, i) => (
+                    <StaggerItem key={i}>
+                      <div className="border-b border-border pb-5 last:border-0">
+                        <h4 className={`font-bold text-base mb-2 text-secondary ${isHi ? 'font-hindi' : ''}`}>
+                          {isHi ? faq.q_hi : faq.q_en}
+                        </h4>
+                        <p className={`text-muted-foreground text-sm ${isHi ? 'font-hindi' : ''}`}>
+                          {isHi ? faq.a_hi : faq.a_en}
+                        </p>
+                      </div>
+                    </StaggerItem>
+                  ))}
+                </StaggerContainer>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
 
           <div className="lg:col-span-1">
