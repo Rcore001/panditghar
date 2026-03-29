@@ -1,6 +1,28 @@
 import { useRef, useEffect, useState, ReactNode } from 'react';
 import { motion, useScroll, useTransform, useSpring, useMotionValue, animate } from 'framer-motion';
 
+const _pageVariants = {
+  initial: { opacity: 0, y: 18 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -12 },
+};
+
+const _pageTransition = { duration: 0.28, ease: [0.22, 1, 0.36, 1] as const };
+
+export function AnimatedPage({ children }: { children: ReactNode }) {
+  return (
+    <motion.div
+      variants={_pageVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      transition={_pageTransition}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
 export function ScrollReveal({
   children,
   className = '',

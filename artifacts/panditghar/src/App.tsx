@@ -1,11 +1,12 @@
 import { Switch, Route, Router as WouterRouter, Redirect, useLocation } from "wouter";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { HelmetProvider } from "react-helmet-async";
 import NotFound from "@/pages/not-found";
 
 import { AppLayout } from "@/components/layout/AppLayout";
+import { AnimatedPage } from "@/components/ui/animated";
 import { Language } from "@/lib/data";
 import { SEO } from "@/components/SEO";
 import { SITE_URL } from "@/lib/config";
@@ -59,28 +60,6 @@ function BookingPage({ lang }: { lang: Language }) {
 
 function BlogPostPage({ lang, params }: { lang: Language; params: { slug: string } }) {
   return <BlogPost lang={lang} slug={params.slug} />;
-}
-
-const pageVariants = {
-  initial: { opacity: 0, y: 18 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -12 },
-};
-
-const pageTransition = { duration: 0.28, ease: [0.22, 1, 0.36, 1] };
-
-function AnimatedPage({ children }: { children: React.ReactNode }) {
-  return (
-    <motion.div
-      variants={pageVariants}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      transition={pageTransition}
-    >
-      {children}
-    </motion.div>
-  );
 }
 
 function LangRoute({ lang, Component, params }: { lang: Language; Component: any; params?: any }) {
