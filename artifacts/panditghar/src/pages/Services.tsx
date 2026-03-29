@@ -8,15 +8,17 @@ import { Button } from '@/components/ui/button';
 import { SITE_URL } from '@/lib/config';
 import { ScrollReveal, StaggerContainer, StaggerItem, TiltCard } from '@/components/ui/animated';
 import { ServiceCardImage } from '@/components/ServiceCardImage';
+import { ServiceIcon } from '@/components/ServiceIcon';
+import { Sparkles, Home, Baby, BookOpen, PartyPopper, Star, Telescope } from 'lucide-react';
 
-const CATEGORY_ICONS: Record<string, string> = {
-  all: '✨',
-  small: '🏠',
-  sanskar: '👶',
-  large: '📖',
-  festival: '🎉',
-  dosha: '⭐',
-  jyotish: '🔮',
+const CATEGORY_ICON_COMPONENTS: Record<string, React.ReactNode> = {
+  all:      <Sparkles className="w-4 h-4" />,
+  small:    <Home className="w-4 h-4" />,
+  sanskar:  <Baby className="w-4 h-4" />,
+  large:    <BookOpen className="w-4 h-4" />,
+  festival: <PartyPopper className="w-4 h-4" />,
+  dosha:    <Star className="w-4 h-4" />,
+  jyotish:  <Telescope className="w-4 h-4" />,
 };
 
 export default function Services({ lang }: { lang: Language }) {
@@ -90,7 +92,7 @@ export default function Services({ lang }: { lang: Language }) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.04, duration: 0.3 }}
               >
-                <span className="text-base leading-none">{CATEGORY_ICONS[cat.id]}</span>
+                <span className="leading-none flex-shrink-0">{CATEGORY_ICON_COMPONENTS[cat.id]}</span>
                 <span>{isHi ? cat.hiLabel : cat.enLabel}</span>
               </motion.button>
             ))}
@@ -127,8 +129,8 @@ export default function Services({ lang }: { lang: Language }) {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/30 to-transparent" />
                         {/* Category badge */}
-                        <div className="absolute top-3 right-3">
-                          <span className="text-2xl drop-shadow-lg">{service.icon}</span>
+                        <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/15 backdrop-blur-sm flex items-center justify-center text-white border border-white/20">
+                          <ServiceIcon name={service.icon} className="w-4 h-4" />
                         </div>
                         <div className="absolute bottom-0 left-0 p-4 w-full">
                           <h3 className="text-lg font-display font-bold text-accent font-hindi leading-tight drop-shadow-md">

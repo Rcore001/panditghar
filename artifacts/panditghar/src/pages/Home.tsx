@@ -5,7 +5,7 @@ import { SITE_URL } from '@/lib/config';
 import { DecorativeDivider, OmIcon } from '@/components/ui/decorative';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
-import { CheckCircle2, Star, MessageCircle } from 'lucide-react';
+import { CheckCircle2, Star, MessageCircle, Flame, Zap, Sparkles, Triangle, Infinity, Languages } from 'lucide-react';
 import { BookingForm } from '@/components/BookingForm';
 import {
   ScrollReveal,
@@ -22,7 +22,7 @@ import { ServiceCardImage } from '@/components/ServiceCardImage';
 const sanghPackages = [
   {
     count: 11,
-    icon: '🔥',
+    Icon: Flame,
     enName: 'Laghu Anushthaan',
     hiName: 'लघु अनुष्ठान',
     enType: 'Ekadash Rudri, small group yagnas',
@@ -30,7 +30,7 @@ const sanghPackages = [
   },
   {
     count: 21,
-    icon: '⚡',
+    Icon: Zap,
     enName: 'Madhyam Anushthaan',
     hiName: 'मध्यम अनुष्ठान',
     enType: 'Navchandi, group havans',
@@ -38,7 +38,7 @@ const sanghPackages = [
   },
   {
     count: 51,
-    icon: '🌟',
+    Icon: Sparkles,
     enName: 'Brihat Yagna',
     hiName: 'बृहत् यज्ञ',
     enType: 'Satchandi, community yagnas',
@@ -46,7 +46,7 @@ const sanghPackages = [
   },
   {
     count: 108,
-    icon: '🔱',
+    Icon: Triangle,
     enName: 'Maha Anushthaan',
     hiName: 'महा अनुष्ठान',
     enType: 'Sahastra Abhishek, Sahastra Chandi',
@@ -54,7 +54,7 @@ const sanghPackages = [
   },
   {
     count: 1008,
-    icon: '🕉️',
+    Icon: Infinity,
     enName: 'Mahayagna',
     hiName: 'महायज्ञ',
     enType: 'Laksha Chandi — supreme grand yagna',
@@ -213,7 +213,7 @@ export default function Home({ lang }: { lang: Language }) {
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 mb-12"
+              className="flex flex-col sm:flex-row gap-4 mb-6"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -236,6 +236,22 @@ export default function Home({ lang }: { lang: Language }) {
               </a>
             </motion.div>
 
+            {/* Language toggle pill */}
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.65 }}
+              className="mb-8"
+            >
+              <Link
+                href={`/${lang === 'hi' ? 'en' : 'hi'}`}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 hover:border-white/35 transition-all backdrop-blur-sm text-white/90 text-sm font-medium"
+              >
+                <Languages className="w-3.5 h-3.5" />
+                {lang === 'hi' ? 'Switch to English' : 'हिंदी में देखें'}
+              </Link>
+            </motion.div>
+
             <motion.div
               className="flex items-center gap-4 text-sm text-white/80"
               initial={{ opacity: 0 }}
@@ -243,13 +259,13 @@ export default function Home({ lang }: { lang: Language }) {
               transition={{ duration: 0.5, delay: 0.55 }}
             >
               <div className="flex -space-x-2">
-                {['🙏', '⭐', '🕉️', '🪔'].map((emoji, i) => (
+                {[<OmIcon className="w-4 h-4 text-white" />, <Star className="w-4 h-4 text-white fill-white" />, <Sparkles className="w-4 h-4 text-white" />, <Flame className="w-4 h-4 text-white" />].map((icon, i) => (
                   <div
                     key={i}
-                    className="w-9 h-9 rounded-full border-2 border-white/30 flex items-center justify-center text-base shadow-md"
+                    className="w-9 h-9 rounded-full border-2 border-white/30 flex items-center justify-center shadow-md"
                     style={{ background: 'linear-gradient(135deg,#c75b1a,#e8a020)' }}
                   >
-                    {emoji}
+                    {icon}
                   </div>
                 ))}
               </div>
@@ -432,7 +448,11 @@ export default function Home({ lang }: { lang: Language }) {
                 >
                   <div className="bg-white/10 backdrop-blur-sm border border-accent/30 rounded-2xl p-5 text-center hover:bg-white/20 hover:border-accent/70 transition-all duration-300 group cursor-pointer h-full flex flex-col justify-between min-h-[180px]">
                     <div>
-                      <div className="text-3xl mb-2">{pkg.icon}</div>
+                      <div className="flex justify-center mb-2">
+                        <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center text-accent">
+                          <pkg.Icon className="w-5 h-5" />
+                        </div>
+                      </div>
                       <div className="text-4xl font-bold text-accent font-display mb-0.5 leading-none">{pkg.count}</div>
                       <div className={`text-white/50 text-xs mb-2 uppercase tracking-wide ${isHi ? 'font-hindi' : ''}`}>
                         {isHi ? 'पंडित' : 'Pandits'}
@@ -548,7 +568,7 @@ export default function Home({ lang }: { lang: Language }) {
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto relative overflow-hidden" id="book-now">
         <FloatingOrb size={200} color="rgba(255,153,0,0.06)" x="-5%" y="10%" duration={12} delay={0} />
         <FloatingOrb size={140} color="rgba(255,204,0,0.05)" x="90%" y="50%" duration={9} delay={2} />
-        <FloatingSymbol symbol="🪔" size={28} x="5%" y="80%" duration={10} delay={1} opacity={0.08} />
+        <FloatingSymbol symbol="ॐ" size={28} x="5%" y="80%" duration={10} delay={1} opacity={0.08} />
         <ScrollReveal>
           <BookingForm lang={lang} />
         </ScrollReveal>

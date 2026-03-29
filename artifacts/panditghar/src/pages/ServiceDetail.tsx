@@ -13,6 +13,7 @@ import { ServiceCardImage } from '@/components/ServiceCardImage';
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
 import { serviceShlokas } from '@/lib/serviceShlokas';
+import { ServiceIcon } from '@/components/ServiceIcon';
 
 interface FAQ {
   q_hi: string;
@@ -1488,7 +1489,9 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
                           transition={{ duration: 0.2 }}
                           className="bg-card border border-border rounded-2xl p-5 hover:border-primary/40 hover:shadow-md transition-all cursor-pointer"
                         >
-                          <div className="text-3xl mb-3">{rel.icon}</div>
+                          <div className="w-10 h-10 mb-3 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                            <ServiceIcon name={rel.icon} className="w-5 h-5" />
+                          </div>
                           <h4 className={`font-bold text-secondary text-sm mb-1 ${isHi ? 'font-hindi' : ''}`}>
                             {isHi ? rel.hiTitle : rel.enTitle}
                           </h4>

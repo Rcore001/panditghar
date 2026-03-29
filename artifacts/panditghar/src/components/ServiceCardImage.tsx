@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { ServiceIcon } from './ServiceIcon';
 
 const PALETTES: Record<string, { gradient: string; glowColor: string }> = {
   small:   { gradient: 'linear-gradient(135deg,#7a2800 0%,#c45c14 40%,#e07800 100%)',   glowColor: 'rgba(224,120,0,0.45)' },
@@ -105,7 +106,7 @@ export function ServiceCardImage({
             transition={{ duration: 0.35 }}
           >
             <div
-              className="rounded-full flex items-center justify-center"
+              className="rounded-full flex items-center justify-center text-white"
               style={{
                 width: 76,
                 height: 76,
@@ -113,9 +114,7 @@ export function ServiceCardImage({
                 boxShadow: `0 0 32px ${palette.glowColor}, 0 0 12px rgba(0,0,0,0.3)`,
               }}
             >
-              <span className="text-4xl select-none" style={{ filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.5))' }}>
-                {icon}
-              </span>
+              <ServiceIcon name={icon} className="w-9 h-9 drop-shadow-md" />
             </div>
           </motion.div>
           <p
