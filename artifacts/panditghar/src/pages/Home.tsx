@@ -212,8 +212,24 @@ export default function Home({ lang }: { lang: Language }) {
               {t.hero.subtitle}
             </motion.p>
 
+            {/* Language toggle pill — above CTAs */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 mb-6"
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.35 }}
+              className="mb-5"
+            >
+              <Link
+                href={`/${lang === 'hi' ? 'en' : 'hi'}`}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 hover:border-white/35 transition-all backdrop-blur-sm text-white/90 text-sm font-medium"
+              >
+                <Languages className="w-3.5 h-3.5" />
+                {lang === 'hi' ? 'Switch to English' : 'हिंदी में देखें'}
+              </Link>
+            </motion.div>
+
+            <motion.div
+              className="flex flex-col sm:flex-row gap-4 mb-12"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -234,22 +250,6 @@ export default function Home({ lang }: { lang: Language }) {
                   {t.hero.ctaSecondary}
                 </Button>
               </a>
-            </motion.div>
-
-            {/* Language toggle pill */}
-            <motion.div
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.65 }}
-              className="mb-8"
-            >
-              <Link
-                href={`/${lang === 'hi' ? 'en' : 'hi'}`}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 hover:border-white/35 transition-all backdrop-blur-sm text-white/90 text-sm font-medium"
-              >
-                <Languages className="w-3.5 h-3.5" />
-                {lang === 'hi' ? 'Switch to English' : 'हिंदी में देखें'}
-              </Link>
             </motion.div>
 
             <motion.div
