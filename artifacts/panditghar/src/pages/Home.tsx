@@ -218,11 +218,17 @@ export default function Home({ lang }: { lang: Language }) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <Link href={`/${lang}/book`}>
-                <Button className="w-full sm:w-auto bg-gradient-saffron hover:shadow-glow-saffron text-white rounded-full px-8 py-7 text-lg font-semibold border-none transition-all">
-                  {t.hero.ctaPrimary}
-                </Button>
-              </Link>
+              <motion.div
+                initial={{ scale: 0.92, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <Link href={`/${lang}/book`}>
+                  <Button className="w-full sm:w-auto bg-gradient-saffron hover:shadow-glow-saffron text-white rounded-full px-8 py-7 text-lg font-semibold border-none transition-all">
+                    {t.hero.ctaPrimary}
+                  </Button>
+                </Link>
+              </motion.div>
               <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noreferrer">
                 <Button variant="outline" className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border-white/30 rounded-full px-8 py-7 text-lg font-semibold backdrop-blur-sm transition-all">
                   {t.hero.ctaSecondary}
@@ -277,7 +283,9 @@ export default function Home({ lang }: { lang: Language }) {
 
       {/* ─── Stats Row ─── */}
       <ScrollReveal>
-        <section className="py-10 px-4">
+        <section className="py-10 px-4 relative overflow-hidden">
+          <FloatingOrb size={120} color="rgba(255,153,0,0.07)" x="0%" y="0%" duration={9} delay={0} />
+          <FloatingSymbol symbol="ॐ" size={36} x="90%" y="5%" duration={11} delay={1.5} opacity={0.06} />
           <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
               { num: 5000, suffix: '+', label: isHi ? 'परिवार सेवित' : 'Families Served' },
@@ -306,20 +314,27 @@ export default function Home({ lang }: { lang: Language }) {
 
       {/* ─── Services Grid ─── */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <ScrollReveal>
-          <div className="text-center mb-16">
+        <div className="text-center mb-16">
+          <ScrollReveal direction="up">
             <h2 className={`text-4xl md:text-5xl font-display font-bold text-secondary mb-4 ${isHi ? 'font-hindi' : ''}`}>
               {t.services.title}
             </h2>
+          </ScrollReveal>
+          <ScrollReveal direction="up" delay={0.08}>
             <p className={`text-lg text-muted-foreground ${isHi ? 'font-hindi' : ''}`}>
               {t.services.subtitle}
             </p>
-          </div>
-        </ScrollReveal>
+          </ScrollReveal>
+        </div>
 
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.slice(0, 6).map((service) => (
             <StaggerItem key={service.id}>
+              <motion.div
+                className="h-full"
+                whileHover={{ y: -4, boxShadow: '0 12px 40px rgba(255,153,0,0.18)' }}
+                transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+              >
               <TiltCard className="h-full">
                 <div
                   className="bg-card rounded-2xl overflow-hidden border border-border hover:border-accent/50 transition-all duration-300 group flex flex-col h-full"
@@ -364,6 +379,7 @@ export default function Home({ lang }: { lang: Language }) {
                   </div>
                 </div>
               </TiltCard>
+              </motion.div>
             </StaggerItem>
           ))}
         </StaggerContainer>
@@ -540,11 +556,14 @@ export default function Home({ lang }: { lang: Language }) {
       </ScrollReveal>
 
       {/* ─── Booking Section ─── */}
-      <ScrollReveal>
-        <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto" id="book-now">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto relative overflow-hidden" id="book-now">
+        <FloatingOrb size={200} color="rgba(255,153,0,0.06)" x="-5%" y="10%" duration={12} delay={0} />
+        <FloatingOrb size={140} color="rgba(255,204,0,0.05)" x="90%" y="50%" duration={9} delay={2} />
+        <FloatingSymbol symbol="🪔" size={28} x="5%" y="80%" duration={10} delay={1} opacity={0.08} />
+        <ScrollReveal>
           <BookingForm lang={lang} />
-        </section>
-      </ScrollReveal>
+        </ScrollReveal>
+      </section>
     </div>
   );
 }
