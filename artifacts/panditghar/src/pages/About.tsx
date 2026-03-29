@@ -77,15 +77,15 @@ export default function About({ lang }: { lang: Language }) {
       </div>
 
       {/* Hero */}
-      <section className="bg-gradient-maroon text-white py-20 px-4">
+      <section className="bg-gradient-maroon text-white py-12 sm:py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <ScrollReveal direction="up">
-            <h1 className={`text-4xl md:text-5xl font-display font-bold mb-6 text-accent ${isHi ? 'font-hindi' : ''}`}>
+            <h1 className={`text-2xl sm:text-4xl md:text-5xl font-display font-bold mb-4 sm:mb-6 text-accent ${isHi ? 'font-hindi' : ''}`}>
               {isHi ? 'हमारे बारे में' : 'About PanditGhar.in'}
             </h1>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.1}>
-            <p className={`text-xl text-white/90 max-w-2xl mx-auto ${isHi ? 'font-hindi' : ''}`}>
+            <p className={`text-base sm:text-xl text-white/90 max-w-2xl mx-auto ${isHi ? 'font-hindi' : ''}`}>
               {isHi
                 ? 'बेंगलुरु के प्रत्येक कोने में प्रामाणिक वैदिक सेवाएं प्रदान करने के लिए समर्पित'
                 : 'Dedicated to providing authentic Vedic services in every corner of Bangalore'}

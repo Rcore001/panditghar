@@ -871,14 +871,14 @@ export default function Blog({ lang }: { lang: Language }) {
           {blogPosts.map((post) => (
             <StaggerItem key={post.slug}>
               <TiltCard intensity={4} className="bg-card rounded-2xl border border-border shadow-md overflow-hidden flex flex-col md:flex-row">
-                <div className="min-w-[220px] w-full md:w-[220px] h-[180px] md:h-auto flex-shrink-0 overflow-hidden">
+                <div className="w-full md:w-[220px] md:min-w-[220px] h-[180px] md:h-auto flex-shrink-0 overflow-hidden">
                   <BlogCardImage
                     src={post.image}
                     alt={isHi ? post.hiTitle : post.enTitle}
                     icon={post.icon}
                   />
                 </div>
-                <div className="p-8 flex-1">
+                <div className="p-5 md:p-8 flex-1">
                   <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
                     <span className="flex items-center gap-1.5"><CalendarDays className="w-4 h-4" /> {post.date}</span>
                     <span className="flex items-center gap-1.5"><Clock className="w-4 h-4" /> {post.readTime} read</span>

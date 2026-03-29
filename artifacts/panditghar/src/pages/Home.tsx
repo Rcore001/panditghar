@@ -199,12 +199,12 @@ export default function Home({ lang }: { lang: Language }) {
               </span>
             </motion.div>
 
-            <h1 className={`text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6 text-gradient-gold ${isHi ? 'font-hindi' : ''}`}>
+            <h1 className={`text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-4 sm:mb-6 text-gradient-gold ${isHi ? 'font-hindi' : ''}`}>
               {t.hero.h1}
             </h1>
 
             <motion.p
-              className={`text-xl md:text-2xl text-white/90 mb-10 leading-relaxed ${isHi ? 'font-hindi' : ''}`}
+              className={`text-base sm:text-xl md:text-2xl text-white/90 mb-8 sm:mb-10 leading-relaxed ${isHi ? 'font-hindi' : ''}`}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -294,7 +294,7 @@ export default function Home({ lang }: { lang: Language }) {
                 transition={{ delay: i * 0.08, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                 whileHover={{ scale: 1.04, boxShadow: '0 8px 32px rgba(255,153,0,0.12)' }}
               >
-                <p className="text-3xl font-bold text-primary mb-1">
+                <p className="text-2xl sm:text-3xl font-bold text-primary mb-1">
                   <AnimatedCounter target={stat.num} suffix={stat.suffix} duration={1.4} />
                 </p>
                 <p className={`text-sm text-muted-foreground ${isHi ? 'font-hindi' : ''}`}>{stat.label}</p>
@@ -399,7 +399,7 @@ export default function Home({ lang }: { lang: Language }) {
                   {isHi ? 'पंडितगृह संस्था — बड़े अनुष्ठान विशेषज्ञ' : 'PanditGhar Agency — Large-Scale Ritual Specialists'}
                 </span>
               </div>
-              <h2 className={`text-3xl md:text-5xl font-display font-bold text-accent mb-4 drop-shadow-lg ${isHi ? 'font-hindi' : ''}`}>
+              <h2 className={`text-2xl sm:text-3xl md:text-5xl font-display font-bold text-accent mb-4 drop-shadow-lg ${isHi ? 'font-hindi' : ''}`}>
                 {isHi ? 'संघ पूजा एवं बड़े अनुष्ठान' : 'Sangh Puja & Bade Anushthaan'}
               </h2>
               <p className={`text-base md:text-lg text-white/85 max-w-2xl leading-relaxed ${isHi ? 'font-hindi' : ''}`}>
@@ -416,7 +416,7 @@ export default function Home({ lang }: { lang: Language }) {
           <FloatingOrb size={180} color="rgba(255,153,0,0.06)" x="0%" y="0%" duration={10} />
           <FloatingOrb size={120} color="rgba(255,204,0,0.05)" x="80%" y="50%" duration={8} delay={2} />
 
-          <StaggerContainer className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-10">
+          <StaggerContainer className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 mb-10">
             {sanghPackages.map((pkg) => (
               <StaggerItem key={pkg.count}>
                 <a
@@ -484,7 +484,7 @@ export default function Home({ lang }: { lang: Language }) {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center gap-12">
           <ScrollReveal className="flex-1" direction="left">
-            <h2 className={`text-4xl md:text-5xl font-display font-bold mb-6 text-accent ${isHi ? 'font-hindi' : ''}`}>
+            <h2 className={`text-2xl sm:text-4xl md:text-5xl font-display font-bold mb-6 text-accent ${isHi ? 'font-hindi' : ''}`}>
               {isHi ? 'प्रमाणिक वैदिक परंपरा' : 'Authentic Vedic Tradition'}
             </h2>
             <p className={`text-lg mb-6 text-white/90 leading-relaxed ${isHi ? 'font-hindi' : ''}`}>

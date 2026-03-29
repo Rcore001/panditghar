@@ -37,7 +37,7 @@ function SectionHeader({
         </h2>
       </div>
       {subtitle && (
-        <p className={`ml-16 text-sm text-muted-foreground ${isHi ? 'font-hindi' : ''}`}>{subtitle}</p>
+        <p className={`mt-1 text-sm text-muted-foreground ${isHi ? 'font-hindi' : ''}`}>{subtitle}</p>
       )}
     </ScrollReveal>
   );
@@ -206,12 +206,16 @@ export default function ShubhMuhurat({ lang }: { lang: Language }) {
           <StaggerContainer className="space-y-2" staggerDelay={0.045}>
             {muhurats.map((m, i) => (
               <StaggerItem key={i} className="bg-card rounded-xl border border-border hover:shadow-md hover:border-primary/30 transition-all">
-                <div className="flex flex-wrap md:flex-nowrap items-center gap-3 px-6 py-4">
-                  <span className="font-semibold min-w-[110px] text-secondary">{m.date}</span>
-                  <span className="text-muted-foreground min-w-[80px] text-sm">{m.day}</span>
-                  <span className="flex-1 text-foreground">{m.occasion}</span>
-                  <span className="text-primary font-medium min-w-[130px] text-sm">{m.time}</span>
-                  <span className="bg-accent/20 text-secondary px-3 py-1 rounded-full text-sm font-medium whitespace-nowrap">{m.type}</span>
+                <div className="flex flex-col sm:flex-wrap md:flex-row items-start sm:items-center gap-1.5 sm:gap-3 px-4 sm:px-6 py-3 sm:py-4">
+                  <div className="flex items-center gap-3 w-full sm:w-auto">
+                    <span className="font-semibold sm:min-w-[110px] text-secondary text-sm sm:text-base">{m.date}</span>
+                    <span className="text-muted-foreground sm:min-w-[80px] text-sm">{m.day}</span>
+                  </div>
+                  <span className="flex-1 text-foreground text-sm sm:text-base">{m.occasion}</span>
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <span className="text-primary font-medium text-xs sm:text-sm">{m.time}</span>
+                    <span className="bg-accent/20 text-secondary px-3 py-1 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap">{m.type}</span>
+                  </div>
                 </div>
               </StaggerItem>
             ))}

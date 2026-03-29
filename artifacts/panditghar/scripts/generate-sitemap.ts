@@ -43,6 +43,11 @@ const locationIds: string[] = [
   'koramangala', 'indiranagar', 'jayanagar', 'yelahanka', 'hebbal',
   'sarjapur-road', 'btm-layout', 'bannerghatta-road', 'rajajinagar',
   'malleshwaram', 'kr-puram', 'hennur', 'banashankari', 'vijayanagar', 'ulsoor',
+  'bellandur', 'kadugodi', 'hoodi', 'nagarbhavi', 'kengeri',
+  'bommanahalli', 'rr-nagar', 'domlur', 'cv-raman-nagar', 'banaswadi',
+  'thanisandra', 'devanahalli', 'doddaballapura-road', 'hoskote', 'bidadi',
+  'begur', 'attibele', 'dasarahalli', 'yeshwanthpur', 'jalahalli',
+  'rt-nagar', 'mathikere', 'electronic-city-phase-2',
 ];
 
 const blogSlugs: { slug: string; lastmod: string }[] = [
@@ -99,7 +104,8 @@ for (const svc of serviceSlugData) {
 for (const id of locationIds) {
   const hiUrl = `${SITE_URL}/hi/bangalore/${id}/pandit-for-pooja`;
   const enUrl = `${SITE_URL}/en/bangalore/${id}/pandit-for-pooja`;
-  const priority = ['whitefield','hsr-layout','marathahalli','electronic-city','jp-nagar','koramangala','indiranagar','jayanagar','yelahanka','hebbal','sarjapur-road','btm-layout'].includes(id) ? '0.9' : '0.85';
+  const highPriorityAreas = ['whitefield','hsr-layout','marathahalli','electronic-city','jp-nagar','koramangala','indiranagar','jayanagar','yelahanka','hebbal','sarjapur-road','btm-layout','bellandur','banaswadi','yeshwanthpur','rt-nagar','electronic-city-phase-2'];
+  const priority = highPriorityAreas.includes(id) ? '0.9' : '0.82';
   entries.push(urlEntry(hiUrl, hreflangPair(hiUrl, enUrl), TODAY, 'monthly', priority));
   entries.push(urlEntry(enUrl, hreflangPair(hiUrl, enUrl), TODAY, 'monthly', priority));
 }

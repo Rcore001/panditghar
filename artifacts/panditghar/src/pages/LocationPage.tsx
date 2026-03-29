@@ -123,25 +123,25 @@ export default function LocationPage({ lang }: { lang: Language }) {
           />
         </div>
         <ScrollReveal direction="up">
-          <div className="bg-gradient-maroon rounded-3xl p-8 md:p-12 text-white shadow-2xl relative overflow-hidden mb-12">
-            <div className="absolute top-0 right-0 p-8 opacity-20">
-              <MapPin className="w-48 h-48" />
+          <div className="bg-gradient-maroon rounded-3xl p-4 sm:p-8 md:p-12 text-white shadow-2xl relative overflow-hidden mb-12">
+            <div className="hidden sm:block absolute top-0 right-0 p-8 opacity-20">
+              <MapPin className="w-32 sm:w-48 h-32 sm:h-48" />
             </div>
             <div className="relative z-10 max-w-3xl">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6"
+                className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/10 border border-white/20 mb-4 sm:mb-6"
               >
                 <MapPin className="w-4 h-4 text-accent" />
-                <span className="font-semibold">{area.name}, Bangalore</span>
+                <span className="font-semibold text-sm sm:text-base">{area.name}, Bangalore</span>
               </motion.div>
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                className={`text-4xl md:text-5xl font-display font-bold mb-6 text-accent ${isHi ? 'font-hindi' : ''}`}
+                className={`text-2xl sm:text-4xl md:text-5xl font-display font-bold mb-4 sm:mb-6 text-accent ${isHi ? 'font-hindi' : ''}`}
               >
                 {title}
               </motion.h1>
@@ -149,7 +149,7 @@ export default function LocationPage({ lang }: { lang: Language }) {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                className={`text-xl text-white/90 leading-relaxed ${isHi ? 'font-hindi' : ''}`}
+                className={`text-sm sm:text-base md:text-xl text-white/90 leading-relaxed ${isHi ? 'font-hindi' : ''}`}
               >
                 {intro}
               </motion.p>

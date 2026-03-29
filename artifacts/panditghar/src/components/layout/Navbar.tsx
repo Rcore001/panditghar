@@ -53,7 +53,7 @@ export function Navbar({ lang }: { lang: Language }) {
           {/* Logo */}
           <Link href={`/${lang}`} className="flex items-center gap-2 group">
             <OmIcon className="w-8 h-8 text-secondary group-hover:text-primary transition-colors" />
-            <span className={`text-2xl font-display font-bold text-secondary ${lang === 'hi' ? 'font-hindi' : ''}`}>
+            <span className={`text-lg sm:text-2xl font-display font-bold text-secondary ${lang === 'hi' ? 'font-hindi' : ''}`}>
               PanditGhar<span className="text-primary">.in</span>
             </span>
           </Link>

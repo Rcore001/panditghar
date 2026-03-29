@@ -11,7 +11,7 @@ export function Footer({ lang }: { lang: Language }) {
   return (
     <footer className="bg-secondary text-secondary-foreground pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-8 md:mb-12">
 
           {/* Brand */}
           <ScrollReveal direction="up" delay={0}>

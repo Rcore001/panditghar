@@ -1261,7 +1261,7 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
           showHoverZoom={false}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/60 to-transparent" />
-        <div className="absolute inset-0 flex flex-col justify-end p-8 max-w-7xl mx-auto w-full left-0 right-0">
+        <div className="absolute inset-0 flex flex-col justify-end p-4 sm:p-8 max-w-7xl mx-auto w-full left-0 right-0">
           <Breadcrumb
             items={[
               { label: isHi ? 'सेवाएं' : 'Services', href: `/${lang}/services` },
@@ -1269,17 +1269,17 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
             ]}
             lang={lang}
             inverted
-            className="mb-4"
+            className="mb-3 sm:mb-4"
           />
-          <h1 className={`text-4xl md:text-5xl font-display font-bold text-accent mb-2 drop-shadow-md ${isHi ? 'font-hindi' : ''}`}>
+          <h1 className={`text-2xl sm:text-4xl md:text-5xl font-display font-bold text-accent mb-2 drop-shadow-md ${isHi ? 'font-hindi' : ''}`}>
             {title}
           </h1>
-          <p className={`text-white/80 text-lg max-w-2xl ${isHi ? 'font-hindi' : ''}`}>{desc}</p>
+          <p className={`text-white/80 text-sm sm:text-base md:text-lg max-w-2xl ${isHi ? 'font-hindi' : ''}`}>{desc}</p>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12">
 
           <div className="lg:col-span-2 space-y-10">
             <ScrollReveal direction="up">

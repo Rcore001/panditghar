@@ -801,6 +801,144 @@ export const locations = [
     name: "Ulsoor",
     enIntro: "Ulsoor is a historic locality in Central Bangalore near MG Road with diverse communities. PanditGhar.in covers Ulsoor, Frazer Town, and Benson Town for all Vedic puja needs including Griha Pravesh and Satyanarayan.",
     hiIntro: "उल्सूर एमजी रोड के पास मध्य बेंगलुरु का एक ऐतिहासिक इलाका है। PanditGhar.in उल्सूर, फ्रेज़र टाउन और बेन्सन टाउन में गृह प्रवेश और सत्यनारायण सहित सभी वैदिक पूजाओं की सेवाएं प्रदान करता है।"
+  },
+  {
+    id: "bellandur",
+    name: "Bellandur",
+    enIntro: "Bellandur is a thriving IT and residential hub near Outer Ring Road. PanditGhar.in serves families in Bellandur, Haralur Road, and Carmelram for Griha Pravesh, Satyanarayan, and all Vedic ceremonies.",
+    hiIntro: "बेल्लंदूर आउटर रिंग रोड के पास एक जीवंत आईटी और आवासीय केंद्र है। PanditGhar.in बेल्लंदूर, हरलूर रोड और कारमेलराम में गृह प्रवेश, सत्यनारायण और सभी वैदिक समारोह संपन्न करता है।"
+  },
+  {
+    id: "kadugodi",
+    name: "Kadugodi",
+    enIntro: "Kadugodi is a growing residential locality near Whitefield with a large Hindu community. PanditGhar.in provides all puja and Vedic ceremony services in Kadugodi, Hope Farm, and Varthur.",
+    hiIntro: "कदुगोडी व्हाइटफील्ड के पास एक बढ़ता हुआ आवासीय क्षेत्र है। PanditGhar.in कदुगोडी, होप फार्म और वर्थुर में सभी पूजा और वैदिक समारोह सेवाएं प्रदान करता है।"
+  },
+  {
+    id: "hoodi",
+    name: "Hoodi",
+    enIntro: "Hoodi is a residential and IT locality between Marathahalli and Whitefield. PanditGhar.in serves Hoodi, Hope Farm Junction, and Garudacharpalya for all Vedic puja services.",
+    hiIntro: "हूडी मराठहल्ली और व्हाइटफील्ड के बीच एक आवासीय और आईटी इलाका है। PanditGhar.in हूडी, होप फार्म जंक्शन और गरुड़ाचारपल्या में सभी वैदिक पूजा सेवाएं प्रदान करता है।"
+  },
+  {
+    id: "nagarbhavi",
+    name: "Nagarbhavi",
+    enIntro: "Nagarbhavi is a well-established residential area in West Bangalore near Bangalore University. PanditGhar.in offers all puja and Vedic ceremony services across Nagarbhavi and Kengeri Satellite Town.",
+    hiIntro: "नागरभावी पश्चिमी बेंगलुरु में बेंगलुरु विश्वविद्यालय के पास एक सुस्थापित आवासीय क्षेत्र है। PanditGhar.in नागरभावी और केंगेरी सैटेलाइट टाउन में सभी पूजा और वैदिक समारोह सेवाएं प्रदान करता है।"
+  },
+  {
+    id: "kengeri",
+    name: "Kengeri",
+    enIntro: "Kengeri is a major residential suburb in West Bangalore well-served by the metro. PanditGhar.in covers Kengeri, Uttarahalli, and Subramanyapura for all Vedic rituals and puja ceremonies.",
+    hiIntro: "केंगेरी पश्चिमी बेंगलुरु का एक प्रमुख आवासीय उपनगर है जो मेट्रो से अच्छी तरह जुड़ा है। PanditGhar.in केंगेरी, उत्तरहल्ली और सुब्रमण्यपुरा में सभी वैदिक अनुष्ठान और पूजा समारोह संपन्न करता है।"
+  },
+  {
+    id: "bommanahalli",
+    name: "Bommanahalli",
+    enIntro: "Bommanahalli is a fast-developing locality in South Bangalore with a diverse residential community. PanditGhar.in serves Bommanahalli, Hongasandra, and Kudlu for all Griha Pravesh, Satyanarayan, and Vedic ceremony needs.",
+    hiIntro: "बोम्मनहल्ली दक्षिण बेंगलुरु में एक तेजी से विकसित हो रहा इलाका है। PanditGhar.in बोम्मनहल्ली, होंगसंद्रा और कुड्लू में गृह प्रवेश, सत्यनारायण और सभी वैदिक समारोह सेवाएं प्रदान करता है।"
+  },
+  {
+    id: "rr-nagar",
+    name: "RR Nagar",
+    enIntro: "Rajarajeshwari Nagar (RR Nagar) is a large and organized residential area in West Bangalore. PanditGhar.in provides complete Vedic puja services across all of RR Nagar's phases and surrounding areas.",
+    hiIntro: "राजराजेश्वरी नगर (RR नगर) पश्चिमी बेंगलुरु का एक बड़ा और सुव्यवस्थित आवासीय क्षेत्र है। PanditGhar.in RR नगर के सभी फेज और आसपास के क्षेत्रों में सम्पूर्ण वैदिक पूजा सेवाएं प्रदान करता है।"
+  },
+  {
+    id: "domlur",
+    name: "Domlur",
+    enIntro: "Domlur is a cosmopolitan locality near the Airport Road with a strong professional community. PanditGhar.in covers Domlur, Domlur Layout, and Embassy Golf Links Road for all puja and ceremony needs.",
+    hiIntro: "डोमलूर एयरपोर्ट रोड के पास एक महानगरीय इलाका है। PanditGhar.in डोमलूर, डोमलूर लेआउट और एम्बेसी गोल्फ लिंक्स रोड में सभी पूजा और समारोह की जरूरतें पूरी करता है।"
+  },
+  {
+    id: "cv-raman-nagar",
+    name: "CV Raman Nagar",
+    enIntro: "CV Raman Nagar is a prominent East Bangalore locality known for its calm residential character. PanditGhar.in provides all Vedic puja services in CV Raman Nagar, New Thippasandra, and Banaswadi.",
+    hiIntro: "सीवी रमन नगर पूर्वी बेंगलुरु का एक प्रमुख इलाका है। PanditGhar.in सीवी रमन नगर, न्यू थिप्पसंद्रा और बनस्वाडी में सभी वैदिक पूजा सेवाएं प्रदान करता है।"
+  },
+  {
+    id: "banaswadi",
+    name: "Banaswadi",
+    enIntro: "Banaswadi is a bustling residential locality in East Bangalore with a large North Indian community. PanditGhar.in serves Banaswadi, HRBR Layout, and Kalyan Nagar for all types of Vedic pujas.",
+    hiIntro: "बनस्वाडी पूर्वी बेंगलुरु का एक व्यस्त आवासीय इलाका है जहाँ उत्तर भारतीय समुदाय बड़ी संख्या में है। PanditGhar.in बनस्वाडी, HRBR लेआउट और कल्याण नगर में सभी प्रकार की वैदिक पूजाएं संपन्न करता है।"
+  },
+  {
+    id: "thanisandra",
+    name: "Thanisandra",
+    enIntro: "Thanisandra is a growing residential area in North Bangalore with many new apartment complexes. PanditGhar.in covers Thanisandra, Thanisandra Main Road, and Kannur for all puja and Vedic ceremony services.",
+    hiIntro: "थानीसंद्रा उत्तरी बेंगलुरु में एक बढ़ता हुआ आवासीय क्षेत्र है जहाँ कई नए अपार्टमेंट परिसर हैं। PanditGhar.in थानीसंद्रा, थानीसंद्रा मेन रोड और कन्नूर में सभी पूजा और वैदिक समारोह सेवाएं प्रदान करता है।"
+  },
+  {
+    id: "devanahalli",
+    name: "Devanahalli",
+    enIntro: "Devanahalli is near Kempegowda International Airport and is a fast-growing North Bangalore area. PanditGhar.in serves Devanahalli, Nandi Hills Road, and airport-adjacent townships for all Vedic pujas.",
+    hiIntro: "देवनहल्ली केम्पेगौड़ा अंतर्राष्ट्रीय हवाई अड्डे के पास और उत्तरी बेंगलुरु का एक तेजी से बढ़ता हुआ क्षेत्र है। PanditGhar.in देवनहल्ली, नंदी हिल्स रोड और हवाई अड्डे के आसपास के टाउनशिप में सभी वैदिक पूजाएं संपन्न करता है।"
+  },
+  {
+    id: "doddaballapura-road",
+    name: "Doddaballapura Road",
+    enIntro: "Doddaballapura Road is a northern corridor of Bangalore with emerging residential zones. PanditGhar.in provides all puja and Vedic ceremony services along Doddaballapura Road, Bagalur, and Jakkur.",
+    hiIntro: "डोड्डाबल्लापुर रोड बेंगलुरु का एक उत्तरी गलियारा है जहाँ नए आवासीय क्षेत्र विकसित हो रहे हैं। PanditGhar.in डोड्डाबल्लापुर रोड, बगलूर और जक्कूर में सभी पूजा और वैदिक समारोह सेवाएं प्रदान करता है।"
+  },
+  {
+    id: "hoskote",
+    name: "Hoskote",
+    enIntro: "Hoskote is an industrial and residential town on the eastern outskirts of Bangalore. PanditGhar.in serves Hoskote, Old Madras Road corridor, and surrounding areas for all Vedic puja and ceremony needs.",
+    hiIntro: "होस्कोटे बेंगलुरु के पूर्वी बाहरी इलाके में एक औद्योगिक और आवासीय शहर है। PanditGhar.in होस्कोटे, ओल्ड मद्रास रोड कॉरिडोर और आसपास के क्षेत्रों में सभी वैदिक पूजा और समारोह सेवाएं प्रदान करता है।"
+  },
+  {
+    id: "bidadi",
+    name: "Bidadi",
+    enIntro: "Bidadi is an industrial township on the Mysore Road corridor south of Bangalore. PanditGhar.in covers Bidadi, Ramanagara, and Mysore Road communities for all Griha Pravesh, Satyanarayan, and Vedic rituals.",
+    hiIntro: "बिदादी बेंगलुरु के दक्षिण में मैसूर रोड कॉरिडोर पर एक औद्योगिक टाउनशिप है। PanditGhar.in बिदादी, रामनगर और मैसूर रोड समुदायों में गृह प्रवेश, सत्यनारायण और सभी वैदिक अनुष्ठान संपन्न करता है।"
+  },
+  {
+    id: "begur",
+    name: "Begur",
+    enIntro: "Begur is a developing South Bangalore residential locality with growing IT and residential zones. PanditGhar.in serves Begur, Begur Road, and Nyanappanahalli for all Vedic puja and ceremony services.",
+    hiIntro: "बेगुर दक्षिण बेंगलुरु का एक विकासशील आवासीय इलाका है। PanditGhar.in बेगुर, बेगुर रोड और न्यानप्पनहल्ली में सभी वैदिक पूजा और समारोह सेवाएं प्रदान करता है।"
+  },
+  {
+    id: "attibele",
+    name: "Attibele",
+    enIntro: "Attibele is an industrial and residential area on the southern outskirts of Bangalore near the Karnataka-Tamil Nadu border. PanditGhar.in provides Vedic puja services in Attibele and Electronic City Phase 2 vicinity.",
+    hiIntro: "अट्टीबेले बेंगलुरु के दक्षिणी बाहरी इलाके में कर्नाटक-तमिलनाडु सीमा के पास एक औद्योगिक और आवासीय क्षेत्र है। PanditGhar.in अट्टीबेले और इलेक्ट्रॉनिक सिटी फेज 2 के आसपास वैदिक पूजा सेवाएं प्रदान करता है।"
+  },
+  {
+    id: "dasarahalli",
+    name: "Dasarahalli",
+    enIntro: "Dasarahalli is a North-West Bangalore locality with mixed industrial and residential character. PanditGhar.in covers Dasarahalli, Peenya, and Jalahalli for all Vedic puja and ceremony needs.",
+    hiIntro: "दशरहल्ली उत्तर-पश्चिम बेंगलुरु का एक मिश्रित औद्योगिक और आवासीय इलाका है। PanditGhar.in दशरहल्ली, पीन्या और जलहल्ली में सभी वैदिक पूजा और समारोह की जरूरतें पूरी करता है।"
+  },
+  {
+    id: "yeshwanthpur",
+    name: "Yeshwanthpur",
+    enIntro: "Yeshwanthpur is a major commercial and residential hub in North-West Bangalore near the railway station. PanditGhar.in serves Yeshwanthpur, Tumkur Road, and Goraguntepalya for all types of Vedic pujas.",
+    hiIntro: "येशवंतपुर उत्तर-पश्चिम बेंगलुरु में रेलवे स्टेशन के पास एक प्रमुख वाणिज्यिक और आवासीय केंद्र है। PanditGhar.in येशवंतपुर, तुमकुर रोड और गोरागुंटेपल्या में सभी प्रकार की वैदिक पूजाएं संपन्न करता है।"
+  },
+  {
+    id: "jalahalli",
+    name: "Jalahalli",
+    enIntro: "Jalahalli is a residential locality in North-West Bangalore near the Air Force Station. PanditGhar.in provides all Vedic puja and ceremony services in Jalahalli, Jalahalli East, and Mathikere.",
+    hiIntro: "जलहल्ली उत्तर-पश्चिम बेंगलुरु में वायु सेना स्टेशन के पास एक आवासीय इलाका है। PanditGhar.in जलहल्ली, जलहल्ली ईस्ट और माथिकेरे में सभी वैदिक पूजा और समारोह सेवाएं प्रदान करता है।"
+  },
+  {
+    id: "rt-nagar",
+    name: "RT Nagar",
+    enIntro: "RT Nagar is a well-known residential area in North Bangalore with a strong community of families. PanditGhar.in covers RT Nagar, Sadashivanagar, and Armane Nagar for all Griha Pravesh, Satyanarayan, and Vedic ceremony needs.",
+    hiIntro: "आरटी नगर उत्तरी बेंगलुरु का एक प्रसिद्ध आवासीय क्षेत्र है। PanditGhar.in आरटी नगर, सदाशिवनगर और अर्माने नगर में गृह प्रवेश, सत्यनारायण और सभी वैदिक समारोह सेवाएं प्रदान करता है।"
+  },
+  {
+    id: "mathikere",
+    name: "Mathikere",
+    enIntro: "Mathikere is a peaceful residential area in North-West Bangalore near BEL Circle. PanditGhar.in serves Mathikere, BEL Layout, and Subramanyanagar for all Vedic puja services.",
+    hiIntro: "माथिकेरे BEL सर्किल के पास उत्तर-पश्चिम बेंगलुरु का एक शांत आवासीय क्षेत्र है। PanditGhar.in माथिकेरे, BEL लेआउट और सुब्रमण्यनगर में सभी वैदिक पूजा सेवाएं प्रदान करता है।"
+  },
+  {
+    id: "electronic-city-phase-2",
+    name: "Electronic City Phase 2",
+    enIntro: "Electronic City Phase 2 is an extension of the iconic Electronic City IT hub, with large gated communities. PanditGhar.in serves Phase 2 families for Griha Pravesh, Satyanarayan, Navgrah Puja, and all Vedic rituals.",
+    hiIntro: "इलेक्ट्रॉनिक सिटी फेज 2 प्रतिष्ठित इलेक्ट्रॉनिक सिटी आईटी हब का एक विस्तार है जहाँ बड़े गेटेड समुदाय हैं। PanditGhar.in फेज 2 के परिवारों के लिए गृह प्रवेश, सत्यनारायण, नवग्रह पूजा और सभी वैदिक अनुष्ठान संपन्न करता है।"
   }
 ];
 
