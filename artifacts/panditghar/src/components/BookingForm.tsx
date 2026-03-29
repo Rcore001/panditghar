@@ -16,6 +16,7 @@ import {
   DrawerDescription,
   DrawerHeader,
   DrawerTitle,
+  DrawerTrigger,
 } from '@/components/ui/drawer';
 import {
   Command,
@@ -184,7 +185,7 @@ function ServiceCombobox({
   if (isMobile) {
     return (
       <Drawer open={open} onOpenChange={setOpen}>
-        <DrawerTriggerWrapper onOpen={() => setOpen(true)}>{triggerButton}</DrawerTriggerWrapper>
+        <DrawerTrigger asChild>{triggerButton}</DrawerTrigger>
         <DrawerContent className="max-h-[85vh]">
           <DrawerHeader>
             <DrawerTitle className={isHi ? 'font-hindi' : ''}>{drawerTitle}</DrawerTitle>
@@ -258,7 +259,7 @@ function LocationCombobox({
   if (isMobile) {
     return (
       <Drawer open={open} onOpenChange={setOpen}>
-        <DrawerTriggerWrapper onOpen={() => setOpen(true)}>{triggerButton}</DrawerTriggerWrapper>
+        <DrawerTrigger asChild>{triggerButton}</DrawerTrigger>
         <DrawerContent className="max-h-[85vh]">
           <DrawerHeader>
             <DrawerTitle className={isHi ? 'font-hindi' : ''}>{drawerTitle}</DrawerTitle>
@@ -282,13 +283,6 @@ function LocationCombobox({
   );
 }
 
-function DrawerTriggerWrapper({ children, onOpen }: { children: React.ReactNode; onOpen: () => void }) {
-  return (
-    <div onClick={onOpen} className="w-full cursor-pointer">
-      {children}
-    </div>
-  );
-}
 
 const SERVICE_CATEGORY_CONFIG: { category: string; enHeading: string; hiHeading: string }[] = [
   { category: 'small', enHeading: 'Puja & Hawan', hiHeading: 'पूजा व हवन' },
