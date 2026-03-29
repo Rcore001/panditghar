@@ -59,10 +59,10 @@ const serviceFaqs: Record<string, FAQ[]> = {
       a_hi: "हाँ, PanditGhar.in, व्हाइटफील्ड, HSR लेआउट, कोरमंगला, इंदिरानगर, मराठहल्ली, इलेक्ट्रॉनिक सिटी, JP नगर, येलहंका और अन्य सभी प्रमुख बेंगलुरु क्षेत्रों में गृह प्रवेश सेवा प्रदान करता है।"
     },
     {
-      q_en: "What is the starting price for Griha Pravesh Puja in Bangalore?",
-      a_en: "Griha Pravesh Puja starts at ₹5,100 which includes pandit dakshina, complete samagri, travel within Bangalore, and the full ritual. Final price depends on the extent of the homa and number of pandits required.",
-      q_hi: "बेंगलुरु में गृह प्रवेश पूजा की शुरूआती कीमत क्या है?",
-      a_hi: "गृह प्रवेश पूजा ₹5,100 से शुरू होती है जिसमें पंडित दक्षिणा, पूरी सामग्री, बेंगलुरु के भीतर यात्रा और पूर्ण विधि शामिल है। अंतिम कीमत हवन के विस्तार और आवश्यक पंडितों की संख्या पर निर्भर करती है।"
+      q_en: "How do I book a pandit for Griha Pravesh Puja in Bangalore?",
+      a_en: "Simply WhatsApp us at +91 93295 66101 or fill the booking form on our website. Share the desired date and location; Pandit Ji will confirm availability and guide you on the auspicious muhurat as per Panchang.",
+      q_hi: "बेंगलुरु में गृह प्रवेश पूजा के लिए पंडित कैसे बुक करें?",
+      a_hi: "+91 93295 66101 पर व्हाट्सएप करें या वेबसाइट पर बुकिंग फॉर्म भरें। इच्छित तिथि और स्थान साझा करें; पंडित जी उपलब्धता की पुष्टि करेंगे और पंचांग के अनुसार शुभ मुहूर्त बताएंगे।"
     }
   ],
   "satyanarayan": [
@@ -671,10 +671,10 @@ const serviceFaqs: Record<string, FAQ[]> = {
       a_hi: "हाँ, PanditGhar.in ने बेंगलुरु के अपार्टमेंट कॉम्प्लेक्स, सामुदायिक हॉल और खुले मैदानों में भागवत कथा कार्यक्रम आयोजित किए हैं। हम टेंट, ध्वनि और प्रसाद सहित सभी रसद संभालते हैं।"
     },
     {
-      q_en: "What is the recommended donation (dakshina) for Bhagvat Katha?",
-      a_en: "The Bhagvat Katha package starts at ₹51,000 for a 7-day event covering all services mentioned. Additional costs for catering, tent, and venue are separate. Brahmin Bhojan (feeding Brahmins) on Day 7 is traditional and highly meritorious.",
-      q_hi: "भागवत कथा के लिए अनुशंसित दान (दक्षिणा) क्या है?",
-      a_hi: "भागवत कथा पैकेज 7 दिवसीय कार्यक्रम के लिए ₹51,000 से शुरू होता है जिसमें सभी उल्लिखित सेवाएं शामिल हैं। भोजन, टेंट और स्थान की अतिरिक्त लागत अलग है। सातवें दिन ब्राह्मण भोजन परंपरागत और अत्यंत पुण्यकारी है।"
+      q_en: "How do I book Bhagvat Katha in Bangalore?",
+      a_en: "WhatsApp +91 93295 66101 with your preferred dates and venue. Our team will plan the complete 7-day event including tent, sound, catering logistics, and Brahmin Bhojan on Day 7 — which is traditionally the most meritorious part of the event.",
+      q_hi: "बेंगलुरु में भागवत कथा कैसे बुक करें?",
+      a_hi: "+91 93295 66101 पर अपनी इच्छित तिथि और स्थान के साथ व्हाट्सएप करें। हमारी टीम टेंट, ध्वनि, भोजन व्यवस्था और सातवें दिन ब्राह्मण भोजन सहित पूरे 7 दिवसीय कार्यक्रम की योजना बनाएगी।"
     }
   ],
   "sundarkand": [
@@ -1108,6 +1108,80 @@ const defaultFaqs: FAQ[] = [
   }
 ];
 
+interface ServiceShloka {
+  devanagari: string;
+  transliteration: string;
+  source_hi: string;
+  source_en: string;
+  meaning_hi: string;
+  meaning_en: string;
+  context_hi: string;
+  context_en: string;
+}
+
+const serviceShlokas: Record<string, ServiceShloka> = {
+  "griha-pravesh": {
+    devanagari: "गृहं प्रविश्य पूजयेत् वास्तुदेवं विधानतः।\nसर्वसिद्धिप्रदं देवं सर्वदोषविनाशनम्॥",
+    transliteration: "Grihaṃ praviśya pūjayet vāstadevaṃ vidhānataḥ। Sarvasiddhipradaṃ devaṃ sarvadoṣavināśanam॥",
+    source_en: "Skanda Purana, Grihya Kanda",
+    source_hi: "स्कन्द पुराण, गृह्य खण्ड",
+    meaning_en: "Before entering a new home, one must worship Vastu Devata according to prescribed rites — the deity who grants all success and destroys all doshas.",
+    meaning_hi: "नए घर में प्रवेश करने से पहले, विधिपूर्वक वास्तु देवता की पूजा करनी चाहिए — जो सभी सिद्धियाँ प्रदान करते हैं और सभी दोषों का नाश करते हैं।",
+    context_en: "This verse is the scriptural basis for Griha Pravesh. Skipping this puja is considered inauspicious — it leaves the home open to Vastu doshas that accumulate over time and affect health, relationships, and prosperity.",
+    context_hi: "यह श्लोक गृह प्रवेश का शास्त्रीय आधार है। इस पूजा के बिना गृह प्रवेश अशुभ माना जाता है — वास्तु दोष समय के साथ स्वास्थ्य, संबंध और समृद्धि को प्रभावित करते हैं।",
+  },
+  "satyanarayan": {
+    devanagari: "सत्यनारायणस्य व्रतं पुण्यं पापप्रणाशनम्।\nभुक्तिमुक्तिप्रदं नृणां सर्वसंकटनाशनम्॥",
+    transliteration: "Satyanārāyaṇasya vrataṃ puṇyaṃ pāpapraṇāśanam। Bhuktimuktipadaṃ nṛṇāṃ sarvasaṃkaṭanāśanam॥",
+    source_en: "Skanda Purana, Reva Khanda (Adhyaya 1)",
+    source_hi: "स्कन्द पुराण, रेवा खण्ड (अध्याय १)",
+    meaning_en: "The Satyanarayan Vrata is most sacred, it destroys all sins, grants worldly enjoyment and liberation, and removes all sorrows and obstacles for its devotees.",
+    meaning_hi: "सत्यनारायण व्रत अत्यंत पुण्यकारी है, समस्त पापों का नाश करता है, भोग और मोक्ष देता है, और भक्तों के सभी संकट दूर करता है।",
+    context_en: "Maharshi Suta narrated this Katha to the sages of Naimisharanya forest. When you host this Katha, you become part of an unbroken chain of devotion stretching back thousands of years.",
+    context_hi: "महर्षि सूत ने नैमिषारण्य के ऋषियों को यह कथा सुनाई थी। इस कथा का आयोजन करके आप हजारों वर्षों से चली आ रही भक्ति की अटूट परंपरा का हिस्सा बनते हैं।",
+  },
+  "vivah": {
+    devanagari: "शुभे मुहूर्ते विधिवत् कन्यादानं प्रशस्यते।\nसप्तपद्यां कृते विप्र सा भार्या नात्र संशयः॥",
+    transliteration: "Śubhe muhūrte vidhivat kanyādānaṃ praśasyate। Saptapadyāṃ kṛte vipra sā bhāryā nātra saṃśayaḥ॥",
+    source_en: "Paraskara Grihya Sutra, Adhyaya 1",
+    source_hi: "पारस्कर गृह्यसूत्र, अध्याय १",
+    meaning_en: "Kanyadaan at an auspicious muhurat, performed according to the Shastra, is most commendable. After the seven steps (Saptapadi) are taken, she is truly and undoubtedly his wife.",
+    meaning_hi: "शुभ मुहूर्त में शास्त्रोक्त विधि से कन्यादान सबसे प्रशंसनीय है। सप्तपदी के पूर्ण होने पर वह निःसंदेह उसकी धर्मपत्नी बन जाती है।",
+    context_en: "Vivah is the 13th and most significant of the 16 Samskaras. The Saptapadi (seven steps around sacred fire) is the legal and spiritual completion of the marriage — no ceremony is considered complete without it.",
+    context_hi: "विवाह 16 संस्कारों में 13वाँ और सबसे महत्वपूर्ण संस्कार है। सप्तपदी (पवित्र अग्नि के चारों ओर सात फेरे) विवाह की कानूनी और आध्यात्मिक परिपूर्णता है — इसके बिना कोई भी समारोह पूर्ण नहीं माना जाता।",
+  },
+  "rudrabhishek": {
+    devanagari: "अभिषेकं प्रकुर्वीत शिवलिङ्गस्य भक्तितः।\nश्रीरुद्रमन्त्रपाठेन सर्वपापैः प्रमुच्यते॥",
+    transliteration: "Abhiṣekaṃ prakurvīta śivaliṅgasya bhaktitaḥ। Śrīrudramantrapaṭhena sarvapāpaiḥ pramucyate॥",
+    source_en: "Shiva Purana, Vidyeshvara Samhita",
+    source_hi: "शिव पुराण, विद्येश्वर संहिता",
+    meaning_en: "One who performs Abhishek of the Shivalinga with devotion, while chanting the Shri Rudra mantras, is freed from all sins.",
+    meaning_hi: "जो व्यक्ति भक्तिभाव से शिवलिंग का अभिषेक करता है और श्री रुद्र मंत्रों का पाठ करता है, वह समस्त पापों से मुक्त हो जाता है।",
+    context_en: "The Shri Rudram from the Yajurveda is one of the oldest Sanskrit hymns. Recited by Pandit Ji during Rudrabhishek, each verse directly pacifies the corresponding Navagraha and dissolves karmic blockages.",
+    context_hi: "यजुर्वेद का श्री रुद्रम सबसे प्राचीन संस्कृत स्तोत्रों में से एक है। रुद्राभिषेक के दौरान पंडित जी द्वारा पाठ किए जाने पर, प्रत्येक श्लोक संबंधित नवग्रह को शांत करता है और कर्म बाधाओं को दूर करता है।",
+  },
+  "namkaran": {
+    devanagari: "नामकर्म द्विजातीनां जन्मतो दशमेऽहनि।\nशुभनक्षत्रयुक्ते तु शुभं नाम प्रदापयेत्॥",
+    transliteration: "Nāmakarma dvijātīnāṃ janmato daśame'hani। Śubhanakṣatrayukte tu śubhaṃ nāma pradāpayet॥",
+    source_en: "Ashvalayana Grihya Sutra, Adhyaya 1",
+    source_hi: "आश्वलायन गृह्यसूत्र, अध्याय १",
+    meaning_en: "Namakaran (the naming rite) for the twice-born should be performed on the 10th day from birth, choosing an auspicious name aligned with the birth Nakshatra.",
+    meaning_hi: "द्विजों का नामकरण जन्म के दसवें दिन किया जाना चाहिए, जन्म नक्षत्र के अनुकूल शुभ नाम रखा जाना चाहिए।",
+    context_en: "A name given through Namkaran is not just a label — it is a spiritual identity rooted in the child's birth Nakshatra and Rashi. This name carries vibrational energy that shapes the child's destiny.",
+    context_hi: "नामकरण से दिया गया नाम केवल एक पहचान नहीं है — यह बच्चे के जन्म नक्षत्र और राशि में निहित एक आध्यात्मिक पहचान है। यह नाम एक कंपनात्मक ऊर्जा वहन करता है जो बच्चे के भाग्य को आकार देती है।",
+  },
+  "mundan": {
+    devanagari: "चूडाकर्म तृतीये वर्षे कर्तव्यं नित्यमेव हि।\nमस्तिष्कस्य विशुद्ध्यर्थं पूर्वपुण्यस्य शोधनम्॥",
+    transliteration: "Cūḍākarma tṛtīye varṣe kartavyaṃ nityameva hi। Mastiṣkasya viśuddhyarthaṃ pūrvapuṇyasya śodhanam॥",
+    source_en: "Manusmriti 2.35, Grihya Sutras",
+    source_hi: "मनुस्मृति २.३५, गृह्य सूत्र",
+    meaning_en: "Chudakarana (Mundan) should be performed in the third year of life for the purification of the brain and the cleansing of the merits and demerits of past lives.",
+    meaning_hi: "मस्तिष्क की शुद्धि और पूर्व जन्म के पुण्य-पाप के शोधन के लिए चूड़ाकर्म तीसरे वर्ष में करना चाहिए।",
+    context_en: "Mundan is not merely a haircut — it is the removal of the hair that carried the vibrations of the womb and past-life karmas, giving the child a clean spiritual slate for this lifetime.",
+    context_hi: "मुंडन केवल बाल काटना नहीं है — यह उस केश को हटाना है जो गर्भ और पूर्वजन्म के कर्मों की तरंगें वहन करता था, जिससे बच्चे को इस जीवन के लिए एक स्वच्छ आध्यात्मिक आरम्भ मिलता है।",
+  },
+};
+
 export default function ServiceDetail({ lang, params }: { lang: Language; params?: { slug?: string } }) {
   const t = useTranslation(lang);
   const isHi = lang === 'hi';
@@ -1241,11 +1315,11 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
     <div className="pb-16">
       <SEO
         title={isHi
-          ? `${title} बेंगलुरु में | मूल्य, सामग्री व बुकिंग — PanditGhar.in`
-          : `${title} in Bangalore | Price, Samagri & Booking — PanditGhar.in`}
+          ? `${title} बेंगलुरु में | शास्त्रीय विधि व बुकिंग — PanditGhar.in`
+          : `${title} in Bangalore | Shastreey Vidhi & Booking — PanditGhar.in`}
         description={isHi
-          ? `बेंगलुरु में ${title} के लिए प्रामाणिक उत्तर भारतीय पंडित बुक करें। शास्त्रीय विधि, पूरी सामग्री, ₹${service.price.toLocaleString('en-IN')} से शुरू। सभी क्षेत्रों में सेवा।`
-          : `Book authentic North Indian Pandit for ${title} in Bangalore. Shastreey rituals, complete samagri, starting ₹${service.price.toLocaleString('en-IN')}. All areas covered.`}
+          ? `बेंगलुरु में ${title} के लिए प्रामाणिक उत्तर भारतीय पंडित बुक करें। शास्त्रीय विधि, पूरी सामग्री। सभी क्षेत्रों में सेवा।`
+          : `Book authentic North Indian Pandit for ${title} in Bangalore. Shastreey Vedic rituals, complete samagri. All areas covered.`}
         lang={lang}
         path={`/${lang}/services/${service.slug}`}
         schema={combinedSchema}
@@ -1312,6 +1386,37 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
                 </div>
 
                 <p>{content}</p>
+
+                {/* ── Shastreey Pramaan Shloka Block ── */}
+                {serviceShlokas[service.id] && (() => {
+                  const sh = serviceShlokas[service.id];
+                  return (
+                    <div className="my-8 bg-gradient-to-br from-secondary/5 via-background to-accent/5 border border-accent/30 rounded-2xl p-6 not-prose">
+                      <div className="flex items-center gap-2 mb-4">
+                        <span className="text-accent font-hindi text-lg">ॐ</span>
+                        <h4 className={`text-sm font-bold text-secondary uppercase tracking-wider ${isHi ? 'font-hindi' : ''}`}>
+                          {isHi ? 'शास्त्रीय प्रमाण — वेद वाक्य' : 'Shastreey Pramaan — Sacred Verse'}
+                        </h4>
+                      </div>
+                      <blockquote className="font-hindi text-base md:text-lg text-secondary font-semibold leading-relaxed whitespace-pre-line border-l-4 border-accent pl-4 mb-3">
+                        {sh.devanagari}
+                      </blockquote>
+                      <p className="text-xs text-muted-foreground italic pl-4 mb-1">{sh.transliteration}</p>
+                      <p className="text-xs font-semibold text-primary pl-4 mb-4">
+                        — {isHi ? sh.source_hi : sh.source_en}
+                      </p>
+                      <div className="bg-background/60 rounded-xl px-4 py-3 border border-border/50 mb-3">
+                        <p className={`text-sm text-foreground leading-relaxed ${isHi ? 'font-hindi' : ''}`}>
+                          <span className="font-semibold text-secondary">{isHi ? 'अर्थ: ' : 'Meaning: '}</span>
+                          {isHi ? sh.meaning_hi : sh.meaning_en}
+                        </p>
+                      </div>
+                      <p className={`text-sm text-muted-foreground leading-relaxed ${isHi ? 'font-hindi' : ''}`}>
+                        {isHi ? sh.context_hi : sh.context_en}
+                      </p>
+                    </div>
+                  );
+                })()}
 
                 <h3 className={`${isHi ? 'font-hindi' : ''}`}>{isHi ? 'क्या-क्या शामिल है?' : 'What is included?'}</h3>
                 <ul className="list-none pl-0 space-y-3">

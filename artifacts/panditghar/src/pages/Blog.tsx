@@ -231,8 +231,8 @@ A: Panchamrit and Sheera (semolina sweet) are the traditional prasads.
 **Q: Can it be done at home?**
 A: Yes, it is typically performed at home.
 
-**Q: How much does it cost in Bangalore?**
-A: Starting from ₹3100 including pandit dakshina and samagri.
+**Q: How do I book Satyanarayan Katha in Bangalore?**
+A: WhatsApp +91 93295 66101 or fill the booking form on PanditGhar.in. Pandit Ji travels to all areas of Bangalore.
     `,
     hi: `
 ## सत्यनारायण कथा क्या है?

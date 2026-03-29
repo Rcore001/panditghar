@@ -67,17 +67,17 @@ export default function Home({ lang }: { lang: Language }) {
   const isHi = lang === 'hi';
 
   const homePaaEn = [
-    { q: "How much does a Griha Pravesh Puja cost in Bangalore?", a: "Griha Pravesh Puja starts at ₹5,100 with PanditGhar.in in Bangalore, including pandit dakshina and complete Vedic rituals as per Skanda Purana. Travel and samagri are charged separately." },
-    { q: "Which pandit service is best for Satyanarayan Katha in Bangalore?", a: "PanditGhar.in specialises in authentic North Indian Satyanarayan Katha as per Skanda Purana Reva Khanda. Pandits travel to all Bangalore areas starting from ₹3,100." },
-    { q: "How do I book a pandit for Vivah in Bangalore?", a: "WhatsApp +91 93295 66101 or fill the booking form at panditghar.in. For Vivah, book at least 2-3 months in advance. All North Indian wedding rituals including Saptapadi and Kanyadaan are performed as per Grihya Sutras." },
+    { q: "How do I book a pandit for Griha Pravesh Puja in Bangalore?", a: "WhatsApp +91 93295 66101 or fill the booking form at panditghar.in. Pandit Ji will confirm the auspicious muhurat as per Panchang and guide you through the complete Vedic vidhi as described in the Skanda Purana and Grihya Sutras." },
+    { q: "Which pandit service is best for Satyanarayan Katha in Bangalore?", a: "PanditGhar.in specialises in authentic North Indian Satyanarayan Katha as per Skanda Purana Reva Khanda, performed with the complete Panchopachar Puja and five-chapter Katha. Pandits travel to all Bangalore areas." },
+    { q: "How do I book a pandit for Vivah in Bangalore?", a: "WhatsApp +91 93295 66101 or fill the booking form at panditghar.in. For Vivah, book at least 2-3 months in advance. All North Indian wedding rituals including Saptapadi and Kanyadaan are performed as per Paraskara Grihya Sutra." },
     { q: "Do North Indian pandits come to HSR Layout, Koramangala, Whitefield?", a: "Yes, PanditGhar.in covers all Bangalore areas — Whitefield, HSR Layout, Koramangala, Indiranagar, Marathahalli, Electronic City, JP Nagar, and 30+ more neighbourhoods." },
     { q: "What is the difference between Griha Pravesh and Vastu Shanti Puja?", a: "Griha Pravesh is the ceremony of entering a new home for the first time. Vastu Shanti Puja can be performed anytime to correct Vastu defects in an existing home or office without structural changes." },
   ];
 
   const homePaaHi = [
-    { q: "बेंगलुरु में गृह प्रवेश पूजा की कीमत कितनी है?", a: "PanditGhar.in के साथ बेंगलुरु में गृह प्रवेश पूजा ₹5,100 से शुरू होती है जिसमें पंडित दक्षिणा और स्कन्द पुराण के अनुसार पूर्ण वैदिक विधि शामिल है।" },
-    { q: "बेंगलुरु में सत्यनारायण कथा के लिए कौन सी पंडित सेवा सबसे अच्छी है?", a: "PanditGhar.in स्कन्द पुराण के रेवा खण्ड के अनुसार प्रामाणिक सत्यनारायण कथा में विशेषज्ञता रखता है। पंडित जी बेंगलुरु के सभी क्षेत्रों में आते हैं, ₹3,100 से शुरू।" },
-    { q: "बेंगलुरु में विवाह के लिए पंडित कैसे बुक करें?", a: "+91 93295 66101 पर व्हाट्सएप करें या panditghar.in पर बुकिंग फॉर्म भरें। विवाह के लिए कम से कम 2-3 महीने पहले बुकिंग करें।" },
+    { q: "बेंगलुरु में गृह प्रवेश पूजा के लिए पंडित कैसे बुक करें?", a: "+91 93295 66101 पर व्हाट्सएप करें या panditghar.in पर बुकिंग फॉर्म भरें। पंडित जी पंचांग के अनुसार शुभ मुहूर्त बताएंगे और स्कन्द पुराण व गृह्य सूत्रों में वर्णित पूर्ण वैदिक विधि से पूजा संपन्न कराएंगे।" },
+    { q: "बेंगलुरु में सत्यनारायण कथा के लिए कौन सी पंडित सेवा सबसे अच्छी है?", a: "PanditGhar.in स्कन्द पुराण के रेवा खण्ड के अनुसार प्रामाणिक सत्यनारायण कथा में विशेषज्ञता रखता है — पंचोपचार पूजा और पाँचों अध्यायों की कथा सहित। पंडित जी बेंगलुरु के सभी क्षेत्रों में आते हैं।" },
+    { q: "बेंगलुरु में विवाह के लिए पंडित कैसे बुक करें?", a: "+91 93295 66101 पर व्हाट्सएप करें या panditghar.in पर बुकिंग फॉर्म भरें। विवाह के लिए कम से कम 2-3 महीने पहले बुकिंग करें। सप्तपदी और कन्यादान सहित सभी अनुष्ठान पारस्कर गृह्यसूत्र के अनुसार।" },
     { q: "क्या उत्तर भारतीय पंडित HSR लेआउट, कोरमंगला, व्हाइटफील्ड आते हैं?", a: "हाँ, PanditGhar.in बेंगलुरु के सभी क्षेत्रों को कवर करता है — व्हाइटफील्ड, HSR लेआउट, कोरमंगला, इंदिरानगर, मराठहल्ली, इलेक्ट्रॉनिक सिटी, JP नगर और 30+ और।" },
     { q: "गृह प्रवेश और वास्तु शांति पूजा में क्या अंतर है?", a: "गृह प्रवेश नए घर में पहली बार प्रवेश का समारोह है। वास्तु शांति पूजा किसी भी समय मौजूदा घर या कार्यालय के वास्तु दोषों को बिना संरचनात्मक बदलाव के ठीक करने के लिए की जा सकती है।" },
   ];
@@ -145,11 +145,11 @@ export default function Home({ lang }: { lang: Language }) {
     <div className="pt-20">
       <SEO
         title={isHi
-          ? "बेंगलुरु में उत्तर भारतीय पंडित — पूजा बुकिंग, मूल्य व सामग्री | PanditGhar.in"
-          : "North Indian Pandit in Bangalore — Puja Booking, Price & Samagri | PanditGhar.in"}
+          ? "बेंगलुरु में उत्तर भारतीय पंडित — पूजा बुकिंग व शास्त्रीय विधि | PanditGhar.in"
+          : "North Indian Pandit in Bangalore — Puja Booking & Vedic Rituals | PanditGhar.in"}
         description={isHi
-          ? "बेंगलुरु में प्रामाणिक उत्तर भारतीय पंडित बुक करें। गृह प्रवेश, विवाह, सत्यनारायण कथा, नामकरण, मुंडन व अधिक। पूरी बेंगलुरु में सेवा। ₹2,100 से शुरू।"
-          : "Book authentic North Indian Pandit in Bangalore for Griha Pravesh, Vivah, Satyanarayan Katha, Namkaran, Mundan & more. All Bangalore covered. Starting ₹2,100."}
+          ? "बेंगलुरु में प्रामाणिक उत्तर भारतीय पंडित बुक करें। गृह प्रवेश, विवाह, सत्यनारायण कथा, नामकरण, मुंडन व अधिक। पूरी बेंगलुरु में सेवा। वैदिक शास्त्रों के अनुसार पूर्ण विधि।"
+          : "Book authentic North Indian Pandit in Bangalore for Griha Pravesh, Vivah, Satyanarayan Katha, Namkaran, Mundan & more. All Bangalore covered. Full Vedic rituals as per Shastra."}
         lang={lang}
         path={`/${lang}`}
         schema={[schema, paaSchema]}

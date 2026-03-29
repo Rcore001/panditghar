@@ -168,6 +168,61 @@ export default function About({ lang }: { lang: Language }) {
         </div>
       </section>
 
+      {/* Vedic Parampara */}
+      <section className="py-16 px-4 max-w-4xl mx-auto">
+        <ScrollReveal direction="up">
+          <div className="text-center mb-10">
+            <h2 className={`text-3xl font-display font-bold text-secondary mb-3 ${isHi ? 'font-hindi' : ''}`}>
+              {isHi ? 'वैदिक परम्परा — हमारी जड़ें' : 'Vedic Parampara — Our Roots'}
+            </h2>
+            <p className={`text-muted-foreground max-w-2xl mx-auto ${isHi ? 'font-hindi' : ''}`}>
+              {isHi
+                ? 'शास्त्रों में स्पष्ट आदेश है कि संस्कार योग्य ब्राह्मण द्वारा, विधिपूर्वक, शुभ मुहूर्त में संपन्न होने पर ही पूर्णफलदायी होते हैं।'
+                : 'The Shastras clearly state that Samskaras yield their full fruit only when performed by a qualified Brahmin, in the correct sequence, at an auspicious muhurat.'}
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <StaggerContainer className="space-y-6" staggerDelay={0.1}>
+          {[
+            {
+              shloka: 'संस्कारो हि नाम स ज्ञेयो यस्य दोष–निवर्तनम्।\nगुणाधानं च यत् कर्म स संस्कार उदाहृतः॥',
+              source: isHi ? '— महर्षि जैमिनी, मीमांसा दर्शन' : '— Maharshi Jaimini, Mimamsa Darshana',
+              meaning: isHi
+                ? 'जो कर्म दोषों को दूर करे और गुणों को आधान करे, वही संस्कार कहलाता है।'
+                : 'That act which removes defects and instils virtues is called Samskara — the sacred rite of purification.',
+            },
+            {
+              shloka: 'वेदोऽखिलो धर्ममूलं स्मृतिशीले च तद्विदाम्।\nआचारश्चैव साधूनामात्मनस्तुष्टिरेव च॥',
+              source: isHi ? '— मनुस्मृति २.६' : '— Manusmriti 2.6',
+              meaning: isHi
+                ? 'सम्पूर्ण वेद धर्म का मूल है। वेद-ज्ञाताओं की स्मृति, आचार-शास्त्र और सज्जनों का आचरण — ये सभी धर्म के स्रोत हैं।'
+                : 'The entire Veda is the root of Dharma. The tradition of those who know the Veda, righteous conduct, and the inner satisfaction of the soul — these are the sources of Dharma.',
+            },
+            {
+              shloka: 'धर्मस्य प्रभवो ब्रह्मन् पुण्यं मङ्गलमेव च।\nमङ्गले कर्मणि क्षिप्रं फलं भवति शाश्वतम्॥',
+              source: isHi ? '— स्कन्द पुराण' : '— Skanda Purana',
+              meaning: isHi
+                ? 'शुभ कार्यों में किये गये मंगल अनुष्ठान का फल शीघ्र और शाश्वत होता है।'
+                : 'Auspicious rites performed at the right time in righteous deeds yield swift and eternal fruit.',
+            },
+          ].map((item, i) => (
+            <StaggerItem key={i}>
+              <div className="bg-card border border-border rounded-2xl p-6 md:p-8 shadow-sm">
+                <blockquote className="font-hindi text-base md:text-lg text-secondary font-semibold leading-relaxed whitespace-pre-line mb-3 border-l-4 border-accent pl-4">
+                  {item.shloka}
+                </blockquote>
+                <p className="text-xs text-muted-foreground font-medium mb-3 pl-4">{item.source}</p>
+                <p className={`text-sm text-foreground leading-relaxed pl-4 ${isHi ? 'font-hindi' : ''}`}>
+                  <span className="font-semibold text-primary">{isHi ? 'अर्थ: ' : 'Meaning: '}</span>
+                  {item.meaning}
+                </p>
+              </div>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
+      </section>
+
       {/* Service Areas */}
       <section className="py-16 px-4 max-w-4xl mx-auto text-center">
         <ScrollReveal>

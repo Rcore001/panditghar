@@ -102,11 +102,11 @@ export default function LocationPage({ lang }: { lang: Language }) {
     <div className="pt-24 pb-16 bg-background">
       <SEO
         title={isHi
-          ? `${area.name} में ${service.hiTitle} — पंडित बुकिंग, मूल्य | PanditGhar.in`
-          : `${service.enTitle} in ${area.name}, Bangalore — Pandit Booking & Price | PanditGhar.in`}
+          ? `${area.name} में ${service.hiTitle} — पंडित बुकिंग | PanditGhar.in`
+          : `${service.enTitle} in ${area.name}, Bangalore — Pandit Booking | PanditGhar.in`}
         description={isHi
-          ? `${area.name}, बेंगलुरु में ${service.hiTitle} के लिए प्रामाणिक उत्तर भारतीय पंडित। ₹${service.price.toLocaleString('en-IN')} से शुरू। पूरी पूजा सामग्री सहित।`
-          : `Authentic North Indian Pandit for ${service.enTitle} in ${area.name}, Bangalore. Starting ₹${service.price.toLocaleString('en-IN')}. Complete samagri included.`}
+          ? `${area.name}, बेंगलुरु में ${service.hiTitle} के लिए प्रामाणिक उत्तर भारतीय पंडित। शास्त्रीय वैदिक विधि। पूरी पूजा सामग्री सहित।`
+          : `Authentic North Indian Pandit for ${service.enTitle} in ${area.name}, Bangalore. Shastreey Vedic rituals. Complete samagri included.`}
         lang={lang}
         path={`/${lang}/bangalore/${params.area}/${params.service}`}
         schema={schema}
@@ -154,6 +154,35 @@ export default function LocationPage({ lang }: { lang: Language }) {
                 {intro}
               </motion.p>
             </div>
+          </div>
+        </ScrollReveal>
+
+        {/* ── Spiritual Context Block ── */}
+        <ScrollReveal direction="up" delay={0.1}>
+          <div className="mb-12 bg-gradient-to-br from-secondary/5 via-background to-accent/5 border border-accent/30 rounded-2xl p-6 md:p-8">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="text-accent font-hindi text-lg">ॐ</span>
+              <h2 className={`text-lg font-bold text-secondary ${isHi ? 'font-hindi' : ''}`}>
+                {isHi
+                  ? `${area.name} में ${service.hiTitle} — शास्त्रीय महत्त्व`
+                  : `${service.enTitle} in ${area.name} — Scriptural Significance`}
+              </h2>
+            </div>
+            <blockquote className="font-hindi text-base md:text-lg text-secondary font-semibold leading-relaxed whitespace-pre-line border-l-4 border-accent pl-4 mb-2">
+              {service.id === 'vivah'
+                ? 'शुभे मुहूर्ते विधिवत् कन्यादानं प्रशस्यते।\nसप्तपद्यां कृते विप्र सा भार्या नात्र संशयः॥'
+                : service.id === 'rudrabhishek'
+                ? 'अभिषेकं प्रकुर्वीत शिवलिङ्गस्य भक्तितः।\nश्रीरुद्रमन्त्रपाठेन सर्वपापैः प्रमुच्यते॥'
+                : 'गृहं प्रविश्य पूजयेत् वास्तुदेवं विधानतः।\nसर्वसिद्धिप्रदं देवं सर्वदोषविनाशनम्॥'}
+            </blockquote>
+            <p className="text-xs font-semibold text-primary pl-4 mb-4">
+              — {isHi ? service.shastreeyRef.split('(')[0].replace('प्रमाण: ', '').trim() : service.shastreeyRef.match(/\(([^)]+)\)/)?.[1] ?? service.shastreeyRef}
+            </p>
+            <p className={`text-sm text-muted-foreground leading-relaxed ${isHi ? 'font-hindi' : ''}`}>
+              {isHi
+                ? `शास्त्रों के अनुसार ${service.hiTitle} एक अनिवार्य संस्कार है। बेंगलुरु के ${area.name} में बसे हमारे उत्तर भारतीय परिवार इस पूजा को विधिवत् कराकर अपने घर में देव कृपा और समृद्धि को आमंत्रित करते हैं। पंडित जी गृह्य सूत्रों एवं पुराणों के अनुसार पूर्ण विधि संपन्न कराते हैं।`
+                : `According to the Shastras, ${service.enTitle} is an essential rite. North Indian families settled in ${area.name}, Bangalore invite divine grace and prosperity into their homes by performing this puja correctly. Pandit Ji conducts the complete ceremony as per the Grihya Sutras and Puranas.`}
+            </p>
           </div>
         </ScrollReveal>
 

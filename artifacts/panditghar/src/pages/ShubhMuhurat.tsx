@@ -547,6 +547,92 @@ export default function ShubhMuhurat({ lang }: { lang: Language }) {
           </StaggerContainer>
         </section>
 
+        {/* ── Muhurat Mahatva — Shloka Section ── */}
+        <DecorativeDivider />
+        <section className="mt-16 mb-8">
+          <ScrollReveal direction="up">
+            <div className="text-center mb-8">
+              <h2 className={`text-2xl md:text-3xl font-display font-bold text-secondary mb-3 ${isHi ? 'font-hindi' : ''}`}>
+                {isHi ? 'मुहूर्त महत्त्व — शास्त्रीय प्रमाण' : 'Muhurat Mahatva — Scriptural Basis'}
+              </h2>
+              <p className={`text-muted-foreground max-w-2xl mx-auto text-sm ${isHi ? 'font-hindi' : ''}`}>
+                {isHi
+                  ? 'हमारे ऋषि-मुनियों ने युगों पहले सिद्ध किया था कि सही समय पर किया गया कार्य सौ गुना अधिक फल देता है।'
+                  : 'Our sages established millennia ago that the right action performed at the right moment yields a hundredfold greater result.'}
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <StaggerContainer className="space-y-5" staggerDelay={0.1}>
+            {[
+              {
+                devanagari: 'शुभे मुहूर्ते यः कुर्यात् कर्म किञ्चिद् विचक्षणः।\nतस्य कर्मफलं नित्यमक्षयं जायते ध्रुवम्॥',
+                transliteration: 'Śubhe muhūrte yaḥ kuryāt karma kiñcid vicakṣaṇaḥ। Tasya karmaphalaṃ nityamakṣayaṃ jāyate dhruvam॥',
+                source_en: 'Skanda Purana',
+                source_hi: 'स्कन्द पुराण',
+                meaning_en: 'The wise person who performs any action at an auspicious muhurat receives undying, everlasting fruit from that action.',
+                meaning_hi: 'जो बुद्धिमान व्यक्ति शुभ मुहूर्त में कोई भी कार्य करता है, उस कार्य का फल नित्य और अक्षय होता है।',
+              },
+              {
+                devanagari: 'काले कर्म समाचरेत् शुभेन नक्षत्रेण संयुक्तम्।\nग्रहाणां बलसम्पन्नं कार्यं सिद्धिं प्रयच्छति॥',
+                transliteration: 'Kāle karma samācaret śubhena nakṣatreṇa saṃyuktam। Grahāṇāṃ balasampannaṃ kāryaṃ siddhiṃ prayacchati॥',
+                source_en: 'Jyotisha Shastra (Graha Laghu Parashari)',
+                source_hi: 'ज्योतिष शास्त्र (लघु पाराशरी)',
+                meaning_en: 'A deed performed at the right time, aligned with auspicious Nakshatras and strong planetary positions, always achieves success.',
+                meaning_hi: 'शुभ नक्षत्र और बलवान ग्रहों के संयोग में किया गया कार्य सदैव सफलता प्रदान करता है।',
+              },
+              {
+                devanagari: 'यत्र विद्वान् पुरोहितो मुहूर्तं वेत्ति सर्वदा।\nतत्र देवाः प्रसीदन्ति गृहे लक्ष्मीः स्थिरा भवेत्॥',
+                transliteration: 'Yatra vidvān purohito muhūrtaṃ vetti sarvadā। Tatra devāḥ prasīdanti gṛhe lakṣmīḥ sthirā bhavet॥',
+                source_en: 'Atharva Veda Parishishta',
+                source_hi: 'अथर्ववेद परिशिष्ट',
+                meaning_en: 'Where a learned purohit (priest) who understands Muhurat performs the rites, the gods are pleased and Lakshmi becomes permanently established in that home.',
+                meaning_hi: 'जहाँ मुहूर्त-ज्ञाता विद्वान पुरोहित अनुष्ठान करते हैं, वहाँ देव प्रसन्न होते हैं और लक्ष्मी उस घर में स्थायी रूप से निवास करती हैं।',
+              },
+            ].map((item, i) => (
+              <StaggerItem key={i}>
+                <div className="bg-card border border-border rounded-2xl p-6 md:p-8 shadow-sm hover:border-primary/30 transition-all">
+                  <blockquote className="font-hindi text-base md:text-lg text-secondary font-semibold leading-relaxed whitespace-pre-line border-l-4 border-accent pl-4 mb-2">
+                    {item.devanagari}
+                  </blockquote>
+                  <p className="text-xs text-muted-foreground italic pl-4 mb-1">{item.transliteration}</p>
+                  <p className="text-xs font-semibold text-primary pl-4 mb-4">— {isHi ? item.source_hi : item.source_en}</p>
+                  <div className="bg-background/60 rounded-xl px-4 py-3 border border-border/50">
+                    <p className={`text-sm text-foreground leading-relaxed ${isHi ? 'font-hindi' : ''}`}>
+                      <span className="font-semibold text-secondary">{isHi ? 'अर्थ: ' : 'Meaning: '}</span>
+                      {isHi ? item.meaning_hi : item.meaning_en}
+                    </p>
+                  </div>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+
+          {/* CTA after shlokas */}
+          <ScrollReveal delay={0.15}>
+            <div className={`mt-8 bg-gradient-maroon rounded-2xl p-6 text-center text-white ${isHi ? 'font-hindi' : ''}`}>
+              <p className="text-base md:text-lg font-semibold mb-3">
+                {isHi
+                  ? 'अपने संस्कार के लिए व्यक्तिगत मुहूर्त जानना चाहते हैं?'
+                  : 'Want a personalised Muhurat for your Sanskar?'}
+              </p>
+              <p className="text-white/80 text-sm mb-4">
+                {isHi
+                  ? 'पंडित जी आपकी कुण्डली और पंचांग के आधार पर सटीक शुभ मुहूर्त बताएंगे।'
+                  : 'Pandit Ji will determine the precise auspicious Muhurat based on your Kundali and the Panchang.'}
+              </p>
+              <a
+                href="https://wa.me/919329566101"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-full transition-colors text-sm"
+              >
+                {isHi ? 'व्हाट्सएप पर पूछें' : 'Ask on WhatsApp'}
+              </a>
+            </div>
+          </ScrollReveal>
+        </section>
+
         {/* ── Footer note ── */}
         <ScrollReveal delay={0.1}>
           <div className={`mt-10 text-center text-muted-foreground text-sm ${isHi ? 'font-hindi' : ''}`}>
