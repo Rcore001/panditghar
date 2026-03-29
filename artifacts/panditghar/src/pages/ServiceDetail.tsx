@@ -378,7 +378,7 @@ const serviceFaqs: Record<string, FAQ[]> = {
     },
     {
       q_en: "Is Vastu Shanti needed for rented properties?",
-      a_en: "A simplified version of Vastu Shanti is recommended for rented homes. It focuses on purification and positive energy without the complete Vastu Purush Mandal puja. This is a cost-effective solution for renters.",
+      a_en: "A simplified version of Vastu Shanti is recommended for rented homes. It focuses on purification and positive energy without the complete Vastu Purush Mandal puja. This is a meaningful and practical option for renters.",
       q_hi: "क्या किराए की संपत्ति के लिए वास्तु शांति जरूरी है?",
       a_hi: "किराए के घरों के लिए वास्तु शांति का एक सरलीकृत संस्करण अनुशंसित है। यह पूर्ण वास्तु पुरुष मंडल पूजा के बिना शुद्धि और सकारात्मक ऊर्जा पर केंद्रित है।"
     },
@@ -692,7 +692,7 @@ const serviceFaqs: Record<string, FAQ[]> = {
     },
     {
       q_en: "Can Sundarkand be combined with Hanuman Puja?",
-      a_en: "Yes, Sundarkand + Hanuman Puja is a powerful combination especially recommended for removing black magic, evil eye, and persistent obstacles. PanditGhar.in offers this as a combined package at a special rate.",
+      a_en: "Yes, Sundarkand + Hanuman Puja is a powerful combination especially recommended for removing black magic, evil eye, and persistent obstacles. WhatsApp us to book the combined Sundarkand + Hanuman Puja — it is our most requested service for obstacle removal.",
       q_hi: "क्या सुंदरकांड को हनुमान पूजा के साथ जोड़ा जा सकता है?",
       a_hi: "हाँ, सुंदरकांड + हनुमान पूजा एक शक्तिशाली संयोजन है जो काले जादू, बुरी नज़र और लगातार बाधाओं को दूर करने के लिए विशेष रूप से अनुशंसित है।"
     },
@@ -1072,9 +1072,9 @@ const defaultFaqs: FAQ[] = [
   },
   {
     q_en: "Will Pandit Ji bring all Pooja Samagri?",
-    a_en: "We share a complete Pooja Samagri list in advance so your family can arrange the items beforehand. Alternatively, our team can procure all samagri on your behalf at actual market rates — whichever is more convenient for you. Please let us know your preference while booking.",
+    a_en: "We share a complete Pooja Samagri list in advance so your family can arrange the items beforehand. Alternatively, our team can procure all samagri on your behalf — whichever is more convenient for you. Please let us know your preference while booking.",
     q_hi: "क्या पंडित जी सभी पूजा सामग्री लाएंगे?",
-    a_hi: "हम पहले से पूरी पूजा सामग्री सूची साझा करते हैं ताकि आपका परिवार पहले से तैयारी कर सके। वैकल्पिक रूप से, हमारी टीम वास्तविक बाज़ार दर पर आपकी ओर से सामग्री खरीद सकती है — जो भी आपको सुविधाजनक लगे। बुकिंग के समय अपनी प्राथमिकता बताएं।"
+    a_hi: "हम पहले से पूरी पूजा सामग्री सूची साझा करते हैं ताकि आपका परिवार पहले से तैयारी कर सके। वैकल्पिक रूप से, हमारी टीम आपकी ओर से सामग्री की व्यवस्था कर सकती है — जो भी आपको सुविधाजनक लगे। बुकिंग के समय अपनी प्राथमिकता बताएं।"
   },
   {
     q_en: "Is service available across all Bangalore areas?",
@@ -1311,14 +1311,14 @@ const serviceShlokas: Record<string, ServiceShloka> = {
     context_hi: "सात दिवसीय भागवत कथा एक परिवार द्वारा आयोजित किए जाने वाले सबसे शक्तिशाली वैदिक अनुष्ठानों में से एक है। भागवत पुराण स्वयं घोषित करता है कि श्रद्धा के साथ एक पूर्ण सप्ताह पाठ (सात दिवसीय पाठ) का श्रवण मोक्ष प्रदान करता है।",
   },
   "sundarkand": {
-    devanagari: "तुलसीदास सदा हरि चेरा। कीजे नाथ हृदय महँ डेरा॥\nशुभ सुरतिय नारद मुनि नागा। सुमिरहिं राम न जानहिं आगा॥",
-    transliteration: "Tulasīdāsa sadā hari cerā। Kīje nātha hṛdaya mahaṃ ḍerā॥",
-    source_en: "Valmiki Ramayana, Sundara Kanda 5.1",
-    source_hi: "वाल्मीकि रामायण, सुंदरकाण्ड ५.१",
-    meaning_en: "Tulsidas, ever Hari's servant, prays: O Lord, make your home in my heart. The blessed, the sages and the divine serpents all contemplate Ram and know nothing beyond.",
-    meaning_hi: "तुलसीदास सदा हरि के सेवक हैं, प्रार्थना करते हैं: हे नाथ, मेरे हृदय में निवास करें। शुभ देव-सतियाँ, नारद मुनि और नाग — सभी राम का स्मरण करते हैं और उससे आगे कुछ नहीं जानते।",
-    context_en: "Sundarkand is the fifth chapter of Valmiki Ramayana, describing Hanuman's leap across the ocean and rescue of Sita. Its recitation is prescribed for removal of fear, financial difficulties, court cases, and health problems. When performed with proper Vedic rites, it is held equal to Rudrabhishek in its power.",
-    context_hi: "सुंदरकांड वाल्मीकि रामायण का पाँचवाँ अध्याय है, जो हनुमान की समुद्र पार यात्रा और सीता के उद्धार का वर्णन करता है। इसका पाठ भय, आर्थिक कठिनाइयों, मुकदमों और स्वास्थ्य समस्याओं के निवारण के लिए निर्धारित है।",
+    devanagari: "ततो रावणनीतायाः सीतायाः शत्रुकर्षणः।\nईयेष पदमन्वेष्टुं चारणाचरिते पथि॥",
+    transliteration: "Tato rāvaṇanītāyāḥ sītāyāḥ śatrukārṣaṇaḥ। Īyeṣa padamanveṣṭuṃ cāraṇācarite pathi॥",
+    source_en: "Valmiki Ramayana, Sundara Kanda 1.1",
+    source_hi: "वाल्मीकि रामायण, सुंदरकाण्ड १.१",
+    meaning_en: "Then that slayer of enemies set out to find the footsteps of Sita who had been abducted by Ravana — travelling along the path trodden by the Charanas (celestial bards).",
+    meaning_hi: "तब उस शत्रुकर्षण (हनुमान) ने रावण द्वारा हरी गई सीता के पदचिह्नों की खोज में प्रस्थान किया — चारणों द्वारा विचरित मार्ग से।",
+    context_en: "Sundarkand (Chapter 5 of Valmiki Ramayana) opens with Hanuman's leap across the ocean — the greatest act of devotion in the Ramayana. Its recitation is prescribed for removal of fear, court cases, health problems, and obstacles. When performed with proper Vedic rites, it is held equal to Rudrabhishek in its power.",
+    context_hi: "सुंदरकांड (वाल्मीकि रामायण का 5वाँ अध्याय) हनुमान की समुद्र पार छलांग से शुरू होता है — रामायण में भक्ति का सबसे महान कार्य। इसका पाठ भय, मुकदमों, स्वास्थ्य समस्याओं और बाधाओं के निवारण के लिए निर्धारित है।",
   },
   "ram-katha": {
     devanagari: "श्रीरामचन्द्रं भजे भजे भजे।\nभवाब्धितारणकारणं भजे।\nसदैव रामं रघुनाथमव्ययं।\nभजे भजे भजे भजे भजे॥",
@@ -1555,7 +1555,7 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
   function extractHowToSteps(text: string, serviceName: string): { name: string; text: string }[] {
     const commonStart = [
       { name: `Book ${serviceName}`, text: `WhatsApp PanditGhar.in at +91 93295 66101 or fill the booking form online to schedule your ${serviceName} in Bangalore.` },
-      { name: "Receive Samagri List", text: "Receive the complete Pooja Samagri list via WhatsApp. Arrange items or let PanditGhar.in procure at actuals." },
+      { name: "Receive Samagri List", text: "Receive the complete Pooja Samagri list via WhatsApp. Arrange items yourself or let PanditGhar.in procure them on your behalf." },
     ];
     const sentenceRegex = /[^.!?]*(?:perform|recit|worship|offer|begin|start|place|light|chant|take|enter|apply|tie|releas)[^.!?]*[.!?]/gi;
     const rawMatches = Array.from(text.matchAll(sentenceRegex)).map(m => m[0].trim()).filter(s => s.length > 30 && s.length < 200);
@@ -1727,37 +1727,6 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
 
                 <p>{content}</p>
 
-                {/* ── Shastreey Pramaan Shloka Block ── */}
-                {serviceShlokas[service.id] && (() => {
-                  const sh = serviceShlokas[service.id];
-                  return (
-                    <div className="my-8 bg-gradient-to-br from-secondary/5 via-background to-accent/5 border border-accent/30 rounded-2xl p-6 not-prose">
-                      <div className="flex items-center gap-2 mb-4">
-                        <span className="text-accent font-hindi text-lg">ॐ</span>
-                        <h4 className={`text-sm font-bold text-secondary uppercase tracking-wider ${isHi ? 'font-hindi' : ''}`}>
-                          {isHi ? 'शास्त्रीय प्रमाण — वेद वाक्य' : 'Shastreey Pramaan — Sacred Verse'}
-                        </h4>
-                      </div>
-                      <blockquote className="font-hindi text-base md:text-lg text-secondary font-semibold leading-relaxed whitespace-pre-line border-l-4 border-accent pl-4 mb-3">
-                        {sh.devanagari}
-                      </blockquote>
-                      <p className="text-xs text-muted-foreground italic pl-4 mb-1">{sh.transliteration}</p>
-                      <p className="text-xs font-semibold text-primary pl-4 mb-4">
-                        — {isHi ? sh.source_hi : sh.source_en}
-                      </p>
-                      <div className="bg-background/60 rounded-xl px-4 py-3 border border-border/50 mb-3">
-                        <p className={`text-sm text-foreground leading-relaxed ${isHi ? 'font-hindi' : ''}`}>
-                          <span className="font-semibold text-secondary">{isHi ? 'अर्थ: ' : 'Meaning: '}</span>
-                          {isHi ? sh.meaning_hi : sh.meaning_en}
-                        </p>
-                      </div>
-                      <p className={`text-sm text-muted-foreground leading-relaxed ${isHi ? 'font-hindi' : ''}`}>
-                        {isHi ? sh.context_hi : sh.context_en}
-                      </p>
-                    </div>
-                  );
-                })()}
-
                 <h3 className={`${isHi ? 'font-hindi' : ''}`}>{isHi ? 'क्या-क्या शामिल है?' : 'What is included?'}</h3>
                 <ul className="list-none pl-0 space-y-3">
                   {[
@@ -1784,10 +1753,10 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
                       <ShoppingBag className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
                       <div>
                         <p className={`text-sm font-semibold text-amber-800 m-0 ${isHi ? 'font-hindi' : ''}`}>
-                          {isHi ? 'पूजा सामग्री शुल्क' : 'Pooja Samagri Cost'}
+                          {isHi ? 'पूजा सामग्री व्यवस्था' : 'Pooja Samagri Arrangement'}
                         </p>
                         <p className={`text-xs text-amber-700 m-0 ${isHi ? 'font-hindi' : ''}`}>
-                          {isHi ? 'वास्तविक बाज़ार दर पर अलग से देय। आप स्वयं व्यवस्था कर सकते हैं या हमारी टीम आपके लिए खरीद सकती है।' : 'Charged at actual market rates, billed separately. You may arrange samagri yourself or our team can procure it for you.'}
+                          {isHi ? 'हम पहले से पूरी सामग्री सूची भेजते हैं। आप स्वयं व्यवस्था कर सकते हैं या हमारी टीम आपके लिए खरीद सकती है।' : 'We share the complete samagri list in advance. You may arrange it yourself or our team can procure on your behalf.'}
                         </p>
                       </div>
                     </li>
@@ -1795,10 +1764,10 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
                       <Car className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
                       <div>
                         <p className={`text-sm font-semibold text-amber-800 m-0 ${isHi ? 'font-hindi' : ''}`}>
-                          {isHi ? 'यात्रा किराया (Kiraya)' : 'Travel Charges (Kiraya)'}
+                          {isHi ? 'यात्रा व्यवस्था' : 'Travel Arrangement'}
                         </p>
                         <p className={`text-xs text-amber-700 m-0 ${isHi ? 'font-hindi' : ''}`}>
-                          {isHi ? 'बेंगलुरु में दूरी के अनुसार अलग से देय। बुकिंग के समय पंडित जी आपको सटीक जानकारी देंगे।' : 'Charged separately based on distance within Bangalore. Exact amount communicated at the time of booking.'}
+                          {isHi ? 'पंडित जी बेंगलुरु में आपके घर तक आते हैं। यात्रा विवरण बुकिंग के समय तय किया जाता है।' : 'Pandit Ji travels to your home anywhere in Bangalore. Travel details are confirmed at the time of booking.'}
                         </p>
                       </div>
                     </li>
@@ -1822,8 +1791,8 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
                 <>
                   <p className={`text-sm text-muted-foreground mb-5 ${isHi ? 'font-hindi' : ''}`}>
                     {isHi
-                      ? 'नीचे दी गई सामग्री इस पूजा के लिए आवश्यक है। आप इसे स्वयं बाज़ार से खरीद सकते हैं, या हमारी टीम आपके लिए व्यवस्था कर सकती है (वास्तविक लागत पर)।'
-                      : 'The following items are required for this puja. You may arrange them yourself or our team can procure them on your behalf at actual cost.'}
+                      ? 'नीचे दी गई सामग्री इस पूजा के लिए आवश्यक है। आप इसे स्वयं व्यवस्था कर सकते हैं, या हमारी टीम आपके लिए खरीद सकती है।'
+                      : 'The following items are required for this puja. You may arrange them yourself or our team can procure them on your behalf.'}
                   </p>
                   <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-2" staggerDelay={0.04}>
                     {service.samagri.map((item, i) => (
@@ -1883,6 +1852,39 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
                 </Accordion>
               </div>
             </ScrollReveal>
+
+            {/* ── Shastreey Pramaan Shloka Block — after FAQs ── */}
+            {serviceShlokas[service.id] && (() => {
+              const sh = serviceShlokas[service.id];
+              return (
+                <ScrollReveal direction="up" delay={0.07}>
+                  <div className="bg-gradient-to-br from-secondary/5 via-background to-accent/5 border border-accent/30 rounded-2xl p-6">
+                    <div className="flex items-center gap-2 mb-4">
+                      <span className="text-accent font-hindi text-lg">ॐ</span>
+                      <h4 className={`text-sm font-bold text-secondary uppercase tracking-wider ${isHi ? 'font-hindi' : ''}`}>
+                        {isHi ? 'शास्त्रीय प्रमाण — वेद वाक्य' : 'Shastreey Pramaan — Sacred Verse'}
+                      </h4>
+                    </div>
+                    <blockquote className="font-hindi text-base md:text-lg text-secondary font-semibold leading-relaxed whitespace-pre-line border-l-4 border-accent pl-4 mb-3">
+                      {sh.devanagari}
+                    </blockquote>
+                    <p className="text-xs text-muted-foreground italic pl-4 mb-1">{sh.transliteration}</p>
+                    <p className="text-xs font-semibold text-primary pl-4 mb-4">
+                      — {isHi ? sh.source_hi : sh.source_en}
+                    </p>
+                    <div className="bg-background/60 rounded-xl px-4 py-3 border border-border/50 mb-3">
+                      <p className={`text-sm text-foreground leading-relaxed ${isHi ? 'font-hindi' : ''}`}>
+                        <span className="font-semibold text-secondary">{isHi ? 'अर्थ: ' : 'Meaning: '}</span>
+                        {isHi ? sh.meaning_hi : sh.meaning_en}
+                      </p>
+                    </div>
+                    <p className={`text-sm text-muted-foreground leading-relaxed ${isHi ? 'font-hindi' : ''}`}>
+                      {isHi ? sh.context_hi : sh.context_en}
+                    </p>
+                  </div>
+                </ScrollReveal>
+              );
+            })()}
 
             {relatedServices.length > 0 && (
               <ScrollReveal direction="up" delay={0.06}>
