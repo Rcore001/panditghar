@@ -9,6 +9,19 @@ import { motion } from 'framer-motion';
 import { ScrollReveal, StaggerContainer, StaggerItem, TiltCard } from '@/components/ui/animated';
 import { Breadcrumb } from '@/components/Breadcrumb';
 
+const areaTempleContext: Record<string, { temple: string; templeHi: string; fact: string; factHi: string }> = {
+  "malleshwaram":      { temple: "Kadu Malleshwara Temple", templeHi: "काडु मल्लेश्वरा मंदिर", fact: "Malleshwaram is Bangalore's oldest Brahmin neighbourhood — home to the 400-year-old Kadu Malleshwara Shiva temple and dozens of smaller shrines. Conducting Vedic Samskaras here carries generations of unbroken tradition.", factHi: "मल्लेश्वरम बेंगलुरु का सबसे पुराना ब्राह्मण मोहल्ला है — 400 वर्ष पुराने काडु मल्लेश्वरा शिव मंदिर और दर्जनों छोटे मंदिरों का घर। यहाँ वैदिक संस्कार करना पीढ़ियों की अटूट परंपरा को आगे बढ़ाना है।" },
+  "basavanagudi":      { temple: "Dodda Ganesha Temple & Bull Temple (Nandi)", templeHi: "दोड्डा गणेश मंदिर और नंदी मंदिर", fact: "Basavanagudi is famous for the Dodda Ganesha (massive 18-foot Ganesha idol) and the ancient Bull Temple, where Nandi has been worshipped since the Kempegowda era. Any Ganesh Puja or major Samskara performed here draws on centuries of sacred vibrations.", factHi: "बसवनगुडी अपने दोड्डा गणेश (18 फुट की विशाल गणेश मूर्ति) और प्राचीन नंदी मंदिर के लिए प्रसिद्ध है, जहाँ केम्पेगौड़ा काल से नंदी की पूजा होती है। यहाँ गणेश पूजा या कोई बड़ा संस्कार करना सदियों की पवित्र ऊर्जा का आह्वान करना है।" },
+  "jayanagar":         { temple: "Sri Ramanjaneya Swamy Temple & Jayanagar Navaratri Mandal", templeHi: "श्री रामांजनेय स्वामी मंदिर", fact: "Jayanagar is one of Bangalore's most family-oriented Hindu neighbourhoods, with the Sri Ramanjaneya Temple on 9th Block remaining a centre of Vedic activity. Families here have maintained the tradition of home pujas for over 50 years.", factHi: "जयनगर बेंगलुरु के सबसे पारिवारिक हिंदू मोहल्लों में से एक है, जहाँ 9वें ब्लॉक का श्री रामांजनेय मंदिर वैदिक गतिविधि का केंद्र है। यहाँ के परिवारों ने 50 से अधिक वर्षों से घर में पूजा की परंपरा बनाए रखी है।" },
+  "rajajinagar":       { temple: "Sri Srinivasa Perumal Temple", templeHi: "श्री श्रीनिवास पेरुमाल मंदिर", fact: "Rajajinagar has a long-standing North Indian community and hosts one of Bangalore's most active Puja Samitis. Satyanarayan and Navratri celebrations here are legendary in scale and bhakti.", factHi: "राजाजीनगर में उत्तर भारतीय समुदाय की लंबी उपस्थिति है और बेंगलुरु की सबसे सक्रिय पूजा समितियों में से एक है। यहाँ सत्यनारायण और नवरात्रि उत्सव अपने पैमाने और भक्ति के लिए प्रसिद्ध हैं।" },
+  "koramangala":       { temple: "Sri Koramangala Shiva Temple", templeHi: "कोरमंगला शिव मंदिर", fact: "Koramangala sits near the ancient Koramangala Shiva temple that gives the area its name. Despite being a modern neighbourhood, it has a strong community of North Indian families who observe every Samskara with traditional depth.", factHi: "कोरमंगला उस प्राचीन शिव मंदिर के पास बसा है जिसने इस क्षेत्र को नाम दिया। आधुनिक पड़ोस होने के बावजूद यहाँ उत्तर भारतीय परिवारों का एक सशक्त समुदाय है जो हर संस्कार को पारंपरिक गहराई के साथ मनाता है।" },
+  "indiranagar":       { temple: "Sri Rama Temple (Indiranagar 100 Feet Road)", templeHi: "श्री राम मंदिर (इंदिरानगर)", fact: "Indiranagar has been home to a vibrant North Indian community since the 1980s. The Sri Rama Temple on 100 Feet Road serves as the spiritual anchor, and home pujas in this area carry forward the Ramayana-inspired bhakti tradition.", factHi: "इंदिरानगर 1980 के दशक से जीवंत उत्तर भारतीय समुदाय का घर रहा है। 100 फीट रोड पर श्री राम मंदिर आध्यात्मिक आधार है, और यहाँ घर में होने वाली पूजाएं रामायण-प्रेरित भक्ति परंपरा को आगे बढ़ाती हैं।" },
+  "whitefield":        { temple: "Sri Siddha Ganapathi Temple", templeHi: "श्री सिद्ध गणपति मंदिर", fact: "Whitefield has grown rapidly and now hosts a large North Indian diaspora. The Sri Siddha Ganapathi temple and numerous apartment community pujas make it one of Bangalore's most active areas for home-based Vedic rituals.", factHi: "व्हाइटफील्ड तेजी से बढ़ा है और अब बड़ी उत्तर भारतीय आबादी का घर है। श्री सिद्ध गणपति मंदिर और अनेक अपार्टमेंट सामुदायिक पूजाएं इसे घर-आधारित वैदिक अनुष्ठानों के लिए बेंगलुरु के सबसे सक्रिय क्षेत्रों में से एक बनाती हैं।" },
+  "hsr-layout":        { temple: "Sri Venkateshwara Temple (HSR Sector 1)", templeHi: "श्री वेंकटेश्वर मंदिर", fact: "HSR Layout is a planned township with a strong Hindu community that celebrates every major Panchang date with collective pujas. Sri Venkateshwara temple in Sector 1 is the focal point of all major community celebrations.", factHi: "एचएसआर लेआउट एक नियोजित टाउनशिप है जहाँ मजबूत हिंदू समुदाय हर प्रमुख पंचांग तिथि को सामूहिक पूजाओं के साथ मनाता है। सेक्टर 1 में श्री वेंकटेश्वर मंदिर सभी प्रमुख सामुदायिक उत्सवों का केंद्र बिंदु है।" },
+  "electronic-city":   { temple: "Sri Eswara Temple (Electronic City Phase 2)", templeHi: "श्री ईश्वर मंदिर (इलेक्ट्रॉनिक सिटी)", fact: "Electronic City houses thousands of North Indian tech families who maintain the full cycle of Samskaras — from Namkaran to Vivah — with great devotion. The Sri Eswara temple in Phase 2 anchors the community's spiritual life.", factHi: "इलेक्ट्रॉनिक सिटी में हजारों उत्तर भारतीय तकनीकी परिवार रहते हैं जो नामकरण से विवाह तक सभी संस्कार बड़ी श्रद्धा के साथ मनाते हैं। फेज 2 में श्री ईश्वर मंदिर समुदाय के आध्यात्मिक जीवन का आधार है।" },
+  "jp-nagar":          { temple: "Srinivasa Swamy Temple (JP Nagar 3rd Phase)", templeHi: "श्रीनिवास स्वामी मंदिर", fact: "JP Nagar is a family-oriented neighbourhood with deep roots in South Indian temple culture. The Srinivasa Swamy temple in 3rd Phase is active all year with North Indian families who have made it their spiritual home.", factHi: "जेपी नगर एक पारिवारिक मोहल्ला है जिसकी दक्षिण भारतीय मंदिर संस्कृति में गहरी जड़ें हैं। 3रे फेज में श्रीनिवास स्वामी मंदिर साल भर उत्तर भारतीय परिवारों के साथ सक्रिय रहता है।" },
+};
+
 const areaGeoCoords: Record<string, { lat: number; lng: number }> = {
   "whitefield":        { lat: 12.9698, lng: 77.7500 },
   "hsr-layout":        { lat: 12.9116, lng: 77.6389 },
@@ -44,6 +57,7 @@ export default function LocationPage({ lang }: { lang: Language }) {
   if (!area) return <NotFound />;
 
   const areaCoords = areaGeoCoords[params.area] ?? { lat: 12.9716, lng: 77.5946 };
+  const templeCtx = areaTempleContext[params.area];
 
   const title = isHi
     ? `${area.name} में ${service.hiTitle} के लिए पंडित`
@@ -179,10 +193,19 @@ export default function LocationPage({ lang }: { lang: Language }) {
               — {isHi ? service.shastreeyRef.split('(')[0].replace('प्रमाण: ', '').trim() : service.shastreeyRef.match(/\(([^)]+)\)/)?.[1] ?? service.shastreeyRef}
             </p>
             <p className={`text-sm text-muted-foreground leading-relaxed ${isHi ? 'font-hindi' : ''}`}>
-              {isHi
-                ? `शास्त्रों के अनुसार ${service.hiTitle} एक अनिवार्य संस्कार है। बेंगलुरु के ${area.name} में बसे हमारे उत्तर भारतीय परिवार इस पूजा को विधिवत् कराकर अपने घर में देव कृपा और समृद्धि को आमंत्रित करते हैं। पंडित जी गृह्य सूत्रों एवं पुराणों के अनुसार पूर्ण विधि संपन्न कराते हैं।`
-                : `According to the Shastras, ${service.enTitle} is an essential rite. North Indian families settled in ${area.name}, Bangalore invite divine grace and prosperity into their homes by performing this puja correctly. Pandit Ji conducts the complete ceremony as per the Grihya Sutras and Puranas.`}
+              {templeCtx
+                ? (isHi ? templeCtx.factHi : templeCtx.fact)
+                : (isHi
+                    ? `शास्त्रों के अनुसार ${service.hiTitle} एक अनिवार्य संस्कार है। बेंगलुरु के ${area.name} में बसे हमारे उत्तर भारतीय परिवार इस पूजा को विधिवत् कराकर अपने घर में देव कृपा और समृद्धि को आमंत्रित करते हैं। पंडित जी गृह्य सूत्रों एवं पुराणों के अनुसार पूर्ण विधि संपन्न कराते हैं।`
+                    : `According to the Shastras, ${service.enTitle} is an essential rite. North Indian families settled in ${area.name}, Bangalore invite divine grace and prosperity into their homes by performing this puja correctly. Pandit Ji conducts the complete ceremony as per the Grihya Sutras and Puranas.`
+                  )
+              }
             </p>
+            {templeCtx && (
+              <p className={`text-xs text-primary/70 mt-3 font-semibold ${isHi ? 'font-hindi' : ''}`}>
+                {isHi ? `📍 ${area.name} का प्रसिद्ध मंदिर: ${templeCtx.templeHi}` : `📍 Notable temple in ${area.name}: ${templeCtx.temple}`}
+              </p>
+            )}
           </div>
         </ScrollReveal>
 

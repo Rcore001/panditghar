@@ -30,16 +30,16 @@ export default function About({ lang }: { lang: Language }) {
 
   const credentials = isHi ? [
     "काशी विद्यापीठ, वाराणसी से वेद शास्त्री",
-    "संस्कृत एवं ज्योतिष विशारद",
+    "शुक्ल यजुर्वेद शाखा — पारायण परम्परा में दीक्षित",
+    "पारस्कर गृह्यसूत्र एवं बौधायन गृह्यसूत्र में विशेष प्रशिक्षण",
     "सभी 16 संस्कारों में प्रशिक्षित",
-    "वास्तु शास्त्र एवं मुहूर्त विशेषज्ञ",
-    "गृह्य सूत्रों के अनुसार अनुष्ठान"
+    "वास्तु शास्त्र एवं मुहूर्त विशेषज्ञ"
   ] : [
     "Veda Shastri from Kashi Vidyapitha, Varanasi",
-    "Expert in Sanskrit & Jyotish (Astrology)",
+    "Initiated in Shukla Yajurveda Shakha — oral Vedic recitation tradition",
+    "Special training in Paraskara & Baudhayana Grihya Sutras",
     "Trained in all 16 Samskaras",
-    "Vastu Shastra & Muhurat Specialist",
-    "Rituals as per original Grihya Sutras"
+    "Vastu Shastra & Muhurat Specialist"
   ];
 
   const services_areas = ["Whitefield", "HSR Layout", "Marathahalli", "Electronic City", "JP Nagar", "Koramangala", "Indiranagar", "Jayanagar", "Bannerghatta", "Hebbal"];
@@ -177,8 +177,8 @@ export default function About({ lang }: { lang: Language }) {
             </h2>
             <p className={`text-muted-foreground max-w-2xl mx-auto ${isHi ? 'font-hindi' : ''}`}>
               {isHi
-                ? 'शास्त्रों में स्पष्ट आदेश है कि संस्कार योग्य ब्राह्मण द्वारा, विधिपूर्वक, शुभ मुहूर्त में संपन्न होने पर ही पूर्णफलदायी होते हैं।'
-                : 'The Shastras clearly state that Samskaras yield their full fruit only when performed by a qualified Brahmin, in the correct sequence, at an auspicious muhurat.'}
+                ? 'हमारे पंडित जी शुक्ल यजुर्वेद शाखा में दीक्षित हैं और उन्होंने पारस्कर गृह्यसूत्र तथा बौधायन गृह्यसूत्र में विशेष प्रशिक्षण प्राप्त किया है — यही दोनों सूत्रग्रन्थ उत्तर भारतीय संस्कारों का मूल आधार हैं। शास्त्रों में स्पष्ट आदेश है कि संस्कार योग्य ब्राह्मण द्वारा, विधिपूर्वक, शुभ मुहूर्त में संपन्न होने पर ही पूर्णफलदायी होते हैं।'
+                : 'Our Pandit Ji is initiated in the Shukla Yajurveda Shakha and has received specialised training in the Paraskara Grihya Sutra and Baudhayana Grihya Sutra — the two primary scriptural authorities governing all North Indian Samskaras. The Shastras clearly state that Samskaras yield their full fruit only when performed by such a qualified Brahmin, in the correct sequence, at an auspicious muhurat.'}
             </p>
           </div>
         </ScrollReveal>

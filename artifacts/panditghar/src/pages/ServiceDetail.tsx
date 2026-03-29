@@ -320,9 +320,9 @@ const serviceFaqs: Record<string, FAQ[]> = {
     },
     {
       q_en: "What items are needed for Lakshmi Puja?",
-      a_en: "Key samagri includes lotus flowers or red flowers, Shri Yantra, gold/silver coins, turmeric, kumkum, ghee, honey, five fruits, and incense. PanditGhar.in brings all samagri included in the package price.",
+      a_en: "Key samagri includes lotus flowers or red flowers, Shri Yantra, gold/silver coins, turmeric, kumkum, ghee, honey, five fruits, and incense. PanditGhar.in shares the complete samagri list in advance — you may arrange it yourself or our team can procure on your behalf.",
       q_hi: "लक्ष्मी पूजा के लिए क्या सामग्री चाहिए?",
-      a_hi: "मुख्य सामग्री में कमल या लाल फूल, श्री यंत्र, सोने/चाँदी के सिक्के, हल्दी, कुमकुम, घी, शहद, पाँच फल और धूप शामिल हैं। PanditGhar.in पैकेज मूल्य में सभी सामग्री लाता है।"
+      a_hi: "मुख्य सामग्री में कमल या लाल फूल, श्री यंत्र, सोने/चाँदी के सिक्के, हल्दी, कुमकुम, घी, शहद, पाँच फल और धूप शामिल हैं। PanditGhar.in पहले से पूरी सामग्री सूची साझा करता है — आप स्वयं व्यवस्था कर सकते हैं या हमारी टीम आपके लिए खरीद सकती है।"
     }
   ],
   "navgrah-puja": [
@@ -404,7 +404,7 @@ const serviceFaqs: Record<string, FAQ[]> = {
     },
     {
       q_en: "What offerings are given to the girls in Kanya Puja?",
-      a_en: "In Kanya Puja, the girls' feet are washed with Gangajal, Tilak is applied, Chunari (red dupatta) is offered, and they are given Puri-Halwa-Chana (traditional prasad), fruits, and small gifts. Cash or gifts are given as dakshina.",
+      a_en: "In Kanya Puja, the girls' feet are washed with Gangajal, Tilak is applied, Chunari (red dupatta) is offered, and they are given Puri-Halwa-Chana (traditional prasad), fruits, and small gifts as offerings of devotion and love.",
       q_hi: "कन्या पूजा में कन्याओं को क्या भेंट दी जाती है?",
       a_hi: "कन्या पूजा में कन्याओं के पैर गंगाजल से धोए जाते हैं, तिलक लगाया जाता है, चुनरी (लाल दुपट्टा) भेंट की जाती है और उन्हें पूरी-हलवा-चना (पारंपरिक प्रसाद), फल और छोटे उपहार दिए जाते हैं।"
     },
@@ -500,9 +500,9 @@ const serviceFaqs: Record<string, FAQ[]> = {
     },
     {
       q_en: "How long does Mangal Dosha Shanti Puja take?",
-      a_en: "Mangal Dosha Shanti Puja takes approximately 2 to 3 hours and includes: Ganesh Puja, Mangal Stotra recitation, Coral (Moonga) gemstone consecration, Mars Havan with specific offerings (red lentils, jaggery), and Brahmin dakshina.",
+      a_en: "Mangal Dosha Shanti Puja takes approximately 2 to 3 hours and includes: Ganesh Puja, Mangal Stotra recitation, Coral (Moonga) gemstone consecration, Mars Havan with specific offerings (red lentils, jaggery), and closing blessings.",
       q_hi: "मंगल दोष शांति पूजा में कितना समय लगता है?",
-      a_hi: "मंगल दोष शांति पूजा में लगभग 2 से 3 घंटे लगते हैं और इसमें गणेश पूजा, मंगल स्तोत्र पाठ, मूंगा रत्न अभिमंत्रण, विशिष्ट भेंट (लाल मसूर, गुड़) के साथ मंगल हवन और ब्राह्मण दक्षिणा शामिल है।"
+      a_hi: "मंगल दोष शांति पूजा में लगभग 2 से 3 घंटे लगते हैं और इसमें गणेश पूजा, मंगल स्तोत्र पाठ, मूंगा रत्न अभिमंत्रण, विशिष्ट भेंट (लाल मसूर, गुड़) के साथ मंगल हवन और आशीर्वाद शामिल हैं।"
     },
     {
       q_en: "Can Mangal Dosha Shanti be done in Bangalore?",
@@ -570,7 +570,7 @@ const serviceFaqs: Record<string, FAQ[]> = {
     },
     {
       q_en: "How long does Hanuman Puja take?",
-      a_en: "A standard Hanuman Puja (with Hanuman Chalisa, Bajrang Baan, and Aarti) takes about 1 to 1.5 hours. If Sundarkand is added, it extends to 3 to 4 hours. The combined Hanuman Puja + Sundarkand is available at a special package price.",
+      a_en: "A standard Hanuman Puja (with Hanuman Chalisa, Bajrang Baan, and Aarti) takes about 1 to 1.5 hours. If Sundarkand is added, it extends to 3 to 4 hours. The combined Hanuman Puja + Sundarkand is the most powerful and highly recommended option.",
       q_hi: "हनुमान पूजा में कितना समय लगता है?",
       a_hi: "एक सामान्य हनुमान पूजा (हनुमान चालीसा, बजरंग बाण और आरती के साथ) में लगभग 1 से 1.5 घंटे लगते हैं। सुंदरकांड जोड़ने पर 3 से 4 घंटे लग जाते हैं।"
     },
@@ -1072,9 +1072,9 @@ const defaultFaqs: FAQ[] = [
   },
   {
     q_en: "Will Pandit Ji bring all Pooja Samagri?",
-    a_en: "Pooja Samagri is NOT included in the pandit dakshina. It is charged separately at actual market rates. We share a complete samagri list in advance so your family can arrange the items, OR our team can arrange samagri on your behalf at actuals. Please confirm your preference while booking.",
+    a_en: "We share a complete Pooja Samagri list in advance so your family can arrange the items beforehand. Alternatively, our team can procure all samagri on your behalf at actual market rates — whichever is more convenient for you. Please let us know your preference while booking.",
     q_hi: "क्या पंडित जी सभी पूजा सामग्री लाएंगे?",
-    a_hi: "पूजा सामग्री पंडित दक्षिणा में शामिल नहीं है। यह वास्तविक बाज़ार दर पर अलग से ली जाती है। हम पहले से पूरी सामग्री सूची साझा करते हैं ताकि आपका परिवार स्वयं व्यवस्था कर सके, अथवा हमारी टीम आपकी ओर से सामग्री की व्यवस्था कर सकती है। बुकिंग के समय अपनी प्राथमिकता बताएं।"
+    a_hi: "हम पहले से पूरी पूजा सामग्री सूची साझा करते हैं ताकि आपका परिवार पहले से तैयारी कर सके। वैकल्पिक रूप से, हमारी टीम वास्तविक बाज़ार दर पर आपकी ओर से सामग्री खरीद सकती है — जो भी आपको सुविधाजनक लगे। बुकिंग के समय अपनी प्राथमिकता बताएं।"
   },
   {
     q_en: "Is service available across all Bangalore areas?",
@@ -1179,6 +1179,46 @@ const serviceShlokas: Record<string, ServiceShloka> = {
     meaning_hi: "मस्तिष्क की शुद्धि और पूर्व जन्म के पुण्य-पाप के शोधन के लिए चूड़ाकर्म तीसरे वर्ष में करना चाहिए।",
     context_en: "Mundan is not merely a haircut — it is the removal of the hair that carried the vibrations of the womb and past-life karmas, giving the child a clean spiritual slate for this lifetime.",
     context_hi: "मुंडन केवल बाल काटना नहीं है — यह उस केश को हटाना है जो गर्भ और पूर्वजन्म के कर्मों की तरंगें वहन करता था, जिससे बच्चे को इस जीवन के लिए एक स्वच्छ आध्यात्मिक आरम्भ मिलता है।",
+  },
+  "ganesh-puja": {
+    devanagari: "वक्रतुण्ड महाकाय सूर्यकोटिसमप्रभ।\nनिर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥",
+    transliteration: "Vakratuṇḍa mahākāya sūryakoṭisamaprabha। Nirvighnaṃ kuru me deva sarvakāryeṣu sarvadā॥",
+    source_en: "Ganesha Purana, Upasana Khanda",
+    source_hi: "गणेश पुराण, उपासना खण्ड",
+    meaning_en: "O Ganesha with the curved trunk and mighty form, radiant as a crore suns — grant me freedom from all obstacles in everything I do, always.",
+    meaning_hi: "हे वक्रतुण्ड, महाकाय, करोड़ सूर्यों के समान तेजस्वी गणेश — मेरे सभी कार्यों में सदा निर्विघ्नता प्रदान करें।",
+    context_en: "No auspicious work — Griha Pravesh, Vivah, business launch, or exam — is started without first invoking Ganesha. The Mudgala Purana states that Ganesha is worshipped before all gods in all four Vedic traditions.",
+    context_hi: "कोई भी शुभ कार्य — गृह प्रवेश, विवाह, व्यापार आरम्भ या परीक्षा — गणेश आह्वान के बिना शुरू नहीं होता। मुद्गल पुराण कहता है कि चारों वेद परंपराओं में गणेश को सर्वप्रथम पूजा जाता है।",
+  },
+  "lakshmi-puja": {
+    devanagari: "हिरण्यवर्णां हरिणीं सुवर्णरजतस्रजाम्।\nचन्द्रां हिरण्मयीं लक्ष्मीं जातवेदो म आवह॥",
+    transliteration: "Hiraṇyavarṇāṃ hariṇīṃ suvarṇarajatasrajām। Candrāṃ hiraṇmayīṃ lakṣmīṃ jātavedo ma āvaha॥",
+    source_en: "Shri Sukta, Rigveda (Khilani, First Verse)",
+    source_hi: "श्री सूक्त, ऋग्वेद (प्रथम मंत्र)",
+    meaning_en: "O Jataveda! Bring to me Lakshmi — golden-hued, deer-eyed, adorned with garlands of gold and silver, radiant as the moon, the embodiment of abundance.",
+    meaning_hi: "हे जातवेद! सुवर्ण वर्णा, हरिण-नेत्री, सोने-चाँदी की मालाओं से सुशोभित, चन्द्रमा-सी दीप्तिमयी, ऐश्वर्य की प्रतीक लक्ष्मी को मेरे पास लाइए।",
+    context_en: "The Shri Sukta is the oldest hymn to Lakshmi, found in the Rigveda — over 3,500 years old. When Pandit Ji chants it during your puja, it is not a mere prayer; it is a precise Vedic invocation that has been used by every generation of Brahmin families to attract prosperity.",
+    context_hi: "श्री सूक्त लक्ष्मी का सबसे प्राचीन स्तोत्र है, जो ऋग्वेद में पाया जाता है — 3,500 वर्ष से भी पुराना। जब पंडित जी आपकी पूजा में इसका पाठ करते हैं, तो यह केवल प्रार्थना नहीं है; यह एक सटीक वैदिक आह्वान है जो पीढ़ियों से ब्राह्मण परिवारों द्वारा समृद्धि को आकर्षित करने के लिए प्रयोग किया जाता रहा है।",
+  },
+  "navgrah-puja": {
+    devanagari: "ब्रह्मा मुरारिः त्रिपुरान्तकारी भानुः शशी भूमिसुतो बुधश्च।\nगुरुश्च शुक्रः शनिराहुकेतवः कुर्वन्तु सर्वे मम सुप्रभातम्॥",
+    transliteration: "Brahmā murāriḥ tripurāntakārī bhānuḥ śaśī bhūmisuto budhaśca। Guruśca śukraḥ śanirāhuketavaḥ kurvantu sarve mama suprapaātam॥",
+    source_en: "Matsya Purana, Navagraha Adhyaya",
+    source_hi: "मत्स्य पुराण, नवग्रह अध्याय",
+    meaning_en: "May Brahma, Vishnu, Shiva, the Sun, Moon, Mars, Mercury, Jupiter, Venus, Saturn, Rahu and Ketu — all these nine cosmic forces — bless my every morning with auspiciousness.",
+    meaning_hi: "ब्रह्मा, विष्णु, शिव, सूर्य, चन्द्र, मंगल, बुध, बृहस्पति, शुक्र, शनि, राहु और केतु — ये सभी नव कॉस्मिक शक्तियाँ मेरी हर सुबह को शुभ बनाएं।",
+    context_en: "The nine planets govern every aspect of human life — health, career, relationships, and fortune. When their influence is malefic due to Kundali doshas, no external effort alone can overcome it. Navgraha Puja, prescribed in the Matsya Purana, directly balances these cosmic forces.",
+    context_hi: "नौ ग्रह मानव जीवन के प्रत्येक पहलू — स्वास्थ्य, करियर, सम्बन्ध और भाग्य — को नियंत्रित करते हैं। जब कुंडली दोष के कारण उनका प्रभाव नकारात्मक हो, तो केवल बाहरी प्रयास से इसे नहीं जीता जा सकता। मत्स्य पुराण में वर्णित नवग्रह पूजा सीधे इन ब्रह्मांडीय शक्तियों को संतुलित करती है।",
+  },
+  "vastu-shanti": {
+    devanagari: "वास्तोष्पते प्रति जानीह्यस्मान् स्वावेशो अनमीवो भवा नः।\nयत् त्वेमहे प्रति तन्नो जुषस्व शं नो भव द्विपदे शं चतुष्पदे॥",
+    transliteration: "Vāstoṣpate prati jānīhyasmān svāveśo anamīvo bhavā naḥ। Yat tvemahe prati tan no juṣasva śaṃ no bhava dvipade śaṃ catuṣpade॥",
+    source_en: "Rigveda 7.54.1 (Vastu Sukta)",
+    source_hi: "ऋग्वेद ७.५४.१ (वास्तु सूक्त)",
+    meaning_en: "O Vastu Pati (Lord of the dwelling), recognise us as your own; be free from disease in our home. Accept our prayers and be auspicious to our two-legged and four-legged beings.",
+    meaning_hi: "हे वास्तु पति, हमें अपना मानो; हमारे घर में रोग-मुक्त रहो। हमारी प्रार्थना स्वीकार करो और हमारे द्विपाद और चतुष्पाद सभी प्राणियों के लिए कल्याणकारी बनो।",
+    context_en: "The Vastu Sukta of the Rigveda is over 3,000 years old. It is the most ancient Vedic prayer for harmonising the energy of a dwelling place. Modern Vastu Shanti Puja is rooted in this very sukta, making it not superstition but a time-tested Vedic science.",
+    context_hi: "ऋग्वेद का वास्तु सूक्त 3,000 वर्ष से भी अधिक पुराना है। यह किसी आवास की ऊर्जा को संतुलित करने के लिए सबसे प्राचीन वैदिक प्रार्थना है। आधुनिक वास्तु शांति पूजा इसी सूक्त में निहित है, जो इसे अंधविश्वास नहीं बल्कि एक समय-परीक्षित वैदिक विज्ञान बनाती है।",
   },
 };
 
@@ -1436,7 +1476,7 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
                   <div className="flex items-start gap-3 mb-3">
                     <AlertCircle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
                     <h4 className={`font-bold text-amber-800 text-sm m-0 ${isHi ? 'font-hindi' : ''}`}>
-                      {isHi ? 'अतिरिक्त शुल्क (Additional Charges) — पंडित दक्षिणा में शामिल नहीं' : 'Additional Charges — Not included in Pandit Dakshina'}
+                      {isHi ? 'सेवा विवरण — अतिरिक्त व्यवस्थाएं' : 'Service Notes — Additional Arrangements'}
                     </h4>
                   </div>
                   <ul className="space-y-2 m-0 pl-0 list-none">
