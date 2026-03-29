@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -9,7 +9,15 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
-import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command';
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+} from '@/components/ui/command';
 import { CalendarIcon, Loader2, ChevronsUpDown, Check } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -22,10 +30,21 @@ const formSchema = z.object({
   message: z.string().optional()
 });
 
-function SearchableCombobox({
+type ServiceGroup = {
+  heading: string;
+  items: { value: string; label: string; subtitle: string }[];
+};
+
+type LocationOption = {
+  value: string;
+  label: string;
+  hiLabel: string;
+};
+
+function ServiceCombobox({
   value,
   onChange,
-  options,
+  groups,
   placeholder,
   searchPlaceholder,
   emptyText,
@@ -33,14 +52,17 @@ function SearchableCombobox({
 }: {
   value: string;
   onChange: (val: string) => void;
-  options: { value: string; label: string }[];
+  groups: ServiceGroup[];
   placeholder: string;
   searchPlaceholder: string;
   emptyText: string;
   lang: Language;
 }) {
   const [open, setOpen] = useState(false);
-  const selected = options.find(o => o.value === value);
+  const isHi = lang === 'hi';
+
+  const allItems = groups.flatMap(g => g.items);
+  const selected = allItems.find(o => o.value === value);
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -53,7 +75,7 @@ function SearchableCombobox({
           className={cn(
             'w-full justify-between bg-background font-normal h-10 border-input text-sm',
             !value && 'text-muted-foreground',
-            lang === 'hi' && 'font-hindi'
+            isHi && 'font-hindi'
           )}
         >
           <span className="truncate">{selected ? selected.label : placeholder}</span>
@@ -62,24 +84,105 @@ function SearchableCombobox({
       </PopoverTrigger>
       <PopoverContent className="w-[--radix-popover-trigger-width] p-0" align="start">
         <Command>
-          <CommandInput placeholder={searchPlaceholder} className={lang === 'hi' ? 'font-hindi' : ''} />
-          <CommandList>
-            <CommandEmpty className={lang === 'hi' ? 'font-hindi' : ''}>{emptyText}</CommandEmpty>
+          <CommandInput placeholder={searchPlaceholder} className={isHi ? 'font-hindi' : ''} />
+          <CommandList className="max-h-[260px]">
+            <CommandEmpty className={isHi ? 'font-hindi' : ''}>{emptyText}</CommandEmpty>
+            {groups.map((group, gi) => (
+              <Fragment key={group.heading}>
+                {gi > 0 && <CommandSeparator />}
+                <CommandGroup heading={group.heading}>
+                  {group.items.map(opt => (
+                    <CommandItem
+                      key={opt.value}
+                      value={`${opt.label} ${opt.subtitle}`}
+                      onSelect={() => {
+                        onChange(opt.value === value ? '' : opt.value);
+                        setOpen(false);
+                      }}
+                      className={cn('cursor-pointer flex items-start gap-2 py-2', isHi && 'font-hindi')}
+                    >
+                      <Check
+                        className={cn('mt-0.5 h-4 w-4 shrink-0', value === opt.value ? 'opacity-100' : 'opacity-0')}
+                      />
+                      <div className="flex flex-col min-w-0">
+                        <span className="text-sm font-medium leading-snug truncate">{opt.label}</span>
+                        {opt.subtitle && (
+                          <span className="text-xs text-muted-foreground leading-snug font-hindi truncate">{opt.subtitle}</span>
+                        )}
+                      </div>
+                    </CommandItem>
+                  ))}
+                </CommandGroup>
+              </Fragment>
+            ))}
+          </CommandList>
+        </Command>
+      </PopoverContent>
+    </Popover>
+  );
+}
+
+function LocationCombobox({
+  value,
+  onChange,
+  options,
+  placeholder,
+  searchPlaceholder,
+  emptyText,
+  lang,
+}: {
+  value: string;
+  onChange: (val: string) => void;
+  options: LocationOption[];
+  placeholder: string;
+  searchPlaceholder: string;
+  emptyText: string;
+  lang: Language;
+}) {
+  const [open, setOpen] = useState(false);
+  const isHi = lang === 'hi';
+  const selected = options.find(o => o.value === value);
+  const displayLabel = selected ? (isHi ? `${selected.hiLabel} (${selected.label})` : selected.label) : placeholder;
+
+  return (
+    <Popover open={open} onOpenChange={setOpen}>
+      <PopoverTrigger asChild>
+        <Button
+          type="button"
+          variant="outline"
+          role="combobox"
+          aria-expanded={open}
+          className={cn(
+            'w-full justify-between bg-background font-normal h-10 border-input text-sm',
+            !value && 'text-muted-foreground',
+            isHi && 'font-hindi'
+          )}
+        >
+          <span className="truncate">{displayLabel}</span>
+          <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent className="w-[--radix-popover-trigger-width] p-0" align="start">
+        <Command>
+          <CommandInput placeholder={searchPlaceholder} className={isHi ? 'font-hindi' : ''} />
+          <CommandList className="max-h-[260px]">
+            <CommandEmpty className={isHi ? 'font-hindi' : ''}>{emptyText}</CommandEmpty>
             <CommandGroup>
               {options.map(opt => (
                 <CommandItem
                   key={opt.value}
-                  value={opt.label}
+                  value={`${opt.label} ${opt.hiLabel}`}
                   onSelect={() => {
                     onChange(opt.value === value ? '' : opt.value);
                     setOpen(false);
                   }}
-                  className={cn('cursor-pointer', lang === 'hi' && 'font-hindi')}
+                  className="cursor-pointer flex items-center gap-2 py-1.5"
                 >
                   <Check
-                    className={cn('mr-2 h-4 w-4', value === opt.value ? 'opacity-100' : 'opacity-0')}
+                    className={cn('h-4 w-4 shrink-0', value === opt.value ? 'opacity-100' : 'opacity-0')}
                   />
-                  {opt.label}
+                  <span className="text-sm font-medium">{opt.label}</span>
+                  <span className="text-xs text-muted-foreground font-hindi">{opt.hiLabel}</span>
                 </CommandItem>
               ))}
             </CommandGroup>
@@ -90,20 +193,40 @@ function SearchableCombobox({
   );
 }
 
+const SERVICE_CATEGORY_CONFIG: { category: string; enHeading: string; hiHeading: string }[] = [
+  { category: 'small', enHeading: 'Puja & Hawan', hiHeading: 'पूजा व हवन' },
+  { category: 'sanskar', enHeading: 'Sanskar', hiHeading: 'संस्कार' },
+  { category: 'large', enHeading: 'Katha & Parayan', hiHeading: 'कथा व पारायण' },
+  { category: 'festival', enHeading: 'Parv & Tyohar', hiHeading: 'पर्व व त्यौहार' },
+  { category: 'dosha', enHeading: 'Dosh Nivaran', hiHeading: 'दोष निवारण' },
+  { category: 'jyotish', enHeading: 'Jyotish & Vastu', hiHeading: 'ज्योतिष व वास्तु' },
+];
+
 export function BookingForm({ lang, preselectedService }: { lang: Language, preselectedService?: string }) {
   const t = useTranslation(lang).booking;
   const { submit, isPending } = useBookingFlow();
   const isHi = lang === 'hi';
 
-  const serviceOptions = services.map(s => ({
-    value: isHi ? s.hiTitle : s.enTitle,
-    label: isHi ? s.hiTitle : s.enTitle,
-  }));
+  const serviceGroups: ServiceGroup[] = SERVICE_CATEGORY_CONFIG.map(cfg => ({
+    heading: isHi ? cfg.hiHeading : cfg.enHeading,
+    items: services
+      .filter(s => s.category === cfg.category)
+      .map(s => ({
+        value: s.enTitle,
+        label: isHi ? s.hiTitle : s.enTitle,
+        subtitle: isHi ? s.enTitle : s.hiTitle,
+      })),
+  })).filter(g => g.items.length > 0);
 
-  const locationOptions = locations.map(loc => ({
+  const locationOptions: LocationOption[] = locations.map(loc => ({
     value: loc.name,
     label: loc.name,
+    hiLabel: loc.hiName,
   }));
+
+  const resolvedPreselected = preselectedService
+    ? (services.find(s => s.enTitle === preselectedService || s.hiTitle === preselectedService)?.enTitle ?? preselectedService)
+    : '';
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -111,7 +234,7 @@ export function BookingForm({ lang, preselectedService }: { lang: Language, pres
       name: '',
       phone: '',
       location: '',
-      service: preselectedService || '',
+      service: resolvedPreselected,
       date: '',
       message: '',
     },
@@ -171,10 +294,10 @@ export function BookingForm({ lang, preselectedService }: { lang: Language, pres
                 <FormItem>
                   <FormLabel className="text-foreground">{t.service}</FormLabel>
                   <FormControl>
-                    <SearchableCombobox
+                    <ServiceCombobox
                       value={field.value}
                       onChange={field.onChange}
-                      options={serviceOptions}
+                      groups={serviceGroups}
                       placeholder={isHi ? 'सेवा चुनें' : 'Select service'}
                       searchPlaceholder={isHi ? 'सेवा खोजें...' : 'Search service...'}
                       emptyText={isHi ? 'कोई सेवा नहीं मिली' : 'No service found'}
@@ -193,7 +316,7 @@ export function BookingForm({ lang, preselectedService }: { lang: Language, pres
                 <FormItem>
                   <FormLabel className="text-foreground">{t.location}</FormLabel>
                   <FormControl>
-                    <SearchableCombobox
+                    <LocationCombobox
                       value={field.value}
                       onChange={field.onChange}
                       options={locationOptions}
