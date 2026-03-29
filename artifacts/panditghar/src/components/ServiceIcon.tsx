@@ -49,6 +49,10 @@ export function ServiceIcon({
   name: string;
   className?: string;
 }) {
-  const Icon = ICON_MAP[name] ?? Star;
-  return <Icon className={className} />;
+  const Icon = ICON_MAP[name];
+  if (!Icon && import.meta.env.DEV) {
+    console.warn(`[ServiceIcon] Unknown icon name: "${name}", falling back to Star`);
+  }
+  const Resolved = Icon ?? Star;
+  return <Resolved className={className} />;
 }
