@@ -1,5 +1,6 @@
 import { writeFileSync } from 'fs';
 import { resolve } from 'path';
+import { locations } from '../src/lib/data.js';
 
 const SITE_URL = 'https://panditghar.in';
 const TODAY = new Date().toISOString().slice(0, 10);
@@ -38,17 +39,15 @@ const serviceSlugData: { slug: string; priority: string; lastmod: string }[] = [
   { slug: 'akhand-ramayan-path-bangalore', priority: '0.75', lastmod: '2026-01-15' },
 ];
 
-const locationIds: string[] = [
+const locationIds: string[] = locations.map(loc => loc.id);
+
+const highPriorityAreas = new Set([
   'whitefield', 'hsr-layout', 'marathahalli', 'electronic-city', 'jp-nagar',
   'koramangala', 'indiranagar', 'jayanagar', 'yelahanka', 'hebbal',
-  'sarjapur-road', 'btm-layout', 'bannerghatta-road', 'rajajinagar',
-  'malleshwaram', 'kr-puram', 'hennur', 'banashankari', 'vijayanagar', 'ulsoor',
-  'bellandur', 'kadugodi', 'hoodi', 'nagarbhavi', 'kengeri',
-  'bommanahalli', 'rr-nagar', 'domlur', 'cv-raman-nagar', 'banaswadi',
-  'thanisandra', 'devanahalli', 'doddaballapura-road', 'hoskote', 'bidadi',
-  'begur', 'attibele', 'dasarahalli', 'yeshwanthpur', 'jalahalli',
-  'rt-nagar', 'mathikere', 'electronic-city-phase-2',
-];
+  'sarjapur-road', 'btm-layout', 'bellandur', 'banaswadi', 'yeshwanthpur',
+  'rt-nagar', 'electronic-city-phase-2', 'basavanagudi', 'padmanabhanagar',
+  'peenya', 'shivajinagar', 'frazer-town', 'mysore-road',
+]);
 
 const blogSlugs: { slug: string; lastmod: string }[] = [
   { slug: 'griha-pravesh-vidhi', lastmod: '2026-01-15' },
@@ -104,8 +103,7 @@ for (const svc of serviceSlugData) {
 for (const id of locationIds) {
   const hiUrl = `${SITE_URL}/hi/bangalore/${id}/pandit-for-pooja`;
   const enUrl = `${SITE_URL}/en/bangalore/${id}/pandit-for-pooja`;
-  const highPriorityAreas = ['whitefield','hsr-layout','marathahalli','electronic-city','jp-nagar','koramangala','indiranagar','jayanagar','yelahanka','hebbal','sarjapur-road','btm-layout','bellandur','banaswadi','yeshwanthpur','rt-nagar','electronic-city-phase-2'];
-  const priority = highPriorityAreas.includes(id) ? '0.9' : '0.82';
+  const priority = highPriorityAreas.has(id) ? '0.9' : '0.82';
   entries.push(urlEntry(hiUrl, hreflangPair(hiUrl, enUrl), TODAY, 'monthly', priority));
   entries.push(urlEntry(enUrl, hreflangPair(hiUrl, enUrl), TODAY, 'monthly', priority));
 }
