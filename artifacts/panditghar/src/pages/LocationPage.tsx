@@ -200,9 +200,6 @@ export default function LocationPage({ lang }: { lang: Language }) {
                 <p className="text-sm italic text-muted-foreground">
                   📜 {service.shastreeyRef}
                 </p>
-                <p className="mt-3 font-bold text-xl text-primary">
-                  {isHi ? 'शुरूआती मूल्य' : 'Starting from'}: ₹{service.price.toLocaleString('en-IN')}
-                </p>
               </div>
             </ScrollReveal>
           </div>

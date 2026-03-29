@@ -147,11 +147,7 @@ export default function Services({ lang }: { lang: Language }) {
                         <div className="bg-muted p-2.5 rounded-lg mb-4 text-xs italic border-l-2 border-accent text-muted-foreground line-clamp-2">
                           {service.shastreeyRef}
                         </div>
-                        <div className="mt-auto pt-3 border-t border-border flex items-center justify-between">
-                          <div className="inline-flex items-baseline gap-0.5 bg-accent/10 px-3 py-1.5 rounded-full">
-                            <span className="text-sm font-bold text-accent leading-none">₹</span>
-                            <span className="font-bold text-lg text-primary leading-none">{service.price.toLocaleString('en-IN')}</span>
-                          </div>
+                        <div className="mt-auto pt-3 border-t border-border flex items-center justify-end">
                           <Link href={`/${lang}/services/${service.slug}`}>
                             <Button variant="outline" size="sm" className={`rounded-full border-primary text-primary hover:bg-primary hover:text-white ${isHi ? 'font-hindi' : ''}`}>
                               {t.services.viewDetails}

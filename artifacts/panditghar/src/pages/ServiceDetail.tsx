@@ -1284,13 +1284,7 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
           <div className="lg:col-span-2 space-y-10">
             <ScrollReveal direction="up">
             <div className="bg-card rounded-3xl p-8 md:p-10 shadow-xl border border-border">
-              <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
-                <div>
-                  <p className="text-sm text-muted-foreground mb-1">
-                    {isHi ? 'शुरूआती मूल्य' : 'Starting from'}
-                  </p>
-                  <p className="text-3xl font-bold text-primary">₹{service.price.toLocaleString('en-IN')}</p>
-                </div>
+              <div className="flex items-center justify-end mb-8 flex-wrap gap-4">
                 <a
                   href={`https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMsg}`}
                   target="_blank"
@@ -1463,7 +1457,6 @@ export default function ServiceDetail({ lang, params }: { lang: Language; params
                           <h4 className={`font-bold text-secondary text-sm mb-1 ${isHi ? 'font-hindi' : ''}`}>
                             {isHi ? rel.hiTitle : rel.enTitle}
                           </h4>
-                          <p className="text-primary font-medium text-sm">₹{rel.price.toLocaleString('en-IN')}</p>
                         </motion.div>
                       </Link>
                     ))}

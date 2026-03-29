@@ -358,14 +358,7 @@ export default function Home({ lang }: { lang: Language }) {
                     <p className={`text-muted-foreground mb-4 line-clamp-2 text-sm ${isHi ? 'font-hindi' : ''}`}>
                       {isHi ? service.hiDesc : service.enDesc}
                     </p>
-                    <div className="pt-4 border-t border-border flex items-center justify-between mt-auto">
-                      <div>
-                        <p className={`text-xs text-muted-foreground mb-0.5 ${isHi ? 'font-hindi' : ''}`}>{t.services.startingAt}</p>
-                        <div className="inline-flex items-baseline gap-0.5 bg-accent/10 px-3 py-1 rounded-full">
-                          <span className="text-sm font-bold text-accent leading-none">₹</span>
-                          <span className="font-bold text-lg text-primary leading-none">{service.price.toLocaleString('en-IN')}</span>
-                        </div>
-                      </div>
+                    <div className="pt-4 border-t border-border flex items-center justify-end mt-auto">
                       <Link href={`/${lang}/services/${service.slug}`}>
                         <Button variant="outline" className={`rounded-full border-primary text-primary hover:bg-primary hover:text-white text-sm ${isHi ? 'font-hindi' : ''}`}>
                           {t.services.viewDetails}
