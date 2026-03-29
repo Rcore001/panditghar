@@ -111,14 +111,10 @@ export default function Services({ lang }: { lang: Language }) {
             >
               {filtered.map((service) => (
                 <StaggerItem key={service.id}>
-                  <motion.div
-                    className="h-full"
-                    whileHover={{ y: -4, boxShadow: '0 12px 40px rgba(255,153,0,0.18)' }}
-                    transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
-                  >
+                  <div className="h-full group/card transition-transform duration-300 ease-out hover:-translate-y-1">
                   <TiltCard className="h-full" intensity={6}>
                     <div
-                      className="bg-card rounded-2xl overflow-hidden border border-border flex flex-col h-full group hover:border-accent/50 transition-all duration-300"
+                      className="bg-card rounded-2xl overflow-hidden border border-border flex flex-col h-full group group-hover/card:border-accent/50 group-hover/card:shadow-[0_12px_40px_rgba(255,153,0,0.18)] transition-all duration-300"
                       style={{ boxShadow: '0 2px 4px rgba(0,0,0,0.06),0 6px 16px rgba(0,0,0,0.08),0 16px 32px rgba(0,0,0,0.04)' }}
                     >
                       <div className="relative h-48 overflow-hidden">
@@ -165,7 +161,7 @@ export default function Services({ lang }: { lang: Language }) {
                       </div>
                     </div>
                   </TiltCard>
-                  </motion.div>
+                  </div>
                 </StaggerItem>
               ))}
             </StaggerContainer>
