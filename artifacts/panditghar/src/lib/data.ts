@@ -983,6 +983,83 @@ export const locations: Location[] = [
     hiName: "इलेक्ट्रॉनिक सिटी फेज 2",
     enIntro: "Electronic City Phase 2 is an extension of the iconic Electronic City IT hub, with large gated communities. PanditGhar.in serves Phase 2 families for Griha Pravesh, Satyanarayan, Navgrah Puja, and all Vedic rituals.",
     hiIntro: "इलेक्ट्रॉनिक सिटी फेज 2 प्रतिष्ठित इलेक्ट्रॉनिक सिटी आईटी हब का एक विस्तार है जहाँ बड़े गेटेड समुदाय हैं। PanditGhar.in फेज 2 के परिवारों के लिए गृह प्रवेश, सत्यनारायण, नवग्रह पूजा और सभी वैदिक अनुष्ठान संपन्न करता है।"
+  },
+  {
+    id: "basavanagudi",
+    name: "Basavanagudi",
+    hiName: "बसवनगुडी",
+    enIntro: "Basavanagudi is one of Bangalore's oldest and most culturally rich neighbourhoods, home to the Bull Temple and Dodda Ganapathi. PanditGhar.in regularly serves families here for Griha Pravesh, Satyanarayan, Navratri, and all Vedic pujas.",
+    hiIntro: "बसवनगुडी बेंगलुरु के सबसे पुराने और सांस्कृतिक रूप से समृद्ध मोहल्लों में से एक है जहाँ बैल मंदिर और दोड्डा गणपति स्थित हैं। PanditGhar.in यहाँ गृह प्रवेश, सत्यनारायण, नवरात्रि और सभी वैदिक पूजाओं के लिए परिवारों की सेवा करता है।"
+  },
+  {
+    id: "padmanabhanagar",
+    name: "Padmanabhanagar",
+    hiName: "पद्मनाभनगर",
+    enIntro: "Padmanabhanagar is a peaceful residential locality in South Bangalore. PanditGhar.in serves Padmanabhanagar and nearby Uttarahalli, Sarakki, and Chikkalasandra for Griha Pravesh, Satyanarayan Katha, and all home rituals.",
+    hiIntro: "पद्मनाभनगर दक्षिण बेंगलुरु का एक शांत आवासीय इलाका है। PanditGhar.in पद्मनाभनगर, उत्तरहल्ली, सरक्की और चिक्कलसंद्रा में गृह प्रवेश, सत्यनारायण कथा और सभी घरेलू अनुष्ठानों के लिए सेवा प्रदान करता है।"
+  },
+  {
+    id: "peenya",
+    name: "Peenya",
+    hiName: "पीन्या",
+    enIntro: "Peenya is a major industrial and residential hub in North-West Bangalore. PanditGhar.in serves Peenya, Jalahalli Cross, and surrounding areas for all Vedic rituals including Griha Pravesh, Satyanarayan, and Namkaran.",
+    hiIntro: "पीन्या उत्तर-पश्चिम बेंगलुरु का एक प्रमुख औद्योगिक और आवासीय केंद्र है। PanditGhar.in पीन्या, जलहल्ली क्रॉस और आसपास के क्षेत्रों में गृह प्रवेश, सत्यनारायण और नामकरण सहित सभी वैदिक अनुष्ठान संपन्न करता है।"
+  },
+  {
+    id: "ejipura",
+    name: "Ejipura",
+    hiName: "एजीपुरा",
+    enIntro: "Ejipura is a vibrant neighbourhood near Koramangala in South-East Bangalore. PanditGhar.in serves Ejipura, Viveknagar, and Suddaguntepalya for Satyanarayan Katha, Griha Pravesh, and all Vedic pujas.",
+    hiIntro: "एजीपुरा दक्षिण-पूर्व बेंगलुरु में कोरमंगला के निकट एक जीवंत मोहल्ला है। PanditGhar.in एजीपुरा, विवेकनगर और सुड्डागुंटेपाल्या में सत्यनारायण कथा, गृह प्रवेश और सभी वैदिक पूजाओं के लिए सेवा प्रदान करता है।"
+  },
+  {
+    id: "panathur",
+    name: "Panathur",
+    hiName: "पनाथुर",
+    enIntro: "Panathur is a fast-growing residential area near Whitefield and Marathahalli in East Bangalore. PanditGhar.in serves Panathur, Kadubeesanahalli, and Outer Ring Road tech corridors for all Vedic rituals.",
+    hiIntro: "पनाथुर पूर्व बेंगलुरु में व्हाइटफील्ड और मराठहल्ली के निकट तेज़ी से बढ़ता आवासीय क्षेत्र है। PanditGhar.in पनाथुर, कड़ुबीसनहल्ली और आउटर रिंग रोड के तकनीकी गलियारों में सभी वैदिक अनुष्ठान संपन्न करता है।"
+  },
+  {
+    id: "budigere-cross",
+    name: "Budigere Cross",
+    hiName: "बुदिगेरे क्रॉस",
+    enIntro: "Budigere Cross is an emerging residential hub on the Old Madras Road near the airport corridor in East Bangalore. PanditGhar.in serves new villa and apartment communities here for Griha Pravesh, Vastu Shanti, and all home pujas.",
+    hiIntro: "बुदिगेरे क्रॉस पूर्व बेंगलुरु में ओल्ड मद्रास रोड पर हवाई अड्डा गलियारे के पास एक उभरता आवासीय केंद्र है। PanditGhar.in यहाँ नई विला और अपार्टमेंट कम्यूनिटी में गृह प्रवेश, वास्तु शांति और सभी घरेलू पूजाओं के लिए सेवा प्रदान करता है।"
+  },
+  {
+    id: "ramamurthy-nagar",
+    name: "Ramamurthy Nagar",
+    hiName: "रामामूर्ति नगर",
+    enIntro: "Ramamurthy Nagar is a well-established residential area in North-East Bangalore. PanditGhar.in serves Ramamurthy Nagar, Banaswadi, and Horamavu for Satyanarayan Katha, Griha Pravesh, Namkaran, and all Vedic rituals.",
+    hiIntro: "रामामूर्ति नगर उत्तर-पूर्व बेंगलुरु का एक सुस्थापित आवासीय इलाका है। PanditGhar.in रामामूर्ति नगर, बनस्वाडी और होरमावु में सत्यनारायण कथा, गृह प्रवेश, नामकरण और सभी वैदिक अनुष्ठानों के लिए सेवा प्रदान करता है।"
+  },
+  {
+    id: "shivajinagar",
+    name: "Shivajinagar",
+    hiName: "शिवाजीनगर",
+    enIntro: "Shivajinagar is a central Bangalore locality near Brigade Road and Cubbon Park. PanditGhar.in serves Shivajinagar, Richmond Town, and surrounding areas for all Vedic pujas and ceremonies.",
+    hiIntro: "शिवाजीनगर ब्रिगेड रोड और कब्बन पार्क के निकट मध्य बेंगलुरु का एक प्रमुख इलाका है। PanditGhar.in शिवाजीनगर, रिचमंड टाउन और आसपास के क्षेत्रों में सभी वैदिक पूजाओं और समारोहों के लिए सेवा प्रदान करता है।"
+  },
+  {
+    id: "frazer-town",
+    name: "Frazer Town",
+    hiName: "फ्रेज़र टाउन",
+    enIntro: "Frazer Town is a cosmopolitan neighbourhood in Central-North Bangalore with a large Hindu residential community. PanditGhar.in serves Frazer Town, Coles Park, and Lingarajapuram for Griha Pravesh, Satyanarayan, and all Vedic ceremonies.",
+    hiIntro: "फ्रेज़र टाउन मध्य-उत्तर बेंगलुरु का एक बहुसांस्कृतिक मोहल्ला है जहाँ बड़ा हिन्दू आवासीय समुदाय है। PanditGhar.in फ्रेज़र टाउन, कोल्स पार्क और लिंगराजापुरम में गृह प्रवेश, सत्यनारायण और सभी वैदिक समारोहों के लिए सेवा प्रदान करता है।"
+  },
+  {
+    id: "cox-town",
+    name: "Cox Town",
+    hiName: "कॉक्स टाउन",
+    enIntro: "Cox Town is a quiet, tree-lined neighbourhood in North Bangalore close to Frazer Town. PanditGhar.in serves Cox Town and neighbouring Jayamahal, Cleveland Town, and Benson Town for all puja services.",
+    hiIntro: "कॉक्स टाउन उत्तर बेंगलुरु में फ्रेज़र टाउन के निकट एक शांत और हरा-भरा मोहल्ला है। PanditGhar.in कॉक्स टाउन और पड़ोसी जयमहल, क्लीवलैंड टाउन और बेन्सन टाउन में सभी पूजा सेवाओं के लिए सेवा प्रदान करता है।"
+  },
+  {
+    id: "mysore-road",
+    name: "Mysore Road",
+    hiName: "मैसूर रोड",
+    enIntro: "Mysore Road is a major arterial corridor in West Bangalore connecting the city to Mysuru. PanditGhar.in serves families along Mysore Road, Nayandahalli, and Rajarajeshwari Nagar for Griha Pravesh, Vastu Shanti, and all Vedic rituals.",
+    hiIntro: "मैसूर रोड पश्चिम बेंगलुरु की एक प्रमुख धमनी है जो शहर को मैसूरु से जोड़ती है। PanditGhar.in मैसूर रोड, नायंदहल्ली और राजराजेश्वरी नगर में गृह प्रवेश, वास्तु शांति और सभी वैदिक अनुष्ठानों के लिए परिवारों की सेवा करता है।"
   }
 ];
 

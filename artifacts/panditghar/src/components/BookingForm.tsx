@@ -3,12 +3,20 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { useBookingFlow } from '@/hooks/use-booking-flow';
+import { useIsMobile } from '@/hooks/use-mobile';
 import { Language, useTranslation, services, locations } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import {
+  Drawer,
+  DrawerContent,
+  DrawerDescription,
+  DrawerHeader,
+  DrawerTitle,
+} from '@/components/ui/drawer';
 import {
   Command,
   CommandEmpty,
@@ -41,6 +49,93 @@ type LocationOption = {
   hiLabel: string;
 };
 
+function ServiceCommandContent({
+  groups,
+  value,
+  onChange,
+  searchPlaceholder,
+  emptyText,
+  isHi,
+}: {
+  groups: ServiceGroup[];
+  value: string;
+  onChange: (val: string) => void;
+  searchPlaceholder: string;
+  emptyText: string;
+  isHi: boolean;
+}) {
+  return (
+    <Command>
+      <CommandInput placeholder={searchPlaceholder} className={isHi ? 'font-hindi' : ''} />
+      <CommandList className="max-h-[320px]">
+        <CommandEmpty className={isHi ? 'font-hindi' : ''}>{emptyText}</CommandEmpty>
+        {groups.map((group, gi) => (
+          <Fragment key={group.heading}>
+            {gi > 0 && <CommandSeparator />}
+            <CommandGroup heading={group.heading}>
+              {group.items.map(opt => (
+                <CommandItem
+                  key={opt.value}
+                  value={`${opt.label} ${opt.subtitle}`}
+                  onSelect={() => onChange(opt.value)}
+                  className={cn('cursor-pointer flex items-start gap-2 py-2', isHi && 'font-hindi')}
+                >
+                  <Check className={cn('mt-0.5 h-4 w-4 shrink-0', value === opt.value ? 'opacity-100' : 'opacity-0')} />
+                  <div className="flex flex-col min-w-0">
+                    <span className="text-sm font-medium leading-snug truncate">{opt.label}</span>
+                    {opt.subtitle && (
+                      <span className="text-xs text-muted-foreground leading-snug font-hindi truncate">{opt.subtitle}</span>
+                    )}
+                  </div>
+                </CommandItem>
+              ))}
+            </CommandGroup>
+          </Fragment>
+        ))}
+      </CommandList>
+    </Command>
+  );
+}
+
+function LocationCommandContent({
+  options,
+  value,
+  onChange,
+  searchPlaceholder,
+  emptyText,
+  isHi,
+}: {
+  options: LocationOption[];
+  value: string;
+  onChange: (val: string) => void;
+  searchPlaceholder: string;
+  emptyText: string;
+  isHi: boolean;
+}) {
+  return (
+    <Command>
+      <CommandInput placeholder={searchPlaceholder} className={isHi ? 'font-hindi' : ''} />
+      <CommandList className="max-h-[320px]">
+        <CommandEmpty className={isHi ? 'font-hindi' : ''}>{emptyText}</CommandEmpty>
+        <CommandGroup>
+          {options.map(opt => (
+            <CommandItem
+              key={opt.value}
+              value={`${opt.label} ${opt.hiLabel}`}
+              onSelect={() => onChange(opt.value)}
+              className="cursor-pointer flex items-center gap-2 py-1.5"
+            >
+              <Check className={cn('h-4 w-4 shrink-0', value === opt.value ? 'opacity-100' : 'opacity-0')} />
+              <span className="text-sm font-medium">{opt.label}</span>
+              <span className="text-xs text-muted-foreground font-hindi">{opt.hiLabel}</span>
+            </CommandItem>
+          ))}
+        </CommandGroup>
+      </CommandList>
+    </Command>
+  );
+}
+
 function ServiceCombobox({
   value,
   onChange,
@@ -49,6 +144,7 @@ function ServiceCombobox({
   searchPlaceholder,
   emptyText,
   lang,
+  drawerTitle,
 }: {
   value: string;
   onChange: (val: string) => void;
@@ -57,66 +153,56 @@ function ServiceCombobox({
   searchPlaceholder: string;
   emptyText: string;
   lang: Language;
+  drawerTitle: string;
 }) {
   const [open, setOpen] = useState(false);
+  const isMobile = useIsMobile();
   const isHi = lang === 'hi';
 
   const allItems = groups.flatMap(g => g.items);
   const selected = allItems.find(o => o.value === value);
 
+  const triggerButton = (
+    <Button
+      type="button"
+      variant="outline"
+      role="combobox"
+      aria-expanded={open}
+      className={cn(
+        'w-full justify-between bg-background font-normal h-10 border-input text-sm',
+        !value && 'text-muted-foreground',
+        isHi && 'font-hindi'
+      )}
+    >
+      <span className="truncate">{selected ? selected.label : placeholder}</span>
+      <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+    </Button>
+  );
+
+  const commandProps = { groups, value, onChange: (v: string) => { onChange(v); setOpen(false); }, searchPlaceholder, emptyText, isHi };
+
+  if (isMobile) {
+    return (
+      <Drawer open={open} onOpenChange={setOpen}>
+        <DrawerTriggerWrapper onOpen={() => setOpen(true)}>{triggerButton}</DrawerTriggerWrapper>
+        <DrawerContent className="max-h-[85vh]">
+          <DrawerHeader>
+            <DrawerTitle className={isHi ? 'font-hindi' : ''}>{drawerTitle}</DrawerTitle>
+            <DrawerDescription className="sr-only">{searchPlaceholder}</DrawerDescription>
+          </DrawerHeader>
+          <div className="px-4 pb-6">
+            <ServiceCommandContent {...commandProps} />
+          </div>
+        </DrawerContent>
+      </Drawer>
+    );
+  }
+
   return (
     <Popover open={open} onOpenChange={setOpen}>
-      <PopoverTrigger asChild>
-        <Button
-          type="button"
-          variant="outline"
-          role="combobox"
-          aria-expanded={open}
-          className={cn(
-            'w-full justify-between bg-background font-normal h-10 border-input text-sm',
-            !value && 'text-muted-foreground',
-            isHi && 'font-hindi'
-          )}
-        >
-          <span className="truncate">{selected ? selected.label : placeholder}</span>
-          <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
-        </Button>
-      </PopoverTrigger>
+      <PopoverTrigger asChild>{triggerButton}</PopoverTrigger>
       <PopoverContent className="w-[--radix-popover-trigger-width] p-0" align="start">
-        <Command>
-          <CommandInput placeholder={searchPlaceholder} className={isHi ? 'font-hindi' : ''} />
-          <CommandList className="max-h-[260px]">
-            <CommandEmpty className={isHi ? 'font-hindi' : ''}>{emptyText}</CommandEmpty>
-            {groups.map((group, gi) => (
-              <Fragment key={group.heading}>
-                {gi > 0 && <CommandSeparator />}
-                <CommandGroup heading={group.heading}>
-                  {group.items.map(opt => (
-                    <CommandItem
-                      key={opt.value}
-                      value={`${opt.label} ${opt.subtitle}`}
-                      onSelect={() => {
-                        onChange(opt.value === value ? '' : opt.value);
-                        setOpen(false);
-                      }}
-                      className={cn('cursor-pointer flex items-start gap-2 py-2', isHi && 'font-hindi')}
-                    >
-                      <Check
-                        className={cn('mt-0.5 h-4 w-4 shrink-0', value === opt.value ? 'opacity-100' : 'opacity-0')}
-                      />
-                      <div className="flex flex-col min-w-0">
-                        <span className="text-sm font-medium leading-snug truncate">{opt.label}</span>
-                        {opt.subtitle && (
-                          <span className="text-xs text-muted-foreground leading-snug font-hindi truncate">{opt.subtitle}</span>
-                        )}
-                      </div>
-                    </CommandItem>
-                  ))}
-                </CommandGroup>
-              </Fragment>
-            ))}
-          </CommandList>
-        </Command>
+        <ServiceCommandContent {...commandProps} />
       </PopoverContent>
     </Popover>
   );
@@ -130,6 +216,7 @@ function LocationCombobox({
   searchPlaceholder,
   emptyText,
   lang,
+  drawerTitle,
 }: {
   value: string;
   onChange: (val: string) => void;
@@ -138,58 +225,68 @@ function LocationCombobox({
   searchPlaceholder: string;
   emptyText: string;
   lang: Language;
+  drawerTitle: string;
 }) {
   const [open, setOpen] = useState(false);
+  const isMobile = useIsMobile();
   const isHi = lang === 'hi';
+
   const selected = options.find(o => o.value === value);
-  const displayLabel = selected ? (isHi ? `${selected.hiLabel} (${selected.label})` : selected.label) : placeholder;
+  const displayLabel = selected
+    ? (isHi ? `${selected.hiLabel} (${selected.label})` : selected.label)
+    : placeholder;
+
+  const triggerButton = (
+    <Button
+      type="button"
+      variant="outline"
+      role="combobox"
+      aria-expanded={open}
+      className={cn(
+        'w-full justify-between bg-background font-normal h-10 border-input text-sm',
+        !value && 'text-muted-foreground',
+        isHi && 'font-hindi'
+      )}
+    >
+      <span className="truncate">{displayLabel}</span>
+      <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+    </Button>
+  );
+
+  const commandProps = { options, value, onChange: (v: string) => { onChange(v); setOpen(false); }, searchPlaceholder, emptyText, isHi };
+
+  if (isMobile) {
+    return (
+      <Drawer open={open} onOpenChange={setOpen}>
+        <DrawerTriggerWrapper onOpen={() => setOpen(true)}>{triggerButton}</DrawerTriggerWrapper>
+        <DrawerContent className="max-h-[85vh]">
+          <DrawerHeader>
+            <DrawerTitle className={isHi ? 'font-hindi' : ''}>{drawerTitle}</DrawerTitle>
+            <DrawerDescription className="sr-only">{searchPlaceholder}</DrawerDescription>
+          </DrawerHeader>
+          <div className="px-4 pb-6">
+            <LocationCommandContent {...commandProps} />
+          </div>
+        </DrawerContent>
+      </Drawer>
+    );
+  }
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
-      <PopoverTrigger asChild>
-        <Button
-          type="button"
-          variant="outline"
-          role="combobox"
-          aria-expanded={open}
-          className={cn(
-            'w-full justify-between bg-background font-normal h-10 border-input text-sm',
-            !value && 'text-muted-foreground',
-            isHi && 'font-hindi'
-          )}
-        >
-          <span className="truncate">{displayLabel}</span>
-          <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
-        </Button>
-      </PopoverTrigger>
+      <PopoverTrigger asChild>{triggerButton}</PopoverTrigger>
       <PopoverContent className="w-[--radix-popover-trigger-width] p-0" align="start">
-        <Command>
-          <CommandInput placeholder={searchPlaceholder} className={isHi ? 'font-hindi' : ''} />
-          <CommandList className="max-h-[260px]">
-            <CommandEmpty className={isHi ? 'font-hindi' : ''}>{emptyText}</CommandEmpty>
-            <CommandGroup>
-              {options.map(opt => (
-                <CommandItem
-                  key={opt.value}
-                  value={`${opt.label} ${opt.hiLabel}`}
-                  onSelect={() => {
-                    onChange(opt.value === value ? '' : opt.value);
-                    setOpen(false);
-                  }}
-                  className="cursor-pointer flex items-center gap-2 py-1.5"
-                >
-                  <Check
-                    className={cn('h-4 w-4 shrink-0', value === opt.value ? 'opacity-100' : 'opacity-0')}
-                  />
-                  <span className="text-sm font-medium">{opt.label}</span>
-                  <span className="text-xs text-muted-foreground font-hindi">{opt.hiLabel}</span>
-                </CommandItem>
-              ))}
-            </CommandGroup>
-          </CommandList>
-        </Command>
+        <LocationCommandContent {...commandProps} />
       </PopoverContent>
     </Popover>
+  );
+}
+
+function DrawerTriggerWrapper({ children, onOpen }: { children: React.ReactNode; onOpen: () => void }) {
+  return (
+    <div onClick={onOpen} className="w-full cursor-pointer">
+      {children}
+    </div>
   );
 }
 
@@ -212,7 +309,7 @@ export function BookingForm({ lang, preselectedService }: { lang: Language, pres
     items: services
       .filter(s => s.category === cfg.category)
       .map(s => ({
-        value: s.enTitle,
+        value: isHi ? s.hiTitle : s.enTitle,
         label: isHi ? s.hiTitle : s.enTitle,
         subtitle: isHi ? s.enTitle : s.hiTitle,
       })),
@@ -225,7 +322,9 @@ export function BookingForm({ lang, preselectedService }: { lang: Language, pres
   }));
 
   const resolvedPreselected = preselectedService
-    ? (services.find(s => s.enTitle === preselectedService || s.hiTitle === preselectedService)?.enTitle ?? preselectedService)
+    ? (isHi
+        ? (services.find(s => s.enTitle === preselectedService || s.hiTitle === preselectedService)?.hiTitle ?? preselectedService)
+        : (services.find(s => s.enTitle === preselectedService || s.hiTitle === preselectedService)?.enTitle ?? preselectedService))
     : '';
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -301,6 +400,7 @@ export function BookingForm({ lang, preselectedService }: { lang: Language, pres
                       placeholder={isHi ? 'सेवा चुनें' : 'Select service'}
                       searchPlaceholder={isHi ? 'सेवा खोजें...' : 'Search service...'}
                       emptyText={isHi ? 'कोई सेवा नहीं मिली' : 'No service found'}
+                      drawerTitle={isHi ? 'सेवा चुनें' : 'Select Service'}
                       lang={lang}
                     />
                   </FormControl>
@@ -323,6 +423,7 @@ export function BookingForm({ lang, preselectedService }: { lang: Language, pres
                       placeholder={isHi ? 'क्षेत्र चुनें' : 'Select area'}
                       searchPlaceholder={isHi ? 'क्षेत्र खोजें...' : 'Search area...'}
                       emptyText={isHi ? 'कोई क्षेत्र नहीं मिला' : 'No area found'}
+                      drawerTitle={isHi ? 'क्षेत्र चुनें' : 'Select Area'}
                       lang={lang}
                     />
                   </FormControl>
