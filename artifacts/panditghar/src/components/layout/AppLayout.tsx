@@ -31,15 +31,17 @@ export function AppLayout({ children, lang }: AppLayoutProps) {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
-        className="fixed bottom-5 right-5 z-50 flex items-center gap-2 bg-[#25D366] text-white rounded-full shadow-xl px-4 py-3 font-semibold text-sm hover:bg-[#20bb5a] transition-colors"
+        className="fixed bottom-20 right-4 sm:bottom-6 sm:right-5 z-50 flex items-center gap-2 bg-[#25D366] text-white rounded-full shadow-xl py-3 px-3 sm:px-4 font-semibold text-sm hover:bg-[#20bb5a] transition-colors"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 1.2, type: 'spring', stiffness: 260, damping: 20 }}
+        transition={{ delay: 1.4, type: 'spring', stiffness: 260, damping: 20 }}
         whileHover={{ scale: 1.06 }}
         whileTap={{ scale: 0.95 }}
       >
         <MessageCircle className="w-5 h-5 fill-white stroke-none" />
-        <span className={isHi ? 'font-hindi' : ''}>{isHi ? 'अभी बुक करें' : 'Book Now'}</span>
+        <span className={`hidden sm:inline ${isHi ? 'font-hindi' : ''}`}>
+          {isHi ? 'अभी बुक करें' : 'Book Now'}
+        </span>
       </motion.a>
     </div>
   );
